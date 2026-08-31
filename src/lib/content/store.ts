@@ -1,5 +1,6 @@
 import 'server-only';
 import { promises as fs } from 'node:fs';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import type {
   Category,
@@ -37,6 +38,27 @@ const FILES = {
 
 type FileKey = keyof typeof FILES;
 
+function gitCommitAndPush(filePath: string, collectionName: string): void {
+  try {
+    const cwd = process.cwd();
+    const relativePath = path.relative(cwd, filePath);
+
+    // Stage the file
+    execSync(`git add "${relativePath}"`, { cwd, stdio: 'pipe' });
+
+    // Create a commit
+    const timestamp = new Date().toISOString();
+    const message = `Content update: ${collectionName} - ${timestamp}`;
+    execSync(`git commit -m "${message}"`, { cwd, stdio: 'pipe' });
+
+    // Push to current branch
+    execSync('git push', { cwd, stdio: 'pipe' });
+  } catch (error) {
+    console.error('Git commit/push failed:', error);
+    // Don't throw — the file was written successfully, git push failure shouldn't break the admin
+  }
+}
+
 async function readFile<T>(key: FileKey): Promise<T> {
   const raw = await fs.readFile(path.join(CONTENT_DIR, FILES[key]), 'utf8');
   return JSON.parse(raw) as T;
@@ -48,6 +70,9 @@ async function writeFile(key: FileKey, value: unknown): Promise<void> {
   // Write-then-rename so a crash mid-write cannot leave truncated JSON behind.
   await fs.writeFile(tmp, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
   await fs.rename(tmp, file);
+
+  // Commit and push to GitHub (non-blocking, failures logged but don't break the save)
+  gitCommitAndPush(file, key);
 }
 
 /** Read the entire content graph. */
