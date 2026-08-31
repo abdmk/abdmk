@@ -1,0 +1,2366 @@
+[
+  {
+    "id": "prj_mizan-identity",
+    "slug": "mizan-identity",
+    "published": true,
+    "order": 0,
+    "title": {
+      "ar": "هوية ميزان",
+      "en": "Mizan Identity"
+    },
+    "cover": {
+      "src": "/media/projects/mizan-identity/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف هوية ميزان",
+        "en": "Mizan Identity cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "هوية بصرية لمؤسسة ثقافية مبنية على شبكة كوفية.",
+      "en": "A cultural institution's identity built on a Kufi grid."
+    },
+    "fullDescription": {
+      "ar": "هوية بصرية لمؤسسة ثقافية مبنية على شبكة كوفية. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A cultural institution's identity built on a Kufi grid. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2025",
+    "categories": [
+      "branding",
+      "arabic-typography",
+      "art-direction"
+    ],
+    "services": [
+      "brand-identity",
+      "arabic-typography",
+      "art-direction"
+    ],
+    "company": "shorouk-studio",
+    "role": {
+      "ar": "مدير فني ومصمم هوية",
+      "en": "Art Director & Identity Designer"
+    },
+    "tools": [
+      "Glyphs",
+      "Illustrator",
+      "InDesign"
+    ],
+    "fonts": [
+      "mizan-kufi"
+    ],
+    "projectUrl": "https://example.com/work/mizan-identity",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/mizan-identity"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0001",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/mizan-identity/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع هوية ميزان",
+            "en": "From Mizan Identity"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0002",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0003",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0004",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/mizan-identity/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/mizan-identity/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0005",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0006",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0007",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/mizan-identity/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع هوية ميزان",
+            "en": "From Mizan Identity"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0008",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/mizan-identity/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/mizan-identity/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/mizan-identity/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/mizan-identity/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/mizan-identity/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/mizan-identity/06.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع هوية ميزان",
+              "en": "From Mizan Identity"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0009",
+        "type": "divider"
+      },
+      {
+        "id": "b0010",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_sard-typeface-campaign",
+    "slug": "sard-typeface-campaign",
+    "published": true,
+    "order": 1,
+    "title": {
+      "ar": "حملة إطلاق خط سرد",
+      "en": "Sard Typeface Launch"
+    },
+    "cover": {
+      "src": "/media/projects/sard-typeface-campaign/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف حملة إطلاق خط سرد",
+        "en": "Sard Typeface Launch cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "حملة إطلاق لخط نصي عربي، من الملصق إلى الموقع.",
+      "en": "A launch campaign for an Arabic text face, from poster to website."
+    },
+    "fullDescription": {
+      "ar": "حملة إطلاق لخط نصي عربي، من الملصق إلى الموقع. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A launch campaign for an Arabic text face, from poster to website. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2025",
+    "categories": [
+      "fonts",
+      "arabic-typography",
+      "posters",
+      "digital"
+    ],
+    "services": [
+      "font-design",
+      "art-direction",
+      "arabic-typography"
+    ],
+    "company": null,
+    "role": {
+      "ar": "مصمم الخط والحملة",
+      "en": "Type & Campaign Designer"
+    },
+    "tools": [
+      "Glyphs",
+      "Figma",
+      "After Effects"
+    ],
+    "fonts": [
+      "sard"
+    ],
+    "projectUrl": "https://example.com/work/sard-typeface-campaign",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/sard-typeface-campaign"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0011",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/sard-typeface-campaign/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع حملة إطلاق خط سرد",
+            "en": "From Sard Typeface Launch"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0012",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0013",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0014",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/sard-typeface-campaign/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0100",
+        "type": "video",
+        "media": {
+          "src": "/media/motion/reel.webm",
+          "kind": "video",
+          "alt": {
+            "ar": "مقطع من حملة الإطلاق",
+            "en": "A clip from the launch campaign"
+          },
+          "poster": "/media/motion/reel-poster.png",
+          "width": 960,
+          "height": 540,
+          "autoplay": true,
+          "loop": true,
+          "muted": true,
+          "controls": false,
+          "caption": {
+            "ar": "الشعار المتحرك",
+            "en": "The animated mark"
+          }
+        }
+      },
+      {
+        "id": "b0015",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0016",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0017",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/sard-typeface-campaign/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع حملة إطلاق خط سرد",
+            "en": "From Sard Typeface Launch"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0018",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/sard-typeface-campaign/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/sard-typeface-campaign/06.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حملة إطلاق خط سرد",
+              "en": "From Sard Typeface Launch"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0019",
+        "type": "divider"
+      },
+      {
+        "id": "b0020",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_beirut-book-fair",
+    "slug": "beirut-book-fair",
+    "published": true,
+    "order": 2,
+    "title": {
+      "ar": "معرض بيروت للكتاب",
+      "en": "Beirut Book Fair"
+    },
+    "cover": {
+      "src": "/media/projects/beirut-book-fair/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف معرض بيروت للكتاب",
+        "en": "Beirut Book Fair cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "الهوية ونظام الإرشاد لدورة ٢٠٢٤.",
+      "en": "Identity and wayfinding for the 2024 edition."
+    },
+    "fullDescription": {
+      "ar": "الهوية ونظام الإرشاد لدورة ٢٠٢٤. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "Identity and wayfinding for the 2024 edition. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2024",
+    "categories": [
+      "branding",
+      "wayfinding",
+      "print",
+      "art-direction"
+    ],
+    "services": [
+      "brand-identity",
+      "art-direction",
+      "editorial-design"
+    ],
+    "company": "beirut-book-fair-org",
+    "role": {
+      "ar": "مدير فني",
+      "en": "Art Director"
+    },
+    "tools": [
+      "Illustrator",
+      "InDesign",
+      "Photoshop"
+    ],
+    "fonts": [
+      "mizan-kufi",
+      "sard"
+    ],
+    "projectUrl": "https://example.com/work/beirut-book-fair",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/beirut-book-fair"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0021",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/beirut-book-fair/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع معرض بيروت للكتاب",
+            "en": "From Beirut Book Fair"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0022",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0023",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0024",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/beirut-book-fair/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0025",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0026",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0027",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/beirut-book-fair/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع معرض بيروت للكتاب",
+            "en": "From Beirut Book Fair"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0028",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/beirut-book-fair/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/beirut-book-fair/06.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع معرض بيروت للكتاب",
+              "en": "From Beirut Book Fair"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0029",
+        "type": "divider"
+      },
+      {
+        "id": "b0030",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_qamar-packaging",
+    "slug": "qamar-packaging",
+    "published": true,
+    "order": 3,
+    "title": {
+      "ar": "تغليف قمر",
+      "en": "Qamar Packaging"
+    },
+    "cover": {
+      "src": "/media/projects/qamar-packaging/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف تغليف قمر",
+        "en": "Qamar Packaging cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "نظام تغليف لخط منتجات غذائية إقليمي.",
+      "en": "A packaging system for a regional food range."
+    },
+    "fullDescription": {
+      "ar": "نظام تغليف لخط منتجات غذائية إقليمي. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A packaging system for a regional food range. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2023",
+    "categories": [
+      "packaging",
+      "branding",
+      "print"
+    ],
+    "services": [
+      "packaging-design",
+      "brand-identity"
+    ],
+    "company": "qamar-foods",
+    "role": {
+      "ar": "مصمم هوية وتغليف",
+      "en": "Identity & Packaging Designer"
+    },
+    "tools": [
+      "Illustrator",
+      "Photoshop"
+    ],
+    "fonts": [
+      "raqim-text"
+    ],
+    "projectUrl": "https://example.com/work/qamar-packaging",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/qamar-packaging"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0031",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/qamar-packaging/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع تغليف قمر",
+            "en": "From Qamar Packaging"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0032",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0033",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0034",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/qamar-packaging/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/qamar-packaging/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0035",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0036",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0037",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/qamar-packaging/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع تغليف قمر",
+            "en": "From Qamar Packaging"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0038",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/qamar-packaging/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/qamar-packaging/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/qamar-packaging/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/qamar-packaging/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/qamar-packaging/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تغليف قمر",
+              "en": "From Qamar Packaging"
+            },
+            "width": 1200,
+            "height": 1500
+          }
+        ]
+      },
+      {
+        "id": "b0039",
+        "type": "divider"
+      },
+      {
+        "id": "b0040",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_nahda-editorial",
+    "slug": "nahda-editorial",
+    "published": true,
+    "order": 4,
+    "title": {
+      "ar": "سلسلة النهضة",
+      "en": "Nahda Editorial Series"
+    },
+    "cover": {
+      "src": "/media/projects/nahda-editorial/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف سلسلة النهضة",
+        "en": "Nahda Editorial Series cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "نظام تصميم لسلسلة أدبية من ٢٤ كتابًا.",
+      "en": "A design system for a 24-title literary series."
+    },
+    "fullDescription": {
+      "ar": "نظام تصميم لسلسلة أدبية من ٢٤ كتابًا. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A design system for a 24-title literary series. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2024",
+    "categories": [
+      "editorial",
+      "print",
+      "arabic-typography"
+    ],
+    "services": [
+      "editorial-design",
+      "arabic-typography"
+    ],
+    "company": "nahda-press",
+    "role": {
+      "ar": "مصمم تحريري",
+      "en": "Editorial Designer"
+    },
+    "tools": [
+      "InDesign",
+      "Glyphs"
+    ],
+    "fonts": [
+      "sard",
+      "raqim-text"
+    ],
+    "projectUrl": "https://example.com/work/nahda-editorial",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/nahda-editorial"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0041",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/nahda-editorial/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع سلسلة النهضة",
+            "en": "From Nahda Editorial Series"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0042",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0043",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0044",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/nahda-editorial/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/nahda-editorial/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0045",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0046",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0047",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/nahda-editorial/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع سلسلة النهضة",
+            "en": "From Nahda Editorial Series"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0048",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/nahda-editorial/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/nahda-editorial/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/nahda-editorial/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/nahda-editorial/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/nahda-editorial/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/nahda-editorial/06.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة النهضة",
+              "en": "From Nahda Editorial Series"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0049",
+        "type": "divider"
+      },
+      {
+        "id": "b0050",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_halaqa-social",
+    "slug": "halaqa-social",
+    "published": true,
+    "order": 5,
+    "title": {
+      "ar": "حلقة — سوشيال",
+      "en": "Halaqa Social System"
+    },
+    "cover": {
+      "src": "/media/projects/halaqa-social/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف حلقة — سوشيال",
+        "en": "Halaqa Social System cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "نظام قوالب سوشيال ميديا لمنصة نقاش عربية.",
+      "en": "A social template system for an Arabic discussion platform."
+    },
+    "fullDescription": {
+      "ar": "نظام قوالب سوشيال ميديا لمنصة نقاش عربية. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A social template system for an Arabic discussion platform. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2024",
+    "categories": [
+      "social-media",
+      "digital",
+      "graphic-design"
+    ],
+    "services": [
+      "social-media-design",
+      "art-direction"
+    ],
+    "company": "aswat-media",
+    "role": {
+      "ar": "مدير فني",
+      "en": "Art Director"
+    },
+    "tools": [
+      "Figma",
+      "After Effects"
+    ],
+    "fonts": [
+      "mizan-kufi"
+    ],
+    "projectUrl": "https://example.com/work/halaqa-social",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/halaqa-social"
+      }
+    ],
+    "featured": false,
+    "blocks": [
+      {
+        "id": "b0051",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/halaqa-social/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع حلقة — سوشيال",
+            "en": "From Halaqa Social System"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0052",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0053",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0054",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/halaqa-social/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/halaqa-social/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0055",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0056",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0057",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/halaqa-social/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع حلقة — سوشيال",
+            "en": "From Halaqa Social System"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0058",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/halaqa-social/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/halaqa-social/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/halaqa-social/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/halaqa-social/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/halaqa-social/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع حلقة — سوشيال",
+              "en": "From Halaqa Social System"
+            },
+            "width": 1200,
+            "height": 1500
+          }
+        ]
+      },
+      {
+        "id": "b0059",
+        "type": "divider"
+      },
+      {
+        "id": "b0060",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_tariq-wayfinding",
+    "slug": "tariq-wayfinding",
+    "published": true,
+    "order": 6,
+    "title": {
+      "ar": "نظام إرشاد طريق",
+      "en": "Tariq Wayfinding"
+    },
+    "cover": {
+      "src": "/media/projects/tariq-wayfinding/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف نظام إرشاد طريق",
+        "en": "Tariq Wayfinding cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "نظام إرشاد ثنائي اللغة لمجمع ثقافي.",
+      "en": "A bilingual wayfinding system for a cultural complex."
+    },
+    "fullDescription": {
+      "ar": "نظام إرشاد ثنائي اللغة لمجمع ثقافي. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "A bilingual wayfinding system for a cultural complex. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2023",
+    "categories": [
+      "wayfinding",
+      "arabic-typography",
+      "print"
+    ],
+    "services": [
+      "arabic-typography",
+      "art-direction"
+    ],
+    "company": "shorouk-studio",
+    "role": {
+      "ar": "مصمم نظام",
+      "en": "Systems Designer"
+    },
+    "tools": [
+      "Illustrator",
+      "InDesign"
+    ],
+    "fonts": [
+      "mizan-kufi"
+    ],
+    "projectUrl": "https://example.com/work/tariq-wayfinding",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/tariq-wayfinding"
+      }
+    ],
+    "featured": false,
+    "blocks": [
+      {
+        "id": "b0061",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/tariq-wayfinding/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع نظام إرشاد طريق",
+            "en": "From Tariq Wayfinding"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0062",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0063",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0064",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/tariq-wayfinding/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/tariq-wayfinding/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0065",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0066",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0067",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/tariq-wayfinding/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع نظام إرشاد طريق",
+            "en": "From Tariq Wayfinding"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0068",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/tariq-wayfinding/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/tariq-wayfinding/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/tariq-wayfinding/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/tariq-wayfinding/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/tariq-wayfinding/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع نظام إرشاد طريق",
+              "en": "From Tariq Wayfinding"
+            },
+            "width": 1200,
+            "height": 1500
+          }
+        ]
+      },
+      {
+        "id": "b0069",
+        "type": "divider"
+      },
+      {
+        "id": "b0070",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_aswat-motion",
+    "slug": "aswat-motion",
+    "published": true,
+    "order": 7,
+    "title": {
+      "ar": "أصوات — هوية متحركة",
+      "en": "Aswat Motion Identity"
+    },
+    "cover": {
+      "src": "/media/projects/aswat-motion/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف أصوات — هوية متحركة",
+        "en": "Aswat Motion Identity cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "تحريك هوية منصة صوتية عربية.",
+      "en": "Putting an Arabic audio platform's identity in motion."
+    },
+    "fullDescription": {
+      "ar": "تحريك هوية منصة صوتية عربية. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "Putting an Arabic audio platform's identity in motion. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2024",
+    "categories": [
+      "motion",
+      "branding",
+      "digital"
+    ],
+    "services": [
+      "motion-design",
+      "art-direction"
+    ],
+    "company": "aswat-media",
+    "role": {
+      "ar": "مدير فني — موشن",
+      "en": "Art Director, Motion"
+    },
+    "tools": [
+      "After Effects",
+      "Cinema 4D"
+    ],
+    "fonts": [
+      "mizan-kufi"
+    ],
+    "projectUrl": "https://example.com/work/aswat-motion",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/aswat-motion"
+      }
+    ],
+    "featured": false,
+    "blocks": [
+      {
+        "id": "b0071",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/aswat-motion/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع أصوات — هوية متحركة",
+            "en": "From Aswat Motion Identity"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0072",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0073",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0101",
+        "type": "gif",
+        "media": {
+          "src": "/media/motion/loop.gif",
+          "kind": "gif",
+          "alt": {
+            "ar": "حلقة متحركة من نظام الهوية",
+            "en": "An animated loop from the identity system"
+          },
+          "width": 480,
+          "height": 270,
+          "caption": {
+            "ar": "حلقة قصيرة للمنصات",
+            "en": "A short loop for platforms"
+          }
+        }
+      },
+      {
+        "id": "b0074",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/aswat-motion/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع أصوات — هوية متحركة",
+              "en": "From Aswat Motion Identity"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/aswat-motion/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع أصوات — هوية متحركة",
+              "en": "From Aswat Motion Identity"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0075",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0076",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0077",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/aswat-motion/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع أصوات — هوية متحركة",
+            "en": "From Aswat Motion Identity"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0078",
+        "type": "divider"
+      },
+      {
+        "id": "b0079",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_madad-app",
+    "slug": "madad-app",
+    "published": true,
+    "order": 8,
+    "title": {
+      "ar": "تطبيق مدد",
+      "en": "Madad App"
+    },
+    "cover": {
+      "src": "/media/projects/madad-app/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف تطبيق مدد",
+        "en": "Madad App cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "واجهة عربية أولًا لتطبيق إدارة أعمال صغيرة.",
+      "en": "An Arabic-first interface for a small-business tool."
+    },
+    "fullDescription": {
+      "ar": "واجهة عربية أولًا لتطبيق إدارة أعمال صغيرة. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "An Arabic-first interface for a small-business tool. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2022",
+    "categories": [
+      "ui-ux",
+      "digital"
+    ],
+    "services": [
+      "ui-ux",
+      "arabic-typography"
+    ],
+    "company": "madad-tech",
+    "role": {
+      "ar": "مصمم منتج",
+      "en": "Product Designer"
+    },
+    "tools": [
+      "Figma"
+    ],
+    "fonts": [
+      "sard"
+    ],
+    "projectUrl": "https://example.com/work/madad-app",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/madad-app"
+      }
+    ],
+    "featured": false,
+    "blocks": [
+      {
+        "id": "b0080",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/madad-app/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع تطبيق مدد",
+            "en": "From Madad App"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0081",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0082",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0083",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/madad-app/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/madad-app/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0084",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0085",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0086",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/madad-app/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع تطبيق مدد",
+            "en": "From Madad App"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0087",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/madad-app/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/madad-app/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/madad-app/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/madad-app/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/madad-app/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع تطبيق مدد",
+              "en": "From Madad App"
+            },
+            "width": 1200,
+            "height": 1500
+          }
+        ]
+      },
+      {
+        "id": "b0088",
+        "type": "divider"
+      },
+      {
+        "id": "b0089",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  },
+  {
+    "id": "prj_khatt-poster-series",
+    "slug": "khatt-poster-series",
+    "published": true,
+    "order": 9,
+    "title": {
+      "ar": "سلسلة ملصقات خط",
+      "en": "Khatt Poster Series"
+    },
+    "cover": {
+      "src": "/media/projects/khatt-poster-series/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "غلاف سلسلة ملصقات خط",
+        "en": "Khatt Poster Series cover"
+      },
+      "width": 1600,
+      "height": 1200
+    },
+    "shortDescription": {
+      "ar": "اثنا عشر ملصقًا حول الحرف العربي كشكل خالص.",
+      "en": "Twelve posters on the Arabic letterform as pure shape."
+    },
+    "fullDescription": {
+      "ar": "اثنا عشر ملصقًا حول الحرف العربي كشكل خالص. بدأ العمل من سؤال واحد: كيف يبدو هذا المحتوى حين يُصمَّم بالعربية أولًا، لا حين يُترجم بعد الانتهاء؟",
+      "en": "Twelve posters on the Arabic letterform as pure shape. The work started from one question: what does this look like when it is designed in Arabic first, rather than translated after the fact?"
+    },
+    "year": "2025",
+    "categories": [
+      "posters",
+      "calligraphy",
+      "arabic-typography",
+      "print"
+    ],
+    "services": [
+      "arabic-calligraphy",
+      "art-direction"
+    ],
+    "company": null,
+    "role": {
+      "ar": "مصمم",
+      "en": "Designer"
+    },
+    "tools": [
+      "Ink",
+      "Illustrator",
+      "Risograph"
+    ],
+    "fonts": [
+      "nuqta-display"
+    ],
+    "projectUrl": "https://example.com/work/khatt-poster-series",
+    "links": [
+      {
+        "label": {
+          "ar": "على بيهانس",
+          "en": "On Behance"
+        },
+        "href": "https://behance.net/khatt-poster-series"
+      }
+    ],
+    "featured": true,
+    "blocks": [
+      {
+        "id": "b0090",
+        "type": "imageFull",
+        "media": {
+          "src": "/media/projects/khatt-poster-series/01.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع سلسلة ملصقات خط",
+            "en": "From Khatt Poster Series"
+          },
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      {
+        "id": "b0091",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "نقطة الانطلاق",
+          "en": "Where it started"
+        }
+      },
+      {
+        "id": "b0092",
+        "type": "paragraph",
+        "text": {
+          "ar": "قبل أي رسم، جمعنا المواد الموجودة وقرأناها كما يقرأها المستخدم: بالعربية، من اليمين، وعلى شاشة صغيرة قبل أي شيء آخر.\nكشف ذلك مشكلتين: نظام تايبوغرافي مستعار من اللاتيني، وتسلسل معلومات لا يصمد عند الاختصار.",
+          "en": "Before any drawing we gathered what already existed and read it the way a reader does: in Arabic, from the right, on a small screen before anything else.\nThat surfaced two problems — a type system borrowed from Latin, and an information hierarchy that collapsed the moment it was condensed."
+        }
+      },
+      {
+        "id": "b0093",
+        "type": "imagePair",
+        "media": [
+          {
+            "src": "/media/projects/khatt-poster-series/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0094",
+        "type": "quote",
+        "text": {
+          "ar": "الحرف العربي لا يحتاج إلى أن يُجمَّل. يحتاج إلى أن يُفهم أولًا.",
+          "en": "The Arabic letter does not need to be prettified. It needs to be understood first."
+        },
+        "attribution": {
+          "ar": "من ملاحظات المشروع",
+          "en": "From the project notes"
+        }
+      },
+      {
+        "id": "b0095",
+        "type": "heading",
+        "level": 2,
+        "text": {
+          "ar": "النظام",
+          "en": "The system"
+        }
+      },
+      {
+        "id": "b0096",
+        "type": "textImage",
+        "heading": {
+          "ar": "قواعد قليلة، تطبيق واسع",
+          "en": "Few rules, wide application"
+        },
+        "text": {
+          "ar": "بُني النظام على عدد صغير من القرارات: مقياس تايبوغرافي واحد للعربي واللاتيني، شبكة تعمل في الاتجاهين، ومجموعة ضيقة من الأحجام.\nكل ما جاء بعد ذلك اشتُقّ من هذه القواعد بدل أن يُصمَّم من جديد في كل مرة.",
+          "en": "The system rests on a small number of decisions: one type scale shared by Arabic and Latin, a grid that works in both directions, and a deliberately narrow set of sizes.\nEverything after that is derived from those rules rather than designed again from scratch."
+        },
+        "media": {
+          "src": "/media/projects/khatt-poster-series/04.svg",
+          "kind": "image",
+          "alt": {
+            "ar": "من مشروع سلسلة ملصقات خط",
+            "en": "From Khatt Poster Series"
+          },
+          "width": 1400,
+          "height": 1400
+        }
+      },
+      {
+        "id": "b0097",
+        "type": "gallery",
+        "columns": 3,
+        "media": [
+          {
+            "src": "/media/projects/khatt-poster-series/01.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/02.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1600,
+            "height": 900
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/03.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1400,
+            "height": 1400
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/04.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/05.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1200,
+            "height": 1500
+          },
+          {
+            "src": "/media/projects/khatt-poster-series/06.svg",
+            "kind": "image",
+            "alt": {
+              "ar": "من مشروع سلسلة ملصقات خط",
+              "en": "From Khatt Poster Series"
+            },
+            "width": 1600,
+            "height": 900
+          }
+        ]
+      },
+      {
+        "id": "b0098",
+        "type": "divider"
+      },
+      {
+        "id": "b0099",
+        "type": "paragraph",
+        "text": {
+          "ar": "النتيجة نظام يمكن لغير المصمم أن يشغّله: قوالب واضحة، قواعد مكتوبة، وملفات مرتبة. هذا هو الفرق بين هوية تُسلَّم وهوية تُستخدم.",
+          "en": "The result is a system someone who is not a designer can actually run: clear templates, written rules, tidy files. That is the difference between an identity that is delivered and one that gets used."
+        }
+      }
+    ]
+  }
+]

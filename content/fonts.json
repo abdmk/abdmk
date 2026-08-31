@@ -1,0 +1,471 @@
+[
+  {
+    "id": "font_sard",
+    "slug": "sard",
+    "published": true,
+    "order": 0,
+    "name": {
+      "ar": "سرد",
+      "en": "Sard"
+    },
+    "preview": {
+      "src": "/media/fonts/sard/preview.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "معاينة خط سرد",
+        "en": "Sard preview"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "description": {
+      "ar": "خط نصي عربي مصمم للقراءة الطويلة — كتب، مجلات، وواجهات كثيفة النص. حروف مفتوحة العدادات وارتفاع صاعد معتدل.",
+      "en": "An Arabic text face built for long reading — books, magazines and text-heavy interfaces. Open counters, a restrained ascender."
+    },
+    "type": {
+      "ar": "نص",
+      "en": "Text"
+    },
+    "weights": [
+      {
+        "name": {
+          "ar": "خفيف جدًا",
+          "en": "Extralight"
+        },
+        "weight": 200
+      },
+      {
+        "name": {
+          "ar": "خفيف",
+          "en": "Light"
+        },
+        "weight": 300
+      },
+      {
+        "name": {
+          "ar": "عادي",
+          "en": "Regular"
+        },
+        "weight": 400
+      },
+      {
+        "name": {
+          "ar": "متوسط",
+          "en": "Medium"
+        },
+        "weight": 500
+      },
+      {
+        "name": {
+          "ar": "شبه عريض",
+          "en": "Semibold"
+        },
+        "weight": 600
+      }
+    ],
+    "features": [
+      {
+        "ar": "أرقام عربية ولاتينية",
+        "en": "Arabic & Latin numerals"
+      },
+      {
+        "ar": "تشكيل كامل",
+        "en": "Full vocalisation"
+      },
+      {
+        "ar": "تراكيب اختيارية",
+        "en": "Optional ligatures"
+      },
+      {
+        "ar": "دعم فارسي وأردي",
+        "en": "Persian & Urdu support"
+      }
+    ],
+    "specimens": [
+      {
+        "src": "/media/fonts/sard/specimen-01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج سرد",
+          "en": "Sard specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/sard/specimen-02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج سرد",
+          "en": "Sard specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/sard/specimen-03.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج سرد",
+          "en": "Sard specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/sard/specimen-04.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج سرد",
+          "en": "Sard specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      }
+    ],
+    "license": {
+      "ar": "ترخيص سطح مكتب وويب. الترخيص التجاري حسب حجم الاستخدام.",
+      "en": "Desktop and web licence. Commercial terms scale with usage."
+    },
+    "purchaseUrl": "https://example.com/fonts/sard",
+    "downloadUrl": "https://example.com/fonts/sard/trial",
+    "sample": {
+      "ar": "سرد خط للقراءة الطويلة",
+      "en": "SARD — TYPE SPECIMEN"
+    },
+    "featured": true
+  },
+  {
+    "id": "font_mizan-kufi",
+    "slug": "mizan-kufi",
+    "published": true,
+    "order": 1,
+    "name": {
+      "ar": "ميزان كوفي",
+      "en": "Mizan Kufi"
+    },
+    "preview": {
+      "src": "/media/fonts/mizan-kufi/preview.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "معاينة خط ميزان كوفي",
+        "en": "Mizan Kufi preview"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "description": {
+      "ar": "كوفي هندسي حديث للعناوين والشعارات. بُني على شبكة صارمة مع زوايا مضبوطة.",
+      "en": "A modern geometric Kufi for headlines and marks, built on a strict grid with tuned corners."
+    },
+    "type": {
+      "ar": "عرض",
+      "en": "Display"
+    },
+    "weights": [
+      {
+        "name": {
+          "ar": "عادي",
+          "en": "Regular"
+        },
+        "weight": 400
+      },
+      {
+        "name": {
+          "ar": "عريض",
+          "en": "Bold"
+        },
+        "weight": 600
+      }
+    ],
+    "features": [
+      {
+        "ar": "شبكة هندسية",
+        "en": "Geometric grid"
+      },
+      {
+        "ar": "بدائل أسلوبية",
+        "en": "Stylistic alternates"
+      },
+      {
+        "ar": "مناسب للشعارات",
+        "en": "Made for logotypes"
+      }
+    ],
+    "specimens": [
+      {
+        "src": "/media/fonts/mizan-kufi/specimen-01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج ميزان كوفي",
+          "en": "Mizan Kufi specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/mizan-kufi/specimen-02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج ميزان كوفي",
+          "en": "Mizan Kufi specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/mizan-kufi/specimen-03.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج ميزان كوفي",
+          "en": "Mizan Kufi specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/mizan-kufi/specimen-04.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج ميزان كوفي",
+          "en": "Mizan Kufi specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      }
+    ],
+    "license": {
+      "ar": "ترخيص سطح مكتب وويب. الترخيص التجاري حسب حجم الاستخدام.",
+      "en": "Desktop and web licence. Commercial terms scale with usage."
+    },
+    "purchaseUrl": "https://example.com/fonts/mizan-kufi",
+    "downloadUrl": "https://example.com/fonts/mizan-kufi/trial",
+    "sample": {
+      "ar": "ميزان كوفي للعناوين",
+      "en": "MIZAN KUFI — TYPE SPECIMEN"
+    },
+    "featured": true
+  },
+  {
+    "id": "font_raqim-text",
+    "slug": "raqim-text",
+    "published": true,
+    "order": 2,
+    "name": {
+      "ar": "رقيم",
+      "en": "Raqim"
+    },
+    "preview": {
+      "src": "/media/fonts/raqim-text/preview.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "معاينة خط رقيم",
+        "en": "Raqim preview"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "description": {
+      "ar": "خط نسخي معاصر بروح المخطوط، معدّل للشاشات الحديثة.",
+      "en": "A contemporary Naskh with the spirit of the manuscript, adjusted for modern screens."
+    },
+    "type": {
+      "ar": "نص",
+      "en": "Text"
+    },
+    "weights": [
+      {
+        "name": {
+          "ar": "خفيف",
+          "en": "Light"
+        },
+        "weight": 300
+      },
+      {
+        "name": {
+          "ar": "عادي",
+          "en": "Regular"
+        },
+        "weight": 400
+      },
+      {
+        "name": {
+          "ar": "متوسط",
+          "en": "Medium"
+        },
+        "weight": 500
+      }
+    ],
+    "features": [
+      {
+        "ar": "نسخ معاصر",
+        "en": "Contemporary Naskh"
+      },
+      {
+        "ar": "تشكيل دقيق",
+        "en": "Precise vocalisation"
+      },
+      {
+        "ar": "قابل للقراءة عند الأحجام الصغيرة",
+        "en": "Legible at small sizes"
+      }
+    ],
+    "specimens": [
+      {
+        "src": "/media/fonts/raqim-text/specimen-01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج رقيم",
+          "en": "Raqim specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/raqim-text/specimen-02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج رقيم",
+          "en": "Raqim specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/raqim-text/specimen-03.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج رقيم",
+          "en": "Raqim specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/raqim-text/specimen-04.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج رقيم",
+          "en": "Raqim specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      }
+    ],
+    "license": {
+      "ar": "ترخيص سطح مكتب وويب. الترخيص التجاري حسب حجم الاستخدام.",
+      "en": "Desktop and web licence. Commercial terms scale with usage."
+    },
+    "purchaseUrl": "https://example.com/fonts/raqim-text",
+    "downloadUrl": null,
+    "sample": {
+      "ar": "رقيم بروح المخطوط",
+      "en": "RAQIM — TYPE SPECIMEN"
+    },
+    "featured": false
+  },
+  {
+    "id": "font_nuqta-display",
+    "slug": "nuqta-display",
+    "published": true,
+    "order": 3,
+    "name": {
+      "ar": "نقطة",
+      "en": "Nuqta"
+    },
+    "preview": {
+      "src": "/media/fonts/nuqta-display/preview.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "معاينة خط نقطة",
+        "en": "Nuqta preview"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "description": {
+      "ar": "خط عرض تجريبي يقوم على النقطة كوحدة قياس، للملصقات والأغلفة.",
+      "en": "An experimental display face that takes the dot as its unit of measure, for posters and covers."
+    },
+    "type": {
+      "ar": "عرض",
+      "en": "Display"
+    },
+    "weights": [
+      {
+        "name": {
+          "ar": "عادي",
+          "en": "Regular"
+        },
+        "weight": 400
+      }
+    ],
+    "features": [
+      {
+        "ar": "وحدة قياس نقطية",
+        "en": "Dot-based metrics"
+      },
+      {
+        "ar": "أشكال بديلة",
+        "en": "Alternate forms"
+      },
+      {
+        "ar": "للعناوين الكبيرة",
+        "en": "For large sizes"
+      }
+    ],
+    "specimens": [
+      {
+        "src": "/media/fonts/nuqta-display/specimen-01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج نقطة",
+          "en": "Nuqta specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/nuqta-display/specimen-02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج نقطة",
+          "en": "Nuqta specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/nuqta-display/specimen-03.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج نقطة",
+          "en": "Nuqta specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "src": "/media/fonts/nuqta-display/specimen-04.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "نموذج نقطة",
+          "en": "Nuqta specimen"
+        },
+        "width": 1600,
+        "height": 1100
+      }
+    ],
+    "license": {
+      "ar": "ترخيص سطح مكتب وويب. الترخيص التجاري حسب حجم الاستخدام.",
+      "en": "Desktop and web licence. Commercial terms scale with usage."
+    },
+    "purchaseUrl": "https://example.com/fonts/nuqta-display",
+    "downloadUrl": null,
+    "sample": {
+      "ar": "نقطة وحدة القياس",
+      "en": "NUQTA — TYPE SPECIMEN"
+    },
+    "featured": false
+  }
+]

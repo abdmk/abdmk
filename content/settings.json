@@ -1,0 +1,247 @@
+{
+  "name": {
+    "ar": "عبد المالك",
+    "en": "Abdulmalek"
+  },
+  "role": {
+    "ar": "مصمم جرافيك ومصمم خطوط عربية",
+    "en": "Graphic Designer & Arabic Type Designer"
+  },
+  "tagline": {
+    "ar": "أصمّم الهويات والخطوط العربية.",
+    "en": "I design identities and Arabic typefaces."
+  },
+  "heroStatement": {
+    "ar": "أبني أنظمة بصرية تبدأ من الحرف العربي — هويات وخطوط ومطبوعات تُقرأ قبل أن تُعجب.",
+    "en": "I build visual systems that start from the Arabic letter — identities, typefaces and print that read before they impress."
+  },
+  "shortBio": {
+    "ar": "مصمم جرافيك ومصمم خطوط. أعمل مع المؤسسات الثقافية والعلامات على الهوية والتايبوغرافي العربي.",
+    "en": "Graphic and type designer. I work with cultural institutions and brands on identity and Arabic typography."
+  },
+  "about": {
+    "portrait": {
+      "src": "/media/about/portrait.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "صورة شخصية",
+        "en": "Portrait"
+      },
+      "width": 1200,
+      "height": 1500
+    },
+    "intro": {
+      "ar": "أصمّم منذ أكثر من عشر سنوات، ومعظم عملي يدور حول سؤال واحد: كيف يُصمَّم المحتوى العربي بالعربية، لا كترجمة متأخرة لتصميم لاتيني؟",
+      "en": "I have been designing for over a decade, and most of my work circles one question: how do you design Arabic content in Arabic, rather than as a late translation of a Latin layout?"
+    },
+    "body": [
+      {
+        "ar": "بدأت من الخط اليدوي قبل أن أنتقل إلى التصميم الرقمي، وهذا ما زال يظهر في طريقة عملي: أبدأ من الشكل، لا من الشبكة.",
+        "en": "I started with hand lettering before moving to digital design, and it still shows in how I work: I start from the shape, not the grid."
+      },
+      {
+        "ar": "اليوم أقسم وقتي بين ثلاثة أشياء — هويات بصرية لمؤسسات ثقافية، خطوط عربية أطوّرها وأنشرها، وتدريس ما تعلّمته في ورش وكورسات.",
+        "en": "Today I split my time three ways — identities for cultural institutions, Arabic typefaces I develop and release, and teaching what I have learned through workshops and courses."
+      },
+      {
+        "ar": "أفضّل المشاريع التي فيها نص حقيقي وقيود حقيقية. الأنظمة التي تصمد هي التي اختُبرت على محتوى صعب، لا على نص وهمي.",
+        "en": "I prefer projects with real text and real constraints. The systems that hold up are the ones tested against difficult content, not against placeholder copy."
+      }
+    ],
+    "approach": [
+      {
+        "title": {
+          "ar": "اقرأ قبل أن ترسم",
+          "en": "Read before drawing"
+        },
+        "text": {
+          "ar": "أقرأ المحتوى الفعلي أولًا. القرارات التايبوغرافية تأتي من النص، لا من المزاج.",
+          "en": "I read the actual content first. Typographic decisions come from the text, not from a mood board."
+        }
+      },
+      {
+        "title": {
+          "ar": "قواعد قليلة",
+          "en": "Few rules"
+        },
+        "text": {
+          "ar": "النظام الجيد يُشرح في صفحة واحدة. إذا احتاج إلى دليل من مئة صفحة، فهو لم يُحلّ بعد.",
+          "en": "A good system explains itself in a page. If it needs a hundred-page manual, it has not been solved yet."
+        }
+      },
+      {
+        "title": {
+          "ar": "سلّم ما يُستخدم",
+          "en": "Ship what gets used"
+        },
+        "text": {
+          "ar": "أسلّم ملفات وقوالب يستطيع الفريق تشغيلها بنفسه بعد انتهاء المشروع.",
+          "en": "I hand over files and templates the team can actually run once the project ends."
+        }
+      }
+    ],
+    "tools": [
+      "Glyphs",
+      "Illustrator",
+      "InDesign",
+      "Photoshop",
+      "Figma",
+      "After Effects",
+      "RoboFont",
+      "Risograph"
+    ],
+    "interests": [
+      {
+        "ar": "المخطوطات العربية",
+        "en": "Arabic manuscripts"
+      },
+      {
+        "ar": "الطباعة بالريزوغراف",
+        "en": "Risograph printing"
+      },
+      {
+        "ar": "لافتات الشوارع",
+        "en": "Street signage"
+      },
+      {
+        "ar": "أرشفة الحرف",
+        "en": "Letterform archives"
+      }
+    ],
+    "achievements": [
+      {
+        "year": "2025",
+        "text": {
+          "ar": "إطلاق خط «سرد» بخمسة أوزان.",
+          "en": "Released Sard in five weights."
+        }
+      },
+      {
+        "year": "2024",
+        "text": {
+          "ar": "الإدارة الفنية لدورة معرض بيروت للكتاب.",
+          "en": "Art directed the Beirut Book Fair edition."
+        }
+      },
+      {
+        "year": "2023",
+        "text": {
+          "ar": "جائزة التميّز في التايبوغرافي العربي.",
+          "en": "Award of excellence in Arabic typography."
+        }
+      },
+      {
+        "year": "2022",
+        "text": {
+          "ar": "أول ورشة عامة في تصميم الخط.",
+          "en": "First public type design workshop."
+        }
+      }
+    ],
+    "cvUrl": null
+  },
+  "contact": {
+    "email": "hello@example.com",
+    "phone": "+961 70 000 000",
+    "whatsapp": "+961 70 000 000",
+    "location": {
+      "ar": "بيروت، لبنان — أعمل عن بُعد",
+      "en": "Beirut, Lebanon — working remotely"
+    },
+    "availability": {
+      "ar": "متاح لمشاريع تبدأ من الربع القادم.",
+      "en": "Taking on projects starting next quarter."
+    },
+    "projectTypes": [
+      {
+        "ar": "هوية بصرية",
+        "en": "Brand identity"
+      },
+      {
+        "ar": "خط مخصص",
+        "en": "Custom typeface"
+      },
+      {
+        "ar": "تصميم تحريري",
+        "en": "Editorial design"
+      },
+      {
+        "ar": "إدارة فنية",
+        "en": "Art direction"
+      },
+      {
+        "ar": "ورشة أو كورس",
+        "en": "Workshop or course"
+      },
+      {
+        "ar": "أخرى",
+        "en": "Something else"
+      }
+    ],
+    "budgets": [
+      {
+        "ar": "أقل من ٥٠٠٠ دولار",
+        "en": "Under $5,000"
+      },
+      {
+        "ar": "٥٬٠٠٠ — ١٥٬٠٠٠ دولار",
+        "en": "$5,000 — $15,000"
+      },
+      {
+        "ar": "١٥٬٠٠٠ — ٤٠٬٠٠٠ دولار",
+        "en": "$15,000 — $40,000"
+      },
+      {
+        "ar": "أكثر من ٤٠٬٠٠٠ دولار",
+        "en": "Over $40,000"
+      },
+      {
+        "ar": "غير محدد بعد",
+        "en": "Not sure yet"
+      }
+    ]
+  },
+  "social": [
+    {
+      "icon": "instagram",
+      "label": "Instagram",
+      "href": "https://instagram.com/"
+    },
+    {
+      "icon": "behance",
+      "label": "Behance",
+      "href": "https://behance.net/"
+    },
+    {
+      "icon": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/"
+    },
+    {
+      "icon": "x",
+      "label": "X",
+      "href": "https://x.com/"
+    },
+    {
+      "icon": "youtube",
+      "label": "YouTube",
+      "href": "https://youtube.com/"
+    },
+    {
+      "icon": "telegram",
+      "label": "Telegram",
+      "href": "https://t.me/"
+    }
+  ],
+  "seo": {
+    "siteUrl": "https://example.com",
+    "title": {
+      "ar": "عبد المالك — مصمم جرافيك ومصمم خطوط عربية",
+      "en": "Abdulmalek — Graphic & Arabic Type Designer"
+    },
+    "description": {
+      "ar": "أعمال في الهوية البصرية والتايبوغرافي العربي وتصميم الخطوط، مع ورش وكورسات.",
+      "en": "Work in brand identity, Arabic typography and type design, plus workshops and courses."
+    }
+  }
+}

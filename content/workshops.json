@@ -1,0 +1,507 @@
+[
+  {
+    "id": "ws_arabic-type-foundations",
+    "slug": "arabic-type-foundations",
+    "published": true,
+    "order": 0,
+    "kind": "workshop",
+    "title": {
+      "ar": "أساسيات التايبوغرافي العربي",
+      "en": "Arabic Type Foundations"
+    },
+    "description": {
+      "ar": "ورشة مكثفة في قراءة الحرف العربي وضبط النص: التناسب، الإيقاع، والفراغ.",
+      "en": "An intensive workshop on reading the Arabic letter and setting text: proportion, rhythm and space."
+    },
+    "cover": {
+      "src": "/media/workshops/arabic-type-foundations/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "أساسيات التايبوغرافي العربي",
+        "en": "Arabic Type Foundations"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2026-11-14",
+    "endDate": "2026-11-15",
+    "duration": {
+      "ar": "يومان — ١٢ ساعة",
+      "en": "Two days — 12 hours"
+    },
+    "location": {
+      "ar": "بيروت، لبنان",
+      "en": "Beirut, Lebanon"
+    },
+    "mode": "offline",
+    "price": {
+      "ar": "٢٥٠ دولار",
+      "en": "$250"
+    },
+    "seats": 18,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/arabic-type-foundations/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "أساسيات التايبوغرافي العربي",
+          "en": "Arabic Type Foundations"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/arabic-type-foundations",
+    "relatedProjects": [
+      "sard-typeface-campaign",
+      "nahda-editorial"
+    ],
+    "relatedServices": [
+      "font-design",
+      "arabic-typography"
+    ],
+    "featured": true
+  },
+  {
+    "id": "ws_identity-sprint",
+    "slug": "identity-sprint",
+    "published": true,
+    "order": 1,
+    "kind": "workshop",
+    "title": {
+      "ar": "سبرنت الهوية البصرية",
+      "en": "Identity Sprint"
+    },
+    "description": {
+      "ar": "ثلاثة أيام لبناء هوية كاملة من الاستراتيجية إلى دليل مختصر.",
+      "en": "Three days to build a complete identity, from strategy to a short guideline."
+    },
+    "cover": {
+      "src": "/media/workshops/identity-sprint/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "سبرنت الهوية البصرية",
+        "en": "Identity Sprint"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2027-02-06",
+    "endDate": "2027-02-08",
+    "duration": {
+      "ar": "ثلاثة أيام",
+      "en": "Three days"
+    },
+    "location": {
+      "ar": "عن بُعد",
+      "en": "Online"
+    },
+    "mode": "online",
+    "price": {
+      "ar": "٣٢٠ دولار",
+      "en": "$320"
+    },
+    "seats": 24,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/identity-sprint/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "سبرنت الهوية البصرية",
+          "en": "Identity Sprint"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/identity-sprint",
+    "relatedProjects": [
+      "mizan-identity"
+    ],
+    "relatedServices": [
+      "brand-identity"
+    ],
+    "featured": true
+  },
+  {
+    "id": "ws_calligraphy-to-type",
+    "slug": "calligraphy-to-type",
+    "published": true,
+    "order": 2,
+    "kind": "workshop",
+    "title": {
+      "ar": "من الخط إلى الحرف",
+      "en": "From Calligraphy to Type"
+    },
+    "description": {
+      "ar": "كيف يتحول العمل الخطي إلى نظام حروف قابل للإنتاج.",
+      "en": "How a piece of calligraphy becomes a producible letter system."
+    },
+    "cover": {
+      "src": "/media/workshops/calligraphy-to-type/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "من الخط إلى الحرف",
+        "en": "From Calligraphy to Type"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2025-04-12",
+    "endDate": "2025-04-12",
+    "duration": {
+      "ar": "يوم واحد — ٦ ساعات",
+      "en": "One day — 6 hours"
+    },
+    "location": {
+      "ar": "عمّان، الأردن",
+      "en": "Amman, Jordan"
+    },
+    "mode": "offline",
+    "price": {
+      "ar": "١٢٠ دولار",
+      "en": "$120"
+    },
+    "seats": 20,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/calligraphy-to-type/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "من الخط إلى الحرف",
+          "en": "From Calligraphy to Type"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/calligraphy-to-type",
+    "relatedProjects": [
+      "sard-typeface-campaign",
+      "nahda-editorial"
+    ],
+    "relatedServices": [
+      "font-design",
+      "arabic-typography"
+    ],
+    "featured": false
+  },
+  {
+    "id": "ws_editorial-systems",
+    "slug": "editorial-systems",
+    "published": true,
+    "order": 3,
+    "kind": "workshop",
+    "title": {
+      "ar": "أنظمة التصميم التحريري",
+      "en": "Editorial Systems"
+    },
+    "description": {
+      "ar": "بناء شبكة وأنماط صفحات لمطبوعة عربية.",
+      "en": "Building a grid and page styles for an Arabic publication."
+    },
+    "cover": {
+      "src": "/media/workshops/editorial-systems/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "أنظمة التصميم التحريري",
+        "en": "Editorial Systems"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2025-09-20",
+    "endDate": "2025-09-21",
+    "duration": {
+      "ar": "يومان",
+      "en": "Two days"
+    },
+    "location": {
+      "ar": "الدوحة، قطر",
+      "en": "Doha, Qatar"
+    },
+    "mode": "offline",
+    "price": {
+      "ar": "٢٠٠ دولار",
+      "en": "$200"
+    },
+    "seats": 16,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/editorial-systems/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "أنظمة التصميم التحريري",
+          "en": "Editorial Systems"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/editorial-systems",
+    "relatedProjects": [
+      "mizan-identity"
+    ],
+    "relatedServices": [
+      "brand-identity"
+    ],
+    "featured": false
+  },
+  {
+    "id": "ws_type-design-course",
+    "slug": "type-design-course",
+    "published": true,
+    "order": 4,
+    "kind": "course",
+    "title": {
+      "ar": "تصميم الخط العربي — كورس كامل",
+      "en": "Arabic Type Design — Full Course"
+    },
+    "description": {
+      "ar": "كورس من ثمانية أسابيع: من الرسم الأول إلى ملف OpenType مختبَر وجاهز للنشر.",
+      "en": "An eight-week course: from first drawings to a tested, shippable OpenType file."
+    },
+    "cover": {
+      "src": "/media/workshops/type-design-course/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم الخط العربي — كورس كامل",
+        "en": "Arabic Type Design — Full Course"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2027-01-10",
+    "endDate": "2027-03-07",
+    "duration": {
+      "ar": "ثمانية أسابيع — لقاء أسبوعي",
+      "en": "Eight weeks — weekly sessions"
+    },
+    "location": {
+      "ar": "عن بُعد",
+      "en": "Online"
+    },
+    "mode": "online",
+    "price": {
+      "ar": "٧٥٠ دولار",
+      "en": "$750"
+    },
+    "seats": 30,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/type-design-course/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "تصميم الخط العربي — كورس كامل",
+          "en": "Arabic Type Design — Full Course"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/type-design-course",
+    "relatedProjects": [
+      "sard-typeface-campaign",
+      "nahda-editorial"
+    ],
+    "relatedServices": [
+      "font-design",
+      "arabic-typography"
+    ],
+    "featured": true
+  },
+  {
+    "id": "ws_brand-systems-course",
+    "slug": "brand-systems-course",
+    "published": true,
+    "order": 5,
+    "kind": "course",
+    "title": {
+      "ar": "أنظمة الهوية البصرية",
+      "en": "Brand Systems"
+    },
+    "description": {
+      "ar": "كورس من ستة أسابيع في بناء أنظمة هوية تعمل بالعربية واللاتينية.",
+      "en": "A six-week course on building identity systems that work in Arabic and Latin."
+    },
+    "cover": {
+      "src": "/media/workshops/brand-systems-course/cover.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "أنظمة الهوية البصرية",
+        "en": "Brand Systems"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "date": "2025-05-05",
+    "endDate": "2025-06-16",
+    "duration": {
+      "ar": "ستة أسابيع",
+      "en": "Six weeks"
+    },
+    "location": {
+      "ar": "عن بُعد",
+      "en": "Online"
+    },
+    "mode": "hybrid",
+    "price": {
+      "ar": "٥٨٠ دولار",
+      "en": "$580"
+    },
+    "seats": 25,
+    "content": [
+      {
+        "ar": "قراءة الحرف وتحليل الشكل",
+        "en": "Reading the letter, analysing the shape"
+      },
+      {
+        "ar": "التناسب والإيقاع",
+        "en": "Proportion and rhythm"
+      },
+      {
+        "ar": "ضبط النص الطويل",
+        "en": "Setting long text"
+      },
+      {
+        "ar": "العلاقة بين العربي واللاتيني",
+        "en": "Arabic and Latin together"
+      },
+      {
+        "ar": "التطبيق العملي ومراجعة الأعمال",
+        "en": "Practical work and critique"
+      }
+    ],
+    "media": [
+      {
+        "src": "/media/workshops/brand-systems-course/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "أنظمة الهوية البصرية",
+          "en": "Brand Systems"
+        },
+        "width": 1400,
+        "height": 1000
+      }
+    ],
+    "registrationUrl": "https://example.com/register/brand-systems-course",
+    "relatedProjects": [
+      "sard-typeface-campaign",
+      "nahda-editorial"
+    ],
+    "relatedServices": [
+      "brand-identity"
+    ],
+    "featured": false
+  }
+]

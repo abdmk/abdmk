@@ -1,0 +1,451 @@
+[
+  {
+    "id": "svc_brand-identity",
+    "slug": "brand-identity",
+    "published": true,
+    "order": 0,
+    "name": {
+      "ar": "الهوية البصرية",
+      "en": "Brand Identity"
+    },
+    "description": {
+      "ar": "بناء هوية متكاملة من الفكرة إلى دليل الاستخدام: الشعار، النظام اللوني، التايبوغرافي، والتطبيقات.",
+      "en": "A complete identity from concept to guidelines: mark, colour, typography and the applications that carry them."
+    },
+    "deliverables": [
+      {
+        "ar": "بحث واستراتيجية بصرية",
+        "en": "Research & visual strategy"
+      },
+      {
+        "ar": "شعار ونظام علامة",
+        "en": "Logo & mark system"
+      },
+      {
+        "ar": "نظام تايبوغرافي عربي ولاتيني",
+        "en": "Arabic & Latin type system"
+      },
+      {
+        "ar": "دليل الهوية",
+        "en": "Brand guidelines"
+      },
+      {
+        "ar": "ملفات جاهزة للإنتاج",
+        "en": "Production-ready files"
+      }
+    ],
+    "image": {
+      "src": "/media/services/brand-identity.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "الهوية البصرية",
+        "en": "Brand Identity"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_logo-design",
+    "slug": "logo-design",
+    "published": true,
+    "order": 1,
+    "name": {
+      "ar": "تصميم الشعارات",
+      "en": "Logo Design"
+    },
+    "description": {
+      "ar": "شعار مبني على معنى، يعمل بالعربية والإنكليزية وبكل المقاسات.",
+      "en": "A mark built on meaning that holds up in Arabic and Latin, at every size."
+    },
+    "deliverables": [
+      {
+        "ar": "ثلاثة اتجاهات أولية",
+        "en": "Three initial directions"
+      },
+      {
+        "ar": "جولتا تعديل",
+        "en": "Two revision rounds"
+      },
+      {
+        "ar": "نسخ أفقية ورأسية وأيقونية",
+        "en": "Horizontal, vertical & icon lockups"
+      },
+      {
+        "ar": "ملفات متجهة",
+        "en": "Vector files"
+      }
+    ],
+    "image": {
+      "src": "/media/services/logo-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم الشعارات",
+        "en": "Logo Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_arabic-typography",
+    "slug": "arabic-typography",
+    "published": true,
+    "order": 2,
+    "name": {
+      "ar": "التايبوغرافي العربي",
+      "en": "Arabic Typography"
+    },
+    "description": {
+      "ar": "ضبط النص العربي: الاختيار، التنسيق، الشبكة، والعلاقة بين العربي واللاتيني.",
+      "en": "Setting Arabic well: selection, composition, grid, and how Arabic and Latin sit together."
+    },
+    "deliverables": [
+      {
+        "ar": "نظام تايبوغرافي",
+        "en": "Type system"
+      },
+      {
+        "ar": "شبكة وتخطيط",
+        "en": "Grid & layout"
+      },
+      {
+        "ar": "قواعد الاستخدام",
+        "en": "Usage rules"
+      }
+    ],
+    "image": {
+      "src": "/media/services/arabic-typography.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "التايبوغرافي العربي",
+        "en": "Arabic Typography"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_font-design",
+    "slug": "font-design",
+    "published": true,
+    "order": 3,
+    "name": {
+      "ar": "تصميم الخطوط",
+      "en": "Font Design"
+    },
+    "description": {
+      "ar": "خط عربي مخصص لعلامتك، من الرسم الأول إلى ملف OpenType مختبَر.",
+      "en": "A bespoke Arabic typeface for your brand, from first drawings to a tested OpenType file."
+    },
+    "deliverables": [
+      {
+        "ar": "رسم الحروف والأشكال",
+        "en": "Letterform & shape design"
+      },
+      {
+        "ar": "أوزان متعددة",
+        "en": "Multiple weights"
+      },
+      {
+        "ar": "تشكيل وتراكيب",
+        "en": "Vocalisation & ligatures"
+      },
+      {
+        "ar": "ملفات OTF/TTF/WOFF",
+        "en": "OTF / TTF / WOFF files"
+      },
+      {
+        "ar": "ترخيص واضح",
+        "en": "A clear licence"
+      }
+    ],
+    "image": {
+      "src": "/media/services/font-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم الخطوط",
+        "en": "Font Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_arabic-calligraphy",
+    "slug": "arabic-calligraphy",
+    "published": true,
+    "order": 4,
+    "name": {
+      "ar": "الخط العربي",
+      "en": "Arabic Calligraphy"
+    },
+    "description": {
+      "ar": "أعمال خط يدوي ورقمنة للأعمال الخطية للاستخدام في الهويات والمطبوعات.",
+      "en": "Hand-lettered Arabic and digitised calligraphy for identities and print."
+    },
+    "deliverables": [
+      {
+        "ar": "عمل خطي أصلي",
+        "en": "Original lettering"
+      },
+      {
+        "ar": "رقمنة ومعالجة",
+        "en": "Digitisation & clean-up"
+      },
+      {
+        "ar": "ملفات متجهة",
+        "en": "Vector files"
+      }
+    ],
+    "image": {
+      "src": "/media/services/arabic-calligraphy.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "الخط العربي",
+        "en": "Arabic Calligraphy"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": false
+  },
+  {
+    "id": "svc_art-direction",
+    "slug": "art-direction",
+    "published": true,
+    "order": 5,
+    "name": {
+      "ar": "الإدارة الفنية",
+      "en": "Art Direction"
+    },
+    "description": {
+      "ar": "توجيه بصري لحملة أو منتج أو إصدار — من المزاج إلى التنفيذ.",
+      "en": "Visual direction for a campaign, product or issue — from mood to final execution."
+    },
+    "deliverables": [
+      {
+        "ar": "لوحة اتجاه بصري",
+        "en": "Art direction deck"
+      },
+      {
+        "ar": "إشراف على التصوير",
+        "en": "Shoot supervision"
+      },
+      {
+        "ar": "مراجعة التنفيذ",
+        "en": "Execution review"
+      }
+    ],
+    "image": {
+      "src": "/media/services/art-direction.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "الإدارة الفنية",
+        "en": "Art Direction"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_motion-design",
+    "slug": "motion-design",
+    "published": true,
+    "order": 6,
+    "name": {
+      "ar": "الموشن",
+      "en": "Motion Design"
+    },
+    "description": {
+      "ar": "تحريك الهوية: شعار متحرك، عناوين، ومحتوى قصير للمنصات.",
+      "en": "Identity in motion: animated marks, titles and short-form content for platforms."
+    },
+    "deliverables": [
+      {
+        "ar": "شعار متحرك",
+        "en": "Animated logo"
+      },
+      {
+        "ar": "قوالب عناوين",
+        "en": "Title templates"
+      },
+      {
+        "ar": "ملفات جاهزة للنشر",
+        "en": "Export-ready files"
+      }
+    ],
+    "image": {
+      "src": "/media/services/motion-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "الموشن",
+        "en": "Motion Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": false
+  },
+  {
+    "id": "svc_editorial-design",
+    "slug": "editorial-design",
+    "published": true,
+    "order": 7,
+    "name": {
+      "ar": "التصميم التحريري",
+      "en": "Editorial Design"
+    },
+    "description": {
+      "ar": "كتب ومجلات وتقارير: شبكة، تسلسل، وإيقاع صفحات يخدم القراءة.",
+      "en": "Books, magazines and reports: grid, sequence and a page rhythm that serves reading."
+    },
+    "deliverables": [
+      {
+        "ar": "شبكة وأنماط صفحات",
+        "en": "Grid & page styles"
+      },
+      {
+        "ar": "تنضيد كامل",
+        "en": "Full typesetting"
+      },
+      {
+        "ar": "تجهيز للطباعة",
+        "en": "Print preparation"
+      }
+    ],
+    "image": {
+      "src": "/media/services/editorial-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "التصميم التحريري",
+        "en": "Editorial Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  },
+  {
+    "id": "svc_social-media-design",
+    "slug": "social-media-design",
+    "published": true,
+    "order": 8,
+    "name": {
+      "ar": "تصميم السوشيال ميديا",
+      "en": "Social Media Design"
+    },
+    "description": {
+      "ar": "نظام قوالب يحافظ على الهوية ويسهّل الإنتاج اليومي.",
+      "en": "A template system that holds the identity together and makes daily output easy."
+    },
+    "deliverables": [
+      {
+        "ar": "نظام قوالب",
+        "en": "Template system"
+      },
+      {
+        "ar": "ملفات قابلة للتحرير",
+        "en": "Editable source files"
+      },
+      {
+        "ar": "دليل استخدام مختصر",
+        "en": "A short usage guide"
+      }
+    ],
+    "image": {
+      "src": "/media/services/social-media-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم السوشيال ميديا",
+        "en": "Social Media Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": false
+  },
+  {
+    "id": "svc_packaging-design",
+    "slug": "packaging-design",
+    "published": true,
+    "order": 9,
+    "name": {
+      "ar": "تصميم التغليف",
+      "en": "Packaging Design"
+    },
+    "description": {
+      "ar": "تغليف يقرأ على الرف: تسلسل معلومات واضح وحضور بصري قوي.",
+      "en": "Packaging that reads on the shelf: a clear information hierarchy and real presence."
+    },
+    "deliverables": [
+      {
+        "ar": "تصميم العبوة",
+        "en": "Structural & surface design"
+      },
+      {
+        "ar": "نظام معلومات",
+        "en": "Information system"
+      },
+      {
+        "ar": "ملفات دايلاين",
+        "en": "Dieline files"
+      }
+    ],
+    "image": {
+      "src": "/media/services/packaging-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم التغليف",
+        "en": "Packaging Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": false
+  },
+  {
+    "id": "svc_ui-ux",
+    "slug": "ui-ux",
+    "published": true,
+    "order": 10,
+    "name": {
+      "ar": "واجهات وتجربة المستخدم",
+      "en": "UI/UX"
+    },
+    "description": {
+      "ar": "واجهات عربية تُقرأ فعلاً: اتجاه صحيح، تايبوغرافي مضبوط، ونظام واضح.",
+      "en": "Arabic interfaces that actually read: correct direction, tuned typography, a clear system."
+    },
+    "deliverables": [
+      {
+        "ar": "نظام تصميم",
+        "en": "Design system"
+      },
+      {
+        "ar": "شاشات أساسية",
+        "en": "Key screens"
+      },
+      {
+        "ar": "تسليم للمطوّرين",
+        "en": "Developer handoff"
+      }
+    ],
+    "image": {
+      "src": "/media/services/ui-ux.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "واجهات وتجربة المستخدم",
+        "en": "UI/UX"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true
+  }
+]

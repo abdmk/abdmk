@@ -1,0 +1,492 @@
+[
+  {
+    "id": "co_shorouk-studio",
+    "slug": "shorouk-studio",
+    "published": true,
+    "order": 0,
+    "name": {
+      "ar": "استوديو الشروق",
+      "en": "Shorouk Studio"
+    },
+    "logo": {
+      "src": "/media/companies/shorouk-studio/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار استوديو الشروق",
+        "en": "Shorouk Studio logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "استوديو تصميم متعدد التخصصات يعمل مع مؤسسات ثقافية في المنطقة.",
+      "en": "A multidisciplinary design studio working with cultural institutions across the region."
+    },
+    "role": {
+      "ar": "مدير فني",
+      "en": "Art Director"
+    },
+    "period": {
+      "ar": "٢٠٢٤ — الآن",
+      "en": "2024 — Present"
+    },
+    "type": "studio",
+    "services": [
+      "brand-identity",
+      "art-direction"
+    ],
+    "url": "https://example.com/shorouk-studio",
+    "images": [
+      {
+        "src": "/media/companies/shorouk-studio/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ استوديو الشروق",
+          "en": "Work for Shorouk Studio"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/shorouk-studio/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ استوديو الشروق",
+          "en": "Work for Shorouk Studio"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": true
+  },
+  {
+    "id": "co_levant-agency",
+    "slug": "levant-agency",
+    "published": true,
+    "order": 1,
+    "name": {
+      "ar": "وكالة المشرق",
+      "en": "Levant Agency"
+    },
+    "logo": {
+      "src": "/media/companies/levant-agency/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار وكالة المشرق",
+        "en": "Levant Agency logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "وكالة إعلانية تغطي حملات إقليمية للعلامات الاستهلاكية.",
+      "en": "An advertising agency running regional campaigns for consumer brands."
+    },
+    "role": {
+      "ar": "مصمم جرافيك أول",
+      "en": "Senior Graphic Designer"
+    },
+    "period": {
+      "ar": "٢٠٢٢ — ٢٠٢٤",
+      "en": "2022 — 2024"
+    },
+    "type": "agency",
+    "services": [
+      "brand-identity",
+      "art-direction"
+    ],
+    "url": "https://example.com/levant-agency",
+    "images": [
+      {
+        "src": "/media/companies/levant-agency/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ وكالة المشرق",
+          "en": "Work for Levant Agency"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/levant-agency/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ وكالة المشرق",
+          "en": "Work for Levant Agency"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": true
+  },
+  {
+    "id": "co_nahda-press",
+    "slug": "nahda-press",
+    "published": true,
+    "order": 2,
+    "name": {
+      "ar": "دار النهضة",
+      "en": "Nahda Press"
+    },
+    "logo": {
+      "src": "/media/companies/nahda-press/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار دار النهضة",
+        "en": "Nahda Press logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "دار نشر مستقلة تُعنى بالأدب العربي المعاصر والترجمة.",
+      "en": "An independent publishing house for contemporary Arabic literature and translation."
+    },
+    "role": {
+      "ar": "مصمم تحريري",
+      "en": "Editorial Designer"
+    },
+    "period": {
+      "ar": "٢٠٢١ — الآن",
+      "en": "2021 — Present"
+    },
+    "type": "organization",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/nahda-press",
+    "images": [
+      {
+        "src": "/media/companies/nahda-press/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ دار النهضة",
+          "en": "Work for Nahda Press"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/nahda-press/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ دار النهضة",
+          "en": "Work for Nahda Press"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": true
+  },
+  {
+    "id": "co_qamar-foods",
+    "slug": "qamar-foods",
+    "published": true,
+    "order": 3,
+    "name": {
+      "ar": "أغذية قمر",
+      "en": "Qamar Foods"
+    },
+    "logo": {
+      "src": "/media/companies/qamar-foods/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار أغذية قمر",
+        "en": "Qamar Foods logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "علامة أغذية إقليمية تعيد بناء حضورها البصري.",
+      "en": "A regional food brand rebuilding its visual presence."
+    },
+    "role": {
+      "ar": "مصمم هوية وتغليف",
+      "en": "Identity & Packaging Designer"
+    },
+    "period": {
+      "ar": "٢٠٢٣",
+      "en": "2023"
+    },
+    "type": "client",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/qamar-foods",
+    "images": [
+      {
+        "src": "/media/companies/qamar-foods/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أغذية قمر",
+          "en": "Work for Qamar Foods"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/qamar-foods/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أغذية قمر",
+          "en": "Work for Qamar Foods"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": false
+  },
+  {
+    "id": "co_aswat-media",
+    "slug": "aswat-media",
+    "published": true,
+    "order": 4,
+    "name": {
+      "ar": "أصوات ميديا",
+      "en": "Aswat Media"
+    },
+    "logo": {
+      "src": "/media/companies/aswat-media/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار أصوات ميديا",
+        "en": "Aswat Media logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "منصة محتوى صوتي ومرئي باللغة العربية.",
+      "en": "An Arabic-language audio and video content platform."
+    },
+    "role": {
+      "ar": "مدير فني — موشن",
+      "en": "Art Director, Motion"
+    },
+    "period": {
+      "ar": "٢٠٢٣ — ٢٠٢٤",
+      "en": "2023 — 2024"
+    },
+    "type": "company",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/aswat-media",
+    "images": [
+      {
+        "src": "/media/companies/aswat-media/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أصوات ميديا",
+          "en": "Work for Aswat Media"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/aswat-media/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أصوات ميديا",
+          "en": "Work for Aswat Media"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": false
+  },
+  {
+    "id": "co_madad-tech",
+    "slug": "madad-tech",
+    "published": true,
+    "order": 5,
+    "name": {
+      "ar": "مدد",
+      "en": "Madad Tech"
+    },
+    "logo": {
+      "src": "/media/companies/madad-tech/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار مدد",
+        "en": "Madad Tech logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "شركة منتجات رقمية تبني أدوات للأعمال الصغيرة.",
+      "en": "A product company building tools for small businesses."
+    },
+    "role": {
+      "ar": "مصمم منتج",
+      "en": "Product Designer"
+    },
+    "period": {
+      "ar": "٢٠٢٢",
+      "en": "2022"
+    },
+    "type": "company",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/madad-tech",
+    "images": [
+      {
+        "src": "/media/companies/madad-tech/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ مدد",
+          "en": "Work for Madad Tech"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/madad-tech/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ مدد",
+          "en": "Work for Madad Tech"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": false,
+    "showInExperience": false
+  },
+  {
+    "id": "co_beirut-book-fair-org",
+    "slug": "beirut-book-fair-org",
+    "published": true,
+    "order": 6,
+    "name": {
+      "ar": "معرض بيروت للكتاب",
+      "en": "Beirut Book Fair"
+    },
+    "logo": {
+      "src": "/media/companies/beirut-book-fair-org/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار معرض بيروت للكتاب",
+        "en": "Beirut Book Fair logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "أحد أقدم معارض الكتاب في المنطقة.",
+      "en": "One of the region's longest-running book fairs."
+    },
+    "role": {
+      "ar": "مدير فني للدورة",
+      "en": "Art Director, 2024 edition"
+    },
+    "period": {
+      "ar": "٢٠٢٤",
+      "en": "2024"
+    },
+    "type": "organization",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/beirut-book-fair-org",
+    "images": [
+      {
+        "src": "/media/companies/beirut-book-fair-org/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ معرض بيروت للكتاب",
+          "en": "Work for Beirut Book Fair"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/beirut-book-fair-org/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ معرض بيروت للكتاب",
+          "en": "Work for Beirut Book Fair"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": true,
+    "showInExperience": false
+  },
+  {
+    "id": "co_independent",
+    "slug": "independent",
+    "published": true,
+    "order": 7,
+    "name": {
+      "ar": "أعمال مستقلة",
+      "en": "Independent"
+    },
+    "logo": {
+      "src": "/media/companies/independent/logo.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "شعار أعمال مستقلة",
+        "en": "Independent logo"
+      },
+      "width": 320,
+      "height": 120
+    },
+    "description": {
+      "ar": "مشاريع ذاتية وأبحاث في الحرف العربي خارج إطار العمل المكلَّف.",
+      "en": "Self-initiated projects and research into the Arabic letterform, outside commissioned work."
+    },
+    "role": {
+      "ar": "مصمم",
+      "en": "Designer"
+    },
+    "period": {
+      "ar": "مستمر",
+      "en": "Ongoing"
+    },
+    "type": "personal",
+    "services": [
+      "brand-identity"
+    ],
+    "url": "https://example.com/independent",
+    "images": [
+      {
+        "src": "/media/companies/independent/01.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أعمال مستقلة",
+          "en": "Work for Independent"
+        },
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/media/companies/independent/02.svg",
+        "kind": "image",
+        "alt": {
+          "ar": "عمل لـ أعمال مستقلة",
+          "en": "Work for Independent"
+        },
+        "width": 1400,
+        "height": 1400
+      }
+    ],
+    "featured": false,
+    "showInExperience": false
+  }
+]

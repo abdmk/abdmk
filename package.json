@@ -1,0 +1,37 @@
+{
+  "name": "abdmk-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "icons": "python3 scripts/extract-uicons.py",
+    "fonts": "python3 scripts/ttf-to-woff.py fonts-src public/fonts",
+    "seed": "python3 scripts/seed-content.py",
+    "placeholders": "python3 scripts/generate-placeholders.py && python3 scripts/generate-motion-placeholders.py && node scripts/record-demo-video.mjs"
+  },
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
+    "motion": "^13.1.1",
+    "next": "^15.5.24",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "autoprefixer": "^10.5.4",
+    "axe-core": "^4.13.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.24",
+    "playwright": "^1.62.1",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^3.4.19",
+    "typescript": "5.7"
+  }
+}

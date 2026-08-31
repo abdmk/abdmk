@@ -1,0 +1,130 @@
+[
+  {
+    "slug": "branding",
+    "name": {
+      "ar": "الهوية البصرية",
+      "en": "Branding"
+    },
+    "order": 0
+  },
+  {
+    "slug": "graphic-design",
+    "name": {
+      "ar": "تصميم جرافيك",
+      "en": "Graphic Design"
+    },
+    "order": 1
+  },
+  {
+    "slug": "arabic-typography",
+    "name": {
+      "ar": "تايبوغرافي عربي",
+      "en": "Arabic Typography"
+    },
+    "order": 2
+  },
+  {
+    "slug": "fonts",
+    "name": {
+      "ar": "خطوط",
+      "en": "Fonts"
+    },
+    "order": 3
+  },
+  {
+    "slug": "calligraphy",
+    "name": {
+      "ar": "خط عربي",
+      "en": "Calligraphy"
+    },
+    "order": 4
+  },
+  {
+    "slug": "motion",
+    "name": {
+      "ar": "موشن",
+      "en": "Motion"
+    },
+    "order": 5
+  },
+  {
+    "slug": "digital",
+    "name": {
+      "ar": "ديجيتال",
+      "en": "Digital"
+    },
+    "order": 6
+  },
+  {
+    "slug": "print",
+    "name": {
+      "ar": "مطبوعات",
+      "en": "Print"
+    },
+    "order": 7
+  },
+  {
+    "slug": "posters",
+    "name": {
+      "ar": "ملصقات",
+      "en": "Posters"
+    },
+    "order": 8
+  },
+  {
+    "slug": "editorial",
+    "name": {
+      "ar": "تصميم تحريري",
+      "en": "Editorial"
+    },
+    "order": 9
+  },
+  {
+    "slug": "ui-ux",
+    "name": {
+      "ar": "واجهات وتجربة",
+      "en": "UI/UX"
+    },
+    "order": 10
+  },
+  {
+    "slug": "art-direction",
+    "name": {
+      "ar": "إدارة فنية",
+      "en": "Art Direction"
+    },
+    "order": 11
+  },
+  {
+    "slug": "social-media",
+    "name": {
+      "ar": "سوشيال ميديا",
+      "en": "Social Media"
+    },
+    "order": 12
+  },
+  {
+    "slug": "packaging",
+    "name": {
+      "ar": "تغليف",
+      "en": "Packaging"
+    },
+    "order": 13
+  },
+  {
+    "slug": "wayfinding",
+    "name": {
+      "ar": "أنظمة إرشاد",
+      "en": "Wayfinding"
+    },
+    "order": 14
+  },
+  {
+    "slug": "other",
+    "name": {
+      "ar": "أخرى",
+      "en": "Other"
+    },
+    "order": 15
+  }
+]
