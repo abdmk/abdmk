@@ -18,7 +18,9 @@ interface ContactFormProps {
 }
 
 const FIELD =
-  'w-full border-0 border-b border-line bg-transparent px-0 py-3 text-body outline-none transition-colors placeholder:text-faint/70 focus:border-ink';
+  'w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none ' +
+  'transition-colors duration-300 placeholder:text-faint/70 ' +
+  'hover:border-line-strong focus:border-ink focus:bg-surface';
 
 export function ContactForm({ settings, lang, serviceLabels }: ContactFormProps) {
   const tr = ui(lang);
@@ -66,17 +68,17 @@ export function ContactForm({ settings, lang, serviceLabels }: ContactFormProps)
 
   if (status === 'sent') {
     return (
-      <div className="border-t border-ink py-14" role="status">
-        <p className="inline-flex items-center gap-3 text-h3 font-light">
+      <div className="flex flex-col items-center gap-4 py-12 text-center" role="status">
+        <span className="grid h-14 w-14 place-items-center rounded-full bg-sunken text-ink">
           <Icon name="check" size={24} />
-          {tr.contact.success}
-        </p>
+        </span>
+        <p className="text-h3">{tr.contact.success}</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid gap-7 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
       <div className="sm:col-span-1">
         <label htmlFor="name" className="label mb-1 block">
           {tr.contact.name}
@@ -184,11 +186,11 @@ export function ContactForm({ settings, lang, serviceLabels }: ContactFormProps)
         className="absolute -left-[9999px] h-0 w-0 opacity-0"
       />
 
-      <div className="flex flex-wrap items-center gap-6 sm:col-span-2">
+      <div className="mt-2 flex flex-wrap items-center gap-5 sm:col-span-2">
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex items-center gap-3 bg-ink px-8 py-4 text-small font-medium text-paper transition-opacity hover:opacity-85 disabled:opacity-50"
+          className="btn btn-primary btn-lg disabled:opacity-50"
         >
           {status === 'sending' ? tr.contact.sending : tr.contact.send}
           <Icon name="arrowRight" size={16} flipRtl />

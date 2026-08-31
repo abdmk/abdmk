@@ -8,6 +8,7 @@ import { ProjectCardMini } from '@/components/project/ProjectCard';
 import { ProjectGrid } from '@/components/project/ProjectGrid';
 import { ShareBar } from '@/components/project/ShareBar';
 import { ArrowLink } from '@/components/ui/ArrowLink';
+import { BloomField } from '@/components/ui/Bloom';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import {
@@ -64,7 +65,7 @@ export async function generateMetadata({
 /** A labelled row in the project meta column. */
 function Meta({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="border-t border-line py-3.5">
+    <div className="rounded-xl2 bg-sunken px-4 py-3">
       <dt className="label mb-1.5">{label}</dt>
       <dd className="text-small">{children}</dd>
     </div>
@@ -112,51 +113,54 @@ export default async function ProjectPage({
   };
 
   return (
-    <article>
+    <article className="shell pb-section pt-6 sm:pt-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* ---------------------------------------------------------------- Hero */}
-      <header className="shell pb-10 pt-8 md:pb-14 md:pt-12">
-        <Link
-          href={localePath(lang, '/work')}
-          className="label inline-flex items-center gap-2 hover:text-ink"
-        >
-          <Icon name="arrowLeft" size={13} flipRtl />
-          {tr.project.backToWork}
-        </Link>
+      <header className="card relative overflow-hidden p-2.5 sm:p-3">
+        <BloomField hues={['peach', 'sky', 'lilac']} />
 
-        <h1 className="mt-8 max-w-[18ch] text-display font-light">{t(project.title, lang)}</h1>
-        <p className="mt-6 max-w-prose text-lead text-muted">
-          {t(project.shortDescription, lang)}
-        </p>
+        <div className="relative px-3.5 pb-8 pt-5 sm:px-6 sm:pb-10 sm:pt-7 lg:px-10 lg:pb-12">
+          <Link
+            href={localePath(lang, '/work')}
+            className="chip transition-colors duration-300 hover:bg-ink hover:text-surface"
+          >
+            <Icon name="arrowLeft" size={13} flipRtl />
+            {tr.project.backToWork}
+          </Link>
+
+          <h1 className="mt-7 max-w-[20ch] text-display">{t(project.title, lang)}</h1>
+          <p className="mt-5 max-w-prose text-lead text-muted">
+            {t(project.shortDescription, lang)}
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken">
+          <SmartImage
+            src={project.cover.src}
+            alt={t(project.cover.alt, lang)}
+            width={project.cover.width}
+            height={project.cover.height}
+            sizes="(max-width: 1024px) 100vw, 88vw"
+            priority
+            className="w-full"
+          />
+        </div>
       </header>
 
-      <div className="relative w-full">
-        <SmartImage
-          src={project.cover.src}
-          alt={t(project.cover.alt, lang)}
-          width={project.cover.width}
-          height={project.cover.height}
-          sizes="100vw"
-          priority
-          className="w-full"
-        />
-      </div>
-
       {/* ---------------------------------------------------------------- Meta */}
-      <div className="shell mt-12 md:mt-16">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-12">
-          <div className="md:col-span-4 lg:col-span-3">
-            <dl className="m-0">
-            <Meta label={tr.project.year}>
+      <div className="mt-5 grid gap-5 lg:mt-6 lg:grid-cols-12 lg:gap-6">
+        <div className="card p-6 sm:p-7 lg:col-span-5 xl:col-span-4">
+          <dl className="m-0 space-y-2">
+          <Meta label={tr.project.year}>
               <span className="numeric">{project.year}</span>
             </Meta>
 
             {company ? (
-              <Meta label={tr.project.client}>
+            <Meta label={tr.project.client}>
                 <Link
                   href={localePath(lang, `/company/${company.slug}`)}
                   className="link-underline inline-flex items-center gap-1.5 font-medium"
@@ -167,10 +171,10 @@ export default async function ProjectPage({
               </Meta>
             ) : null}
 
-            <Meta label={tr.project.role}>{t(project.role, lang)}</Meta>
+          <Meta label={tr.project.role}>{t(project.role, lang)}</Meta>
 
             {projectServices.length ? (
-              <Meta label={tr.project.services}>
+            <Meta label={tr.project.services}>
                 <ul className="list-none space-y-1 p-0">
                   {projectServices.map((service) => (
                     <li key={service.id}>
@@ -187,7 +191,7 @@ export default async function ProjectPage({
             ) : null}
 
             {categoryNames.length ? (
-              <Meta label={tr.project.categories}>
+            <Meta label={tr.project.categories}>
                 <ul className="flex list-none flex-wrap gap-x-3 gap-y-1 p-0">
                   {categoryNames.map((category) => (
                     <li key={category!.slug}>
@@ -204,7 +208,7 @@ export default async function ProjectPage({
             ) : null}
 
             {projectFonts.length ? (
-              <Meta label={tr.project.fontsUsed}>
+            <Meta label={tr.project.fontsUsed}>
                 <ul className="list-none space-y-1 p-0">
                   {projectFonts.map((font) => (
                     <li key={font.id}>
@@ -218,40 +222,39 @@ export default async function ProjectPage({
             ) : null}
 
             {project.tools.length ? (
-              <Meta label={tr.project.tools}>{project.tools.join('، ')}</Meta>
+            <Meta label={tr.project.tools}>{project.tools.join('، ')}</Meta>
             ) : null}
-            </dl>
+          </dl>
 
-            {/* Actions sit outside the definition list: they are not terms. */}
-            <div className="border-t border-line pt-5">
-              {project.projectUrl ? (
-                <ArrowLink href={project.projectUrl} external className="mb-5">
-                  {tr.project.visitProject}
-                </ArrowLink>
-              ) : null}
-              <ShareBar
-                title={t(project.title, lang)}
-                path={`/${lang}/project/${slug}`}
-                lang={lang}
-              />
-            </div>
+          {/* Actions sit outside the definition list: they are not terms. */}
+          <div className="mt-6 border-t border-line pt-6">
+            {project.projectUrl ? (
+              <ArrowLink href={project.projectUrl} external className="mb-5">
+                {tr.project.visitProject}
+              </ArrowLink>
+            ) : null}
+            <ShareBar
+              title={t(project.title, lang)}
+              path={`/${lang}/project/${slug}`}
+              lang={lang}
+            />
           </div>
+        </div>
 
-          <div className="md:col-span-7 md:col-start-6">
-            <p className="text-h3 font-light leading-snug">{t(project.fullDescription, lang)}</p>
-          </div>
+        <div className="card flex items-center p-6 sm:p-8 lg:col-span-7 lg:p-12 xl:col-span-8">
+          <p className="text-h3 font-normal leading-snug">{t(project.fullDescription, lang)}</p>
         </div>
       </div>
 
       {/* --------------------------------------------------------- Case study */}
-      <div className="mt-16 md:mt-24">
+      <div className="mt-section">
         <ProjectBlocks blocks={project.blocks} lang={lang} />
       </div>
 
       {/* --------------------------------------------------------- Navigation */}
       <nav
         aria-label={tr.project.nextProject}
-        className="shell mt-section grid gap-12 border-t border-line pt-12 md:grid-cols-2 md:gap-8"
+        className="mt-section grid gap-5 md:grid-cols-2 lg:gap-6"
       >
         {neighbours.previous ? (
           <ProjectCardMini
@@ -274,8 +277,8 @@ export default async function ProjectPage({
 
       {/* ------------------------------------------------------------ Related */}
       {related.length ? (
-        <section className="shell mt-section">
-          <SectionHeader title={tr.project.related} className="mb-10" />
+        <section className="mt-section">
+          <SectionHeader title={tr.project.related} className="mb-9 md:mb-12" />
           <Reveal>
             <ProjectGrid
               projects={related}

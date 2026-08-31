@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { WorkFilters } from '@/components/project/WorkFilters';
+import { PageHeader } from '@/components/ui/PageHeader';
 import {
   activeCategories,
   companies as getCompanies,
@@ -33,13 +34,16 @@ export default async function WorkPage({ params }: { params: Promise<{ lang: Lan
   ]);
 
   return (
-    <div className="shell py-14 md:py-20">
-      <header className="mb-12 md:mb-16">
-        <h1 className="text-display font-light">{tr.work.title}</h1>
-        <p className="label numeric mt-6">
-          {projects.length} {tr.work.projectCount}
-        </p>
-      </header>
+    <div className="shell pb-section pt-6 sm:pt-8">
+      <PageHeader
+        title={tr.work.title}
+        meta={
+          <span className="chip numeric">
+            {projects.length} {tr.work.projectCount}
+          </span>
+        }
+        className="mb-9 md:mb-12"
+      />
 
       <Suspense fallback={<div className="py-20 text-center text-muted">{tr.common.loading}</div>}>
         <WorkFilters projects={projects} categories={categories} companies={companies} lang={lang} />

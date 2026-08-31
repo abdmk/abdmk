@@ -201,6 +201,7 @@ const dict = {
     connect: { ar: 'تواصل', en: 'Connect' },
     rights: { ar: 'جميع الحقوق محفوظة', en: 'All rights reserved' },
     backToTop: { ar: 'إلى الأعلى', en: 'Back to top' },
+    startProject: { ar: 'ابدأ مشروعًا', en: 'Start a project' },
   },
   common: {
     notFound: { ar: 'الصفحة غير موجودة', en: 'Page not found' },

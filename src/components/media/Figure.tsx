@@ -42,13 +42,13 @@ export function Figure({ media, lang, sizes, priority, className, showCaption = 
   return (
     <figure className={cn('m-0', className)}>
       <div
-        className="relative overflow-hidden bg-ink/[0.04]"
+        className="relative overflow-hidden rounded-card bg-sunken"
         style={ratio ? { aspectRatio: String(ratio) } : undefined}
       >
         {inner}
       </div>
       {showCaption && media.caption && t(media.caption, lang) ? (
-        <figcaption className="mt-3 text-small text-faint">{t(media.caption, lang)}</figcaption>
+        <figcaption className="mt-3 px-1 text-small text-faint">{t(media.caption, lang)}</figcaption>
       ) : null}
     </figure>
   );

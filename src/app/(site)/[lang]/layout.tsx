@@ -13,7 +13,7 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F4F2ED',
+  themeColor: '#F4F5F7',
   width: 'device-width',
   initialScale: 1,
 };
@@ -88,7 +88,7 @@ export default async function SiteLayout({
       </head>
       <body className="min-h-dvh antialiased">
         <Navbar lang={typed} settings={s} />
-        <main id="main" className="pt-[68px] md:pt-[76px]">
+        <main id="main" className="pt-[76px] sm:pt-[88px]">
           {children}
         </main>
         <Footer lang={typed} settings={s} />

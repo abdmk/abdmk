@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { Icon, type IconName } from '@/components/icons';
 import { ContactForm } from '@/components/ui/ContactForm';
 import { SocialLinks } from '@/components/layout/SocialLinks';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { services as getServices, settings as getSettings } from '@/lib/content/queries';
 import type { Lang } from '@/lib/content/types';
 import { t } from '@/lib/i18n/config';
@@ -64,48 +65,56 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   ];
 
   return (
-    <div className="shell py-14 md:py-20">
-      <header className="mb-14 md:mb-20">
-        <h1 className="text-display font-light">{tr.contact.title}</h1>
-        <p className="mt-6 max-w-prose text-lead text-muted">{tr.contact.intro}</p>
-      </header>
+    <div className="shell pb-section pt-6 sm:pt-8">
+      <PageHeader
+        title={tr.contact.title}
+        intro={tr.contact.intro}
+        hues={['mint', 'peach', 'lilac']}
+        className="mb-9 md:mb-12"
+      />
 
-      <div className="grid gap-14 md:grid-cols-12 md:gap-12">
-        <div className="md:col-span-7">
+      <div className="grid gap-5 lg:grid-cols-12 lg:gap-6">
+        <div className="card p-6 sm:p-8 lg:col-span-7 lg:p-10">
           <Suspense fallback={<p className="text-muted">{tr.common.loading}</p>}>
             <ContactForm settings={settings} lang={lang} serviceLabels={serviceLabels} />
           </Suspense>
         </div>
 
-        <aside className="md:col-span-4 md:col-start-9">
-          <h2 className="label mb-4">{tr.contact.elsewhere}</h2>
-          <ul className="list-none border-t border-line p-0">
-            {direct.map((item) => (
-              <li key={item.href} className="border-b border-line">
-                <a
-                  href={item.href}
-                  target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noreferrer noopener' : undefined}
-                  className="flex items-center gap-3.5 py-3.5 transition-opacity hover:opacity-60"
-                >
-                  <Icon name={item.icon} size={17} className="text-faint" />
-                  <span className="text-small" dir="ltr">
-                    {item.value}
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <SocialLinks links={settings.social} className="-ms-2.5 mt-5" />
-
-          <div className="mt-10 border-t border-line pt-5">
-            <h2 className="label mb-2">{tr.contact.availability}</h2>
-            <p className="text-small text-muted">{t(settings.contact.availability, lang)}</p>
+        <aside className="flex flex-col gap-4 lg:col-span-5 lg:gap-5">
+          <div className="card p-6 sm:p-7">
+            <h2 className="text-h3">{tr.contact.elsewhere}</h2>
+            <ul className="mt-5 list-none space-y-2 p-0">
+              {direct.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noreferrer noopener' : undefined}
+                    className="group flex items-center gap-3.5 rounded-xl2 bg-sunken px-4 py-3.5 transition-colors duration-300 hover:bg-ink"
+                  >
+                    <Icon
+                      name={item.icon}
+                      size={17}
+                      className="text-faint transition-colors group-hover:text-surface"
+                    />
+                    <span
+                      className="text-small transition-colors group-hover:text-surface"
+                      dir="ltr"
+                    >
+                      {item.value}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <SocialLinks links={settings.social} className="mt-5" />
           </div>
 
-          <div className="mt-8 border-t border-line pt-5">
-            <h2 className="label mb-2 inline-flex items-center gap-2">
+          <div className="card p-6 sm:p-7">
+            <h2 className="label mb-2">{tr.contact.availability}</h2>
+            <p className="text-small text-muted">{t(settings.contact.availability, lang)}</p>
+
+            <h2 className="label mb-2 mt-6 inline-flex items-center gap-2">
               <Icon name="location" size={13} />
               {tr.companies.type}
             </h2>

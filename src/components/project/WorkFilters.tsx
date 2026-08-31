@@ -47,27 +47,27 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
 
   return (
     <>
-      <div className="mb-10 md:mb-14">
-        {/* Mobile: a disclosure, so a long taxonomy does not push the work down. */}
+      <div className="mb-8 md:mb-12">
+        {/* Mobile: a disclosure card, so a long taxonomy does not push work down. */}
         <div className="md:hidden">
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="flex w-full items-center justify-between border-y border-line py-3.5"
+            className="card flex w-full items-center justify-between px-5 py-4"
           >
             <span className="inline-flex items-center gap-2.5 text-small font-medium">
-              <Icon name="filter" size={15} />
+              <Icon name="filter" size={15} className="text-faint" />
               {tr.work.filter}: {t(activeLabel, lang)}
             </span>
             <Icon
               name="chevronDown"
               size={16}
-              className={cn('transition-transform duration-300', open && 'rotate-180')}
+              className={cn('text-faint transition-transform duration-300', open && 'rotate-180')}
             />
           </button>
           {open ? (
-            <ul className="list-none border-b border-line p-0 py-2">
+            <ul className="card mt-2 list-none p-2">
               {options.map((option) => (
                 <li key={option.slug}>
                   <button
@@ -75,12 +75,14 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
                     onClick={() => select(option.slug)}
                     aria-current={active === option.slug ? 'true' : undefined}
                     className={cn(
-                      'flex w-full items-center justify-between py-2 text-small',
-                      active === option.slug ? 'font-medium' : 'text-muted',
+                      'flex w-full items-center justify-between rounded-full px-4 py-2.5 text-small transition-colors',
+                      active === option.slug
+                        ? 'bg-ink font-medium text-surface'
+                        : 'text-muted hover:bg-sunken',
                     )}
                   >
                     {t(option.name, lang)}
-                    <span className="numeric text-faint">{option.count}</span>
+                    <span className="numeric opacity-70">{option.count}</span>
                   </button>
                 </li>
               ))}
@@ -88,9 +90,9 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
           ) : null}
         </div>
 
-        {/* Desktop: the whole taxonomy on one line, scrollable if it overflows. */}
+        {/* Desktop: the taxonomy as a wrapping row of pills. */}
         <ul
-          className="no-scrollbar hidden list-none gap-x-5 gap-y-2 overflow-x-auto border-y border-line p-0 py-3.5 md:flex md:flex-wrap"
+          className="hidden list-none flex-wrap gap-2 p-0 md:flex"
           aria-label={tr.work.filter}
         >
           {options.map((option) => (
@@ -100,14 +102,22 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
                 onClick={() => select(option.slug)}
                 aria-current={active === option.slug ? 'true' : undefined}
                 className={cn(
-                  'group inline-flex items-baseline gap-1.5 whitespace-nowrap text-small transition-colors',
-                  active === option.slug ? 'font-medium text-ink' : 'text-muted hover:text-ink',
+                  'inline-flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 text-small',
+                  'transition-colors duration-300',
+                  active === option.slug
+                    ? 'bg-ink font-medium text-surface shadow-pill'
+                    : 'bg-surface text-muted shadow-soft hover:text-ink',
                 )}
               >
-                <span className={cn(active === option.slug && 'link-underline !bg-[length:100%_1px]')}>
-                  {t(option.name, lang)}
+                {t(option.name, lang)}
+                <span
+                  className={cn(
+                    'numeric text-meta',
+                    active === option.slug ? 'opacity-70' : 'text-faint',
+                  )}
+                >
+                  {option.count}
                 </span>
-                <span className="numeric text-meta text-faint">{option.count}</span>
               </button>
             </li>
           ))}

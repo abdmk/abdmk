@@ -59,15 +59,15 @@ export function ShareBar({ title, path, lang }: ShareBarProps) {
     <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
       <span className="label">{t.project.share}</span>
 
-      <div className="flex items-center gap-1">
+      <div className="flex flex-wrap items-center gap-2">
         {canShare ? (
           <button
             type="button"
             onClick={() => void navigator.share({ title, url }).catch(() => undefined)}
             aria-label={t.project.share}
-            className="grid h-10 w-10 place-items-center transition-opacity hover:opacity-55"
+            className="grid h-10 w-10 place-items-center rounded-full bg-sunken text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
           >
-            <Icon name="share" size={17} />
+            <Icon name="share" size={16} />
           </button>
         ) : null}
 
@@ -78,18 +78,18 @@ export function ShareBar({ title, path, lang }: ShareBarProps) {
             target="_blank"
             rel="noreferrer noopener"
             aria-label={target.label}
-            className="grid h-10 w-10 place-items-center transition-opacity hover:opacity-55"
+            className="grid h-10 w-10 place-items-center rounded-full bg-sunken text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
           >
-            <Icon name={target.icon} size={17} />
+            <Icon name={target.icon} size={16} />
           </a>
         ))}
 
         <button
           type="button"
           onClick={copy}
-          className="inline-flex h-10 items-center gap-2 px-2 text-small transition-opacity hover:opacity-55"
+          className="inline-flex h-10 items-center gap-2 rounded-full bg-sunken px-4 text-small text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
         >
-          <Icon name={copied ? 'check' : 'copy'} size={17} />
+          <Icon name={copied ? 'check' : 'copy'} size={16} />
           <span>{copied ? t.project.copied : t.project.copyLink}</span>
         </button>
       </div>

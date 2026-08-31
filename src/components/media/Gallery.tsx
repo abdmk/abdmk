@@ -34,7 +34,7 @@ export function Gallery({ media, lang, columns = 3, className }: GalleryProps) {
             <button
               type="button"
               onClick={() => setOpen(i)}
-              className="media-zoom group relative block w-full overflow-hidden bg-ink/[0.04]"
+              className="media-zoom group relative block w-full overflow-hidden rounded-card bg-sunken"
               style={
                 item.width && item.height
                   ? { aspectRatio: String(item.width / item.height) }

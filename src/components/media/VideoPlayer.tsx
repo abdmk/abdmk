@@ -76,7 +76,7 @@ export function VideoPlayer({ media, lang, className }: VideoPlayerProps) {
           <button
             type="button"
             onClick={toggle}
-            className="pointer-events-auto grid h-9 w-9 place-items-center bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-paper"
+            className="pointer-events-auto grid h-9 w-9 place-items-center rounded-full bg-white/90 text-[#0F1115] shadow-soft backdrop-blur transition-colors hover:bg-white"
             aria-label={playing ? 'Pause' : 'Play'}
           >
             <Icon name={playing ? 'pause' : 'play'} size={15} />
@@ -89,7 +89,7 @@ export function VideoPlayer({ media, lang, className }: VideoPlayerProps) {
               el.muted = !el.muted;
               setMuted(el.muted);
             }}
-            className="pointer-events-auto grid h-9 w-9 place-items-center bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-paper"
+            className="pointer-events-auto grid h-9 w-9 place-items-center rounded-full bg-white/90 text-[#0F1115] shadow-soft backdrop-blur transition-colors hover:bg-white"
             aria-label={muted ? 'Unmute' : 'Mute'}
           >
             <Icon name={muted ? 'mute' : 'unmute'} size={15} />
@@ -97,7 +97,7 @@ export function VideoPlayer({ media, lang, className }: VideoPlayerProps) {
           <button
             type="button"
             onClick={() => void ref.current?.requestFullscreen?.()}
-            className="pointer-events-auto grid h-9 w-9 place-items-center bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-paper"
+            className="pointer-events-auto grid h-9 w-9 place-items-center rounded-full bg-white/90 text-[#0F1115] shadow-soft backdrop-blur transition-colors hover:bg-white"
             aria-label={t.gallery.zoom}
           >
             <Icon name="fullscreen" size={15} />

@@ -13,7 +13,7 @@ interface ProjectCardProps {
   company?: Company;
   scale?: CardScale;
   priority?: boolean;
-  /** Shown above the title — usually the year or an index. */
+  /** Shown as a chip beside the year — usually the position in the list. */
   index?: number;
 }
 
@@ -25,15 +25,16 @@ const RATIO: Record<CardScale, string> = {
 };
 
 const SIZES: Record<CardScale, string> = {
-  hero: '100vw',
-  wide: '(max-width: 768px) 100vw, 66vw',
-  tall: '(max-width: 768px) 100vw, 33vw',
-  regular: '(max-width: 768px) 100vw, 50vw',
+  hero: '(max-width: 768px) 100vw, 90vw',
+  wide: '(max-width: 768px) 100vw, 60vw',
+  tall: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 34vw',
+  regular: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 44vw',
 };
 
 /**
- * A project in the grid. No card chrome — the artwork is the object, and the
- * type sits under it the way a caption sits under a plate in a printed book.
+ * A project as a floating white card: the artwork sits in a rounded well inside
+ * the surface, the title and client sit under it, and the whole card lifts a few
+ * pixels on hover. One card shape, four aspect ratios.
  */
 export function ProjectCard({
   project,
@@ -46,10 +47,13 @@ export function ProjectCard({
   const title = t(project.title, lang);
 
   return (
-    <article className="group">
-      <Link href={localePath(lang, `/project/${project.slug}`)} className="block">
+    <article className="group h-full">
+      <Link
+        href={localePath(lang, `/project/${project.slug}`)}
+        className="card card-hover flex h-full flex-col overflow-hidden p-2.5 sm:p-3"
+      >
         <div
-          className="media-zoom relative overflow-hidden bg-ink/[0.04]"
+          className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
           style={{ aspectRatio: RATIO[scale] }}
         >
           <SmartImage
@@ -59,40 +63,45 @@ export function ProjectCard({
             sizes={SIZES[scale]}
             priority={priority}
           />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/[0.06]"
-          />
         </div>
 
-        <div className="mt-4 flex items-start justify-between gap-6">
-          <div className="min-w-0">
-            <h3
-              className={cn(
-                'font-medium leading-tight',
-                scale === 'hero' ? 'text-h2' : 'text-h3',
-              )}
-            >
-              <span className="link-underline">{title}</span>
+        <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4 sm:px-3.5 sm:pt-5">
+          <div className="flex items-start justify-between gap-4">
+            <h3 className={cn('leading-tight', scale === 'hero' ? 'text-h2' : 'text-h3')}>
+              {title}
             </h3>
-            <p className="mt-1.5 text-small text-muted">
-              {company ? t(company.name, lang) : t(project.shortDescription, lang)}
-            </p>
+            <span className="chip numeric shrink-0 text-faint">
+              {index !== undefined ? String(index + 1).padStart(2, '0') : project.year}
+            </span>
           </div>
-          <p className="label numeric shrink-0 pt-1.5">
-            {index !== undefined ? String(index + 1).padStart(2, '0') : project.year}
+
+          <p className="mt-2 text-small text-muted">
+            {company ? t(company.name, lang) : t(project.shortDescription, lang)}
           </p>
+
+          {scale === 'hero' ? (
+            <p className="mt-3 max-w-prose text-lead text-muted">
+              {t(project.shortDescription, lang)}
+            </p>
+          ) : null}
+
+          <span
+            aria-hidden
+            className={cn(
+              'mt-4 inline-flex h-9 w-9 items-center justify-center self-start rounded-full',
+              'bg-sunken text-ink transition-colors duration-500 ease-editorial',
+              'group-hover:bg-ink group-hover:text-surface',
+            )}
+          >
+            <Icon name="arrowRight" size={15} flipRtl />
+          </span>
         </div>
       </Link>
-
-      {scale === 'hero' ? (
-        <p className="mt-3 max-w-prose text-lead text-muted">{t(project.shortDescription, lang)}</p>
-      ) : null}
     </article>
   );
 }
 
-/** A compact horizontal variant used for "next project" and related lists. */
+/** A compact variant used for "previous / next project" and related lists. */
 export function ProjectCardMini({
   project,
   lang,
@@ -107,14 +116,20 @@ export function ProjectCardMini({
   return (
     <Link
       href={localePath(lang, `/project/${project.slug}`)}
-      className={cn('group flex flex-col gap-4', align === 'end' && 'items-end text-end')}
+      className={cn(
+        'card card-hover group flex flex-col gap-4 p-2.5 sm:p-3',
+        align === 'end' && 'items-end text-end',
+      )}
     >
-      <span className="label inline-flex items-center gap-2">
+      <span className="label inline-flex items-center gap-2 px-2 pt-2">
         {align === 'start' ? <Icon name="arrowLeft" size={13} flipRtl /> : null}
         {label}
         {align === 'end' ? <Icon name="arrowRight" size={13} flipRtl /> : null}
       </span>
-      <span className="media-zoom relative block w-full overflow-hidden bg-ink/[0.04]" style={{ aspectRatio: '16 / 10' }}>
+      <span
+        className="media-zoom relative block w-full overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
+        style={{ aspectRatio: '16 / 10' }}
+      >
         <SmartImage
           src={project.cover.src}
           alt={t(project.cover.alt, lang)}
@@ -122,9 +137,7 @@ export function ProjectCardMini({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </span>
-      <span className="text-h3 font-medium">
-        <span className="link-underline">{t(project.title, lang)}</span>
-      </span>
+      <span className="px-2 pb-2 text-h3">{t(project.title, lang)}</span>
     </Link>
   );
 }

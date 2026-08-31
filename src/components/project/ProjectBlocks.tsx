@@ -1,6 +1,7 @@
 import { ArrowLink } from '@/components/ui/ArrowLink';
 import { Figure } from '@/components/media/Figure';
 import { Gallery } from '@/components/media/Gallery';
+import { BloomField } from '@/components/ui/Bloom';
 import { Reveal } from '@/components/ui/Reveal';
 import type { Block, Lang } from '@/lib/content/types';
 import { t } from '@/lib/i18n/config';
@@ -16,6 +17,7 @@ import { t } from '@/lib/i18n/config';
 
 /** Text sits in a centred measure; media can go wider. */
 const MEASURE = 'mx-auto w-full max-w-[68ch]';
+const PANEL = 'card mx-auto w-full max-w-[80ch] px-6 py-8 sm:px-10 sm:py-10';
 
 function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
   switch (block.type) {
@@ -23,9 +25,7 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
       const Tag = block.level === 2 ? 'h2' : 'h3';
       return (
         <div className={MEASURE}>
-          <Tag className={block.level === 2 ? 'text-h2 font-medium' : 'text-h3 font-medium'}>
-            {t(block.text, lang)}
-          </Tag>
+          <Tag className={block.level === 2 ? 'text-h2' : 'text-h3'}>{t(block.text, lang)}</Tag>
         </div>
       );
     }
@@ -46,18 +46,15 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
 
     case 'image':
       return (
-        <div className="mx-auto w-full max-w-[110ch]">
+        <div className="mx-auto w-full max-w-[100ch]">
           <Figure media={block.media} lang={lang} sizes="(max-width: 768px) 100vw, 80vw" />
         </div>
       );
 
     case 'imageFull':
-      // Breaks the shell's gutters to sit edge to edge.
-      return (
-        <div className="relative left-1/2 w-screen -translate-x-1/2 rtl:translate-x-1/2">
-          <Figure media={block.media} lang={lang} sizes="100vw" />
-        </div>
-      );
+      // "Full" is the full content width — the page is a system of surfaces
+      // floating on a canvas, so nothing runs to the physical screen edge.
+      return <Figure media={block.media} lang={lang} sizes="(max-width: 1024px) 100vw, 88vw" />;
 
     case 'imagePair':
       return (
@@ -83,17 +80,20 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
     case 'video':
     case 'gif':
       return (
-        <div className="mx-auto w-full max-w-[110ch]">
+        <div className="mx-auto w-full max-w-[100ch]">
           <Figure media={block.media} lang={lang} sizes="(max-width: 768px) 100vw, 80vw" />
         </div>
       );
 
     case 'quote':
       return (
-        <blockquote className={`${MEASURE} border-s-2 border-ink ps-6 sm:ps-8`}>
-          <p className="text-h3 font-light leading-snug">“{t(block.text, lang)}”</p>
+        <blockquote className={`${PANEL} relative overflow-hidden`}>
+          <BloomField hues={['lilac', 'peach']} />
+          <p className="relative text-h3 font-normal leading-snug">
+            “{t(block.text, lang)}”
+          </p>
           {block.attribution ? (
-            <cite className="mt-4 block text-small not-italic text-faint">
+            <cite className="relative mt-4 block text-small not-italic text-faint">
               — {t(block.attribution, lang)}
             </cite>
           ) : null}
@@ -101,13 +101,13 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
       );
 
     case 'divider':
-      return <hr className="mx-auto w-full max-w-[110ch] border-0 border-t border-line" />;
+      return <hr className="mx-auto w-full max-w-[80ch] border-0 border-t border-line" />;
 
     case 'textImage':
     case 'imageText': {
       const textFirst = block.type === 'textImage';
       const text = (
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center px-3.5 py-4 sm:px-7 sm:py-8">
           {block.heading ? (
             <h3 className="mb-4 text-h3 font-medium">{t(block.heading, lang)}</h3>
           ) : null}
@@ -123,7 +123,7 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
       );
       const media = <Figure media={block.media} lang={lang} sizes="(max-width: 768px) 100vw, 50vw" />;
       return (
-        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <div className="card grid items-center gap-6 p-2.5 sm:p-3 md:grid-cols-2">
           {textFirst ? (
             <>
               {text}
@@ -150,9 +150,9 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
 
     case 'embed':
       return (
-        <div className="mx-auto w-full max-w-[110ch]">
+        <div className="w-full">
           <div
-            className="relative w-full overflow-hidden bg-ink/[0.04]"
+            className="relative w-full overflow-hidden rounded-card bg-sunken"
             style={{ aspectRatio: String(block.ratio ?? 16 / 9) }}
           >
             <iframe
@@ -176,22 +176,22 @@ function BlockContent({ block, lang }: { block: Block; lang: Lang }) {
 function spacing(block: Block): string {
   switch (block.type) {
     case 'heading':
-      return 'mt-16 md:mt-24';
+      return 'mt-14 md:mt-20';
     case 'paragraph':
     case 'button':
       return 'mt-8';
     case 'divider':
-      return 'mt-16 md:mt-24';
-    case 'imageFull':
       return 'mt-14 md:mt-20';
+    case 'imageFull':
+      return 'mt-6 md:mt-8';
     default:
-      return 'mt-10 md:mt-16';
+      return 'mt-6 md:mt-8';
   }
 }
 
 export function ProjectBlocks({ blocks, lang }: { blocks: Block[]; lang: Lang }) {
   return (
-    <div className="shell">
+    <div>
       {blocks.map((block, i) => (
         <Reveal key={block.id} className={i === 0 ? '' : spacing(block)}>
           <BlockContent block={block} lang={lang} />

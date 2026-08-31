@@ -4,6 +4,7 @@ import { Icon } from '@/components/icons';
 import { SmartImage } from '@/components/media/SmartImage';
 import { SocialLinks } from '@/components/layout/SocialLinks';
 import { ArrowLink } from '@/components/ui/ArrowLink';
+import { BloomField } from '@/components/ui/Bloom';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import {
@@ -41,7 +42,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
   const experience = companies.filter((c) => c.showInExperience);
 
   return (
-    <div className="py-14 md:py-20">
+    <div className="shell pb-section pt-6 sm:pt-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -60,73 +61,74 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
       />
 
       {/* --------------------------------------------------------------- Intro */}
-      <header className="shell">
-        <h1 className="max-w-[20ch] text-display font-light">{t(about.intro, lang)}</h1>
+      <header className="card relative overflow-hidden p-2.5 sm:p-3">
+        <BloomField hues={['peach', 'lilac', 'sky']} />
+        <div className="relative grid gap-6 lg:grid-cols-12">
+          <Reveal className="lg:col-span-5 xl:col-span-4">
+            <div className="overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken">
+              <SmartImage
+                src={about.portrait.src}
+                alt={t(about.portrait.alt, lang)}
+                width={about.portrait.width}
+                height={about.portrait.height}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                priority
+                className="w-full"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal className="flex flex-col justify-center px-3 pb-5 lg:col-span-7 lg:px-8 lg:py-10 xl:col-span-8 xl:px-12">
+            <span className="chip mb-5 self-start bg-sunken text-muted">
+              {t(settings.role, lang)}
+            </span>
+            <h1 className="max-w-[22ch] text-h1">{t(about.intro, lang)}</h1>
+            {about.body.map((paragraph, i) => (
+              <p key={i} className="mt-5 max-w-prose text-lead text-muted">
+                {t(paragraph, lang)}
+              </p>
+            ))}
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              {about.cvUrl ? (
+                <ArrowLink href={about.cvUrl} external>
+                  {tr.about.downloadCv}
+                </ArrowLink>
+              ) : null}
+              <SocialLinks links={settings.social} />
+            </div>
+          </Reveal>
+        </div>
       </header>
 
-      <div className="shell mt-14 grid gap-12 md:mt-20 md:grid-cols-12">
-        <Reveal className="md:col-span-5">
-          <SmartImage
-            src={about.portrait.src}
-            alt={t(about.portrait.alt, lang)}
-            width={about.portrait.width}
-            height={about.portrait.height}
-            sizes="(max-width: 768px) 100vw, 40vw"
-            priority
-            className="w-full"
-          />
-          <p className="label mt-4">{t(settings.role, lang)}</p>
-        </Reveal>
-
-        <Reveal className="md:col-span-6 md:col-start-7">
-          {about.body.map((paragraph, i) => (
-            <p key={i} className="max-w-prose text-lead text-muted [&+p]:mt-6">
-              {t(paragraph, lang)}
-            </p>
-          ))}
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            {about.cvUrl ? (
-              <ArrowLink href={about.cvUrl} external>
-                {tr.about.downloadCv}
-              </ArrowLink>
-            ) : null}
-            <SocialLinks links={settings.social} className="-ms-2.5" />
-          </div>
-        </Reveal>
-      </div>
-
       {/* ---------------------------------------------------------- Experience */}
-      <section className="shell mt-section">
+      <section className="mt-section">
         <SectionHeader
           label={tr.about.experience}
           title={tr.companies.title}
           action={{ href: localePath(lang, '/companies'), label: tr.home.viewAllCompanies }}
-          className="mb-10"
+          className="mb-9 md:mb-12"
         />
         {/* Experience as an index of places, each opening onto the work done
             there — a CV that leads back into the portfolio rather than away from it. */}
-        <ul className="list-none border-t border-line p-0">
+        <ul className="list-none space-y-3 p-0 lg:space-y-4">
           {experience.map((company, i) => {
             const count = projects.filter((p) => p.company === company.slug).length;
             return (
               <Reveal as="li" key={company.id} index={Math.min(i, 4)}>
                 <Link
                   href={localePath(lang, `/company/${company.slug}`)}
-                  className="group grid items-baseline gap-x-8 gap-y-1 border-b border-line py-7 md:grid-cols-12"
+                  className="card card-hover group grid items-center gap-x-6 gap-y-3 p-5 sm:p-6 md:grid-cols-12 lg:px-8"
                 >
-                  <p className="numeric label md:col-span-3">{t(company.period, lang)}</p>
-                  <h3 className="text-h3 font-medium md:col-span-4">
-                    <span className="link-underline">{t(company.name, lang)}</span>
-                  </h3>
+                  <span className="chip numeric self-start md:col-span-3">
+                    {t(company.period, lang)}
+                  </span>
+                  <h3 className="text-h3 md:col-span-4">{t(company.name, lang)}</h3>
                   <p className="text-small text-muted md:col-span-4">{t(company.role, lang)}</p>
-                  <span className="hidden items-center justify-end gap-3 md:col-span-1 md:flex">
-                    {count ? <span className="numeric text-small text-faint">{count}</span> : null}
-                    <Icon
-                      name="arrowRight"
-                      size={16}
-                      flipRtl
-                      className="text-faint transition-transform duration-500 ease-editorial group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
-                    />
+                  <span
+                    aria-hidden
+                    className="hidden justify-self-end md:col-span-1 md:grid md:h-9 md:w-9 md:place-items-center md:rounded-full md:bg-sunken md:text-ink md:transition-colors md:duration-500 md:group-hover:bg-ink md:group-hover:text-surface"
+                  >
+                    <Icon name="arrowRight" size={15} flipRtl />
                   </span>
                 </Link>
               </Reveal>
@@ -136,44 +138,61 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
       </section>
 
       {/* ------------------------------------------------------------ Approach */}
-      <section className="shell mt-section">
-        <SectionHeader title={tr.about.approach} className="mb-10" />
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
+      <section className="mt-section">
+        <SectionHeader title={tr.about.approach} className="mb-9 md:mb-12" />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {about.approach.map((item, i) => (
-            <Reveal key={i} index={i}>
-              <p className="label numeric mb-4">{String(i + 1).padStart(2, '0')}</p>
-              <h3 className="text-h3 font-medium">{t(item.title, lang)}</h3>
-              <p className="mt-3 text-small text-muted">{t(item.text, lang)}</p>
+            <Reveal key={i} index={i} className="h-full">
+              <div className="card h-full p-6 sm:p-7">
+                <span className="numeric grid h-10 w-10 place-items-center rounded-full bg-sunken text-small font-medium text-muted">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="mt-5 text-h3">{t(item.title, lang)}</h3>
+                <p className="mt-3 text-small text-muted">{t(item.text, lang)}</p>
+              </div>
             </Reveal>
           ))}
         </div>
       </section>
 
       {/* ------------------------------------------- Tools, interests, awards */}
-      <section className="shell mt-section grid gap-12 md:grid-cols-12">
-        <div className="md:col-span-4">
-          <SectionHeader title={tr.about.tools} className="mb-5" />
-          <ul className="flex list-none flex-wrap gap-x-4 gap-y-1.5 p-0 text-small text-muted">
-            {about.tools.map((tool) => (
-              <li key={tool}>{tool}</li>
-            ))}
-          </ul>
+      <section className="mt-section grid gap-4 lg:grid-cols-12 lg:gap-5">
+        <div className="flex flex-col gap-4 lg:col-span-5 lg:gap-5">
+          <div className="card p-6 sm:p-7">
+            <h2 className="text-h3">{tr.about.tools}</h2>
+            <ul className="mt-5 flex list-none flex-wrap gap-2 p-0">
+              {about.tools.map((tool) => (
+                <li key={tool}>
+                  <span className="chip">{tool}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <SectionHeader title={tr.about.interests} className="mb-5 mt-12" />
-          <ul className="list-none space-y-1.5 p-0 text-small text-muted">
-            {about.interests.map((interest, i) => (
-              <li key={i}>{t(interest, lang)}</li>
-            ))}
-          </ul>
+          <div className="card p-6 sm:p-7">
+            <h2 className="text-h3">{tr.about.interests}</h2>
+            <ul className="mt-5 flex list-none flex-wrap gap-2 p-0">
+              {about.interests.map((interest, i) => (
+                <li key={i}>
+                  <span className="chip">{t(interest, lang)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div className="md:col-span-7 md:col-start-6">
-          <SectionHeader title={tr.about.achievements} className="mb-5" />
-          <ul className="list-none p-0">
+        <div className="card p-6 sm:p-7 lg:col-span-7">
+          <h2 className="text-h3">{tr.about.achievements}</h2>
+          <ul className="mt-5 list-none space-y-2 p-0">
             {about.achievements.map((item, i) => (
-              <li key={i} className="flex items-baseline gap-6 border-b border-line py-4">
-                <span className="label numeric shrink-0">{item.year}</span>
-                <span className="text-body">{t(item.text, lang)}</span>
+              <li
+                key={i}
+                className="flex items-start gap-4 rounded-xl2 bg-sunken px-4 py-3.5"
+              >
+                <span className="numeric shrink-0 text-small font-medium text-faint">
+                  {item.year}
+                </span>
+                <span className="text-small">{t(item.text, lang)}</span>
               </li>
             ))}
           </ul>
@@ -181,19 +200,27 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
       </section>
 
       {/* --------------------------------------------------------------- CTA */}
-      <section className="shell mt-section">
-        <div className="rule pt-10">
-          <Link href={localePath(lang, '/contact')} className="group block">
-            <h2 className="text-h1 font-light">
-              <span className="link-underline">{tr.home.ctaTitle}</span>
-            </h2>
-          </Link>
-          <a
-            href={`mailto:${settings.contact.email}`}
-            className="link-underline mt-5 inline-block text-lead"
-          >
-            {settings.contact.email}
-          </a>
+      <section className="mt-section">
+        <div className="surface-invert relative overflow-hidden rounded-xl3 px-6 py-12 sm:rounded-xl4 sm:px-10 sm:py-16 lg:px-14">
+          <BloomField hues={['lilac', 'mint', 'peach']} intensity="strong" className="opacity-50" />
+          <div className="relative">
+            <h2 className="max-w-[16ch] text-h1">{tr.home.ctaTitle}</h2>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link
+                href={localePath(lang, '/contact')}
+                className="btn btn-light"
+              >
+                {tr.home.contactMe}
+                <Icon name="arrowRight" size={17} flipRtl />
+              </Link>
+              <a
+                href={`mailto:${settings.contact.email}`}
+                className="btn border border-line-strong text-ink hover:bg-white/10"
+              >
+                {settings.contact.email}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

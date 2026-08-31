@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SmartImage } from '@/components/media/SmartImage';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { Reveal } from '@/components/ui/Reveal';
 import { typefaces as getTypefaces } from '@/lib/content/queries';
 import type { Lang } from '@/lib/content/types';
@@ -27,48 +28,52 @@ export default async function FontsPage({ params }: { params: Promise<{ lang: La
   const fonts = await getTypefaces();
 
   return (
-    <div className="shell py-14 md:py-20">
-      <header className="mb-14 md:mb-20">
-        <h1 className="text-display font-light">{tr.fonts.title}</h1>
-        <p className="mt-6 max-w-prose text-lead text-muted">{tr.fonts.intro}</p>
-      </header>
+    <div className="shell pb-section pt-6 sm:pt-8">
+      <PageHeader
+        title={tr.fonts.title}
+        intro={tr.fonts.intro}
+        hues={['lilac', 'sky', 'mint']}
+        meta={
+          <span className="chip numeric">
+            {fonts.length} {tr.fonts.title}
+          </span>
+        }
+        className="mb-9 md:mb-12"
+      />
 
-      {/* Typefaces get a full-width row each — a font is judged at size, not in a
-          thumbnail — with the specimen doing the talking. */}
-      <ul className="list-none space-y-20 p-0 md:space-y-28">
+      {/* Typefaces get a full-width card each — a font is judged at size, not in
+          a thumbnail — with the specimen doing the talking. */}
+      <ul className="list-none space-y-5 p-0 lg:space-y-6">
         {fonts.map((font, i) => (
           <Reveal as="li" key={font.id} index={i % 2}>
-            <Link href={localePath(lang, `/font/${font.slug}`)} className="group block">
+            <Link
+              href={localePath(lang, `/font/${font.slug}`)}
+              className="card card-hover group block overflow-hidden p-2.5 sm:p-3"
+            >
               <div
-                className="media-zoom relative overflow-hidden bg-ink/[0.04]"
+                className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
                 style={{ aspectRatio: '16 / 9' }}
               >
                 <SmartImage
                   src={font.preview.src}
                   alt={t(font.preview.alt, lang)}
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 1024px) 100vw, 88vw"
                   priority={i === 0}
                 />
               </div>
 
-              <div className="mt-6 grid gap-x-8 gap-y-4 md:grid-cols-12">
-                <h2 className="text-h1 font-light md:col-span-5">
-                  <span className="link-underline">{t(font.name, lang)}</span>
-                </h2>
+              <div className="grid gap-x-8 gap-y-4 px-2.5 pb-3 pt-6 sm:px-4 md:grid-cols-12 md:items-start">
+                <h2 className="text-h1 md:col-span-4">{t(font.name, lang)}</h2>
                 <p className="max-w-prose text-lead text-muted md:col-span-5">
                   {t(font.description, lang)}
                 </p>
-                <dl className="m-0 space-y-2 text-small md:col-span-2 md:justify-self-end md:text-end">
-                  <div>
-                    <dt className="label">{tr.fonts.type}</dt>
-                    <dd>{t(font.type, lang)}</dd>
-                  </div>
-                  <div>
-                    <dt className="label">{tr.fonts.weights}</dt>
-                    <dd className="numeric">{font.weights.length}</dd>
-                  </div>
-                </dl>
+                <div className="flex flex-wrap gap-2 md:col-span-3 md:justify-end">
+                  <span className="chip">{t(font.type, lang)}</span>
+                  <span className="chip numeric">
+                    {font.weights.length} {tr.fonts.weights}
+                  </span>
+                </div>
               </div>
             </Link>
           </Reveal>

@@ -16,16 +16,18 @@ import random
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "media")
 
-# Warm, print-leaning palette. Each entry is (background, ink, accent).
+# Soft-light palette, matching the site tokens: near-white and tinted-pastel
+# grounds, near-black ink, one saturated accent per scheme.
+# Each entry is (background, ink, accent).
 SCHEMES = [
-    ("#EFEBE3", "#141414", "#C6462B"),
-    ("#141414", "#F2EFE8", "#D9A441"),
-    ("#1E2A32", "#EDE8DE", "#E2705A"),
-    ("#E6E1D6", "#243027", "#7C6A4F"),
-    ("#F2EFE8", "#2B2118", "#3E6B5A"),
-    ("#2B2118", "#EFE7D8", "#C99B5E"),
-    ("#DCD6C8", "#161616", "#9B3B2E"),
-    ("#101820", "#E8E4DA", "#6C8EA0"),
+    ("#F1F3F6", "#0F1115", "#FF8A4C"),
+    ("#0F1115", "#F8F9FB", "#C4B5FD"),
+    ("#EEF2FF", "#1E1B4B", "#4F46E5"),
+    ("#ECFDF5", "#0B3B2C", "#34D399"),
+    ("#FFF7ED", "#3A1D08", "#FB923C"),
+    ("#F5F3FF", "#2E1065", "#A78BFA"),
+    ("#EFF6FF", "#0C2A4D", "#3B82F6"),
+    ("#1A1D23", "#F1F3F6", "#86E7BE"),
 ]
 
 
@@ -153,7 +155,7 @@ def logo(seed: str, name: str) -> str:
     r = rng_for(seed)
     w, h = 320, 120
     initials = "".join(p[0] for p in name.split()[:2]).upper() or "AB"
-    ink = "#141414"
+    ink = "#0F1115"
     shapes = {
         0: f'<circle cx="60" cy="60" r="30" fill="none" stroke="{ink}" stroke-width="6"/>',
         1: f'<rect x="32" y="32" width="56" height="56" fill="none" stroke="{ink}" stroke-width="6"/>',

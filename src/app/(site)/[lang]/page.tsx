@@ -3,6 +3,8 @@ import { Icon } from '@/components/icons';
 import { SmartImage } from '@/components/media/SmartImage';
 import { ProjectGrid } from '@/components/project/ProjectGrid';
 import { ArrowLink } from '@/components/ui/ArrowLink';
+import { BloomField } from '@/components/ui/Bloom';
+import { ButtonLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import {
@@ -41,33 +43,48 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
   return (
     <>
       {/* ---------------------------------------------------------------- Hero */}
-      <section className="shell pb-20 pt-14 md:pb-28 md:pt-24">
-        <h1 className="max-w-[16ch] text-display font-light">
-          {t(settings.tagline, lang)}
-        </h1>
-        <div className="mt-10 grid gap-8 md:mt-14 md:grid-cols-12">
-          <p className="text-lead text-muted md:col-span-7 md:col-start-1">
-            {t(settings.heroStatement, lang)}
-          </p>
-          <div className="flex flex-wrap items-start gap-x-8 gap-y-4 md:col-span-4 md:col-start-9 md:justify-end">
-            <ArrowLink href={localePath(lang, '/work')} size="lead">
-              {tr.home.viewWork}
-            </ArrowLink>
-            <ArrowLink href={localePath(lang, '/contact')} size="lead">
-              {tr.home.contactMe}
-            </ArrowLink>
+      <section className="shell pt-6 sm:pt-8">
+        <div className="card relative overflow-hidden px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+          <BloomField hues={['peach', 'lilac', 'sky']} intensity="strong" />
+
+          <div className="relative lg:max-w-[68%] xl:max-w-[62%]">
+            <span className="chip bg-sunken text-muted">{t(settings.role, lang)}</span>
+
+            <h1 className="mt-6 max-w-[18ch] text-display">{t(settings.tagline, lang)}</h1>
+
+            <p className="mt-6 max-w-prose text-lead text-muted lg:mt-8">
+              {t(settings.heroStatement, lang)}
+            </p>
+
+            <div className="mt-9 flex flex-col gap-3 xs:flex-row xs:flex-wrap xs:items-center lg:mt-11">
+              <ButtonLink
+                href={localePath(lang, '/work')}
+                size="lg"
+                icon="arrowRight"
+                className="w-full xs:w-auto"
+              >
+                {tr.home.viewWork}
+              </ButtonLink>
+              <ButtonLink
+                href={localePath(lang, '/contact')}
+                variant="ghost"
+                size="lg"
+                className="w-full xs:w-auto"
+              >
+                {tr.home.contactMe}
+              </ButtonLink>
+            </div>
           </div>
         </div>
-        <p className="label mt-12 md:mt-16">{t(settings.role, lang)}</p>
       </section>
 
       {/* -------------------------------------------------------- Featured work */}
-      <section className="shell">
+      <section className="shell mt-section">
         <SectionHeader
           label={tr.home.featuredWork}
           title={tr.work.title}
           action={{ href: localePath(lang, '/work'), label: tr.home.viewAllWork }}
-          className="mb-12 md:mb-16"
+          className="mb-9 md:mb-12"
         />
         <ProjectGrid projects={featured} lang={lang} companies={companies} priorityCount={1} />
       </section>
@@ -79,14 +96,17 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
           title={tr.fonts.title}
           intro={tr.fonts.intro}
           action={{ href: localePath(lang, '/fonts'), label: tr.home.viewAllFonts }}
-          className="mb-12 md:mb-16"
+          className="mb-9 md:mb-12"
         />
-        <div className="grid gap-x-6 gap-y-12 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {selectedFonts.map((font, i) => (
-            <Reveal key={font.id} index={i}>
-              <Link href={localePath(lang, `/font/${font.slug}`)} className="group block">
+            <Reveal key={font.id} index={i} className="h-full">
+              <Link
+                href={localePath(lang, `/font/${font.slug}`)}
+                className="card card-hover group flex h-full flex-col overflow-hidden p-2.5 sm:p-3"
+              >
                 <div
-                  className="media-zoom relative overflow-hidden bg-ink/[0.04]"
+                  className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
                   style={{ aspectRatio: '8 / 5' }}
                 >
                   <SmartImage
@@ -96,13 +116,15 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="mt-4 flex items-baseline justify-between gap-4">
-                  <h3 className="text-h3 font-medium">
-                    <span className="link-underline">{t(font.name, lang)}</span>
-                  </h3>
-                  <span className="label">{t(font.type, lang)}</span>
+                <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4 sm:px-3.5 sm:pt-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-h3">{t(font.name, lang)}</h3>
+                    <span className="chip shrink-0">{t(font.type, lang)}</span>
+                  </div>
+                  <p className="mt-2 max-w-prose text-small text-muted">
+                    {t(font.description, lang)}
+                  </p>
                 </div>
-                <p className="mt-2 max-w-prose text-small text-muted">{t(font.description, lang)}</p>
               </Link>
             </Reveal>
           ))}
@@ -115,14 +137,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
           label={tr.home.workedWith}
           title={tr.companies.title}
           action={{ href: localePath(lang, '/companies'), label: tr.home.viewAllCompanies }}
-          className="mb-10 md:mb-14"
+          className="mb-9 md:mb-12"
         />
-        <ul className="grid list-none grid-cols-2 gap-px border border-line bg-line p-0 sm:grid-cols-3">
+        <ul className="grid list-none grid-cols-2 gap-3 p-0 sm:grid-cols-3 lg:gap-4">
           {clients.map((company) => (
-            <li key={company.id} className="bg-paper">
+            <li key={company.id}>
               <Link
                 href={localePath(lang, `/company/${company.slug}`)}
-                className="group flex h-28 items-center justify-center px-6 md:h-36"
+                className="card card-hover group flex h-28 items-center justify-center px-6 md:h-32 lg:h-36"
               >
                 {company.logo ? (
                   <SmartImage
@@ -131,10 +153,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
                     width={160}
                     height={60}
                     sizes="160px"
-                    className="h-9 w-auto opacity-45 transition-opacity duration-500 group-hover:opacity-100 md:h-11"
+                    className="h-8 w-auto opacity-45 transition-opacity duration-500 group-hover:opacity-100 md:h-10"
                   />
                 ) : (
-                  <span className="text-small text-muted transition-colors group-hover:text-ink">
+                  <span className="text-center text-small text-muted transition-colors group-hover:text-ink">
                     {t(company.name, lang)}
                   </span>
                 )}
@@ -150,29 +172,27 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
           label={tr.home.services}
           title={tr.services.title}
           action={{ href: localePath(lang, '/services'), label: tr.home.viewAllServices }}
-          className="mb-8 md:mb-12"
+          className="mb-9 md:mb-12"
         />
-        <ul className="list-none p-0">
+        <ul className="grid list-none gap-3 p-0 md:grid-cols-2 lg:gap-4">
           {topServices.map((service, i) => (
-            <Reveal as="li" key={service.id} index={i}>
+            <Reveal as="li" key={service.id} index={i % 2} className="h-full">
               <Link
                 href={`${localePath(lang, '/services')}#${service.slug}`}
-                className="group grid items-baseline gap-x-8 gap-y-1 border-b border-line py-6 md:grid-cols-12"
+                className="card card-hover group flex h-full items-start gap-4 p-5 sm:gap-5 sm:p-6"
               >
-                <span className="label numeric md:col-span-1">
+                <span className="numeric grid h-10 w-10 shrink-0 place-items-center rounded-full bg-sunken text-small font-medium text-muted">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="text-h3 font-medium md:col-span-4">
-                  <span className="link-underline">{t(service.name, lang)}</span>
-                </h3>
-                <p className="text-small text-muted md:col-span-6">{t(service.description, lang)}</p>
-                <span className="hidden justify-self-end md:col-span-1 md:block">
-                  <Icon
-                    name="arrowRight"
-                    size={18}
-                    flipRtl
-                    className="text-faint transition-transform duration-500 ease-editorial group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
-                  />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-h3">{t(service.name, lang)}</h3>
+                  <p className="mt-2 text-small text-muted">{t(service.description, lang)}</p>
+                </div>
+                <span
+                  aria-hidden
+                  className="mt-1 hidden h-8 w-8 shrink-0 place-items-center rounded-full bg-sunken text-ink transition-colors duration-500 group-hover:bg-ink group-hover:text-surface sm:grid"
+                >
+                  <Icon name="arrowRight" size={14} flipRtl />
                 </span>
               </Link>
             </Reveal>
@@ -186,20 +206,20 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
           label={tr.home.workshops}
           title={tr.workshops.title}
           action={{ href: localePath(lang, '/workshops'), label: tr.home.viewAllWorkshops }}
-          className="mb-12 md:mb-16"
+          className="mb-9 md:mb-12"
         />
-        <div className="grid gap-x-6 gap-y-12 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {nextSessions.map((session, i) => (
-            <Reveal key={session.id} index={i}>
+            <Reveal key={session.id} index={i} className="h-full">
               <Link
                 href={localePath(
                   lang,
                   `/${session.kind === 'course' ? 'course' : 'workshop'}/${session.slug}`,
                 )}
-                className="group block"
+                className="card card-hover group flex h-full flex-col overflow-hidden p-2.5 sm:p-3"
               >
                 <div
-                  className="media-zoom relative overflow-hidden bg-ink/[0.04]"
+                  className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
                   style={{ aspectRatio: '8 / 5' }}
                 >
                   <SmartImage
@@ -209,14 +229,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <p className="label mt-4 flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <span className="numeric">{formatDate(session.date, lang)}</span>
-                  <span aria-hidden>·</span>
-                  <span>{tr.workshops.mode[session.mode]}</span>
-                </p>
-                <h3 className="mt-2 text-h3 font-medium">
-                  <span className="link-underline">{t(session.title, lang)}</span>
-                </h3>
+                <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4 sm:px-3.5 sm:pt-5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="chip numeric">{formatDate(session.date, lang)}</span>
+                    <span className="chip">{tr.workshops.mode[session.mode]}</span>
+                  </div>
+                  <h3 className="mt-3 text-h3">{t(session.title, lang)}</h3>
+                </div>
               </Link>
             </Reveal>
           ))}
@@ -225,47 +244,60 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
 
       {/* --------------------------------------------------------------- About */}
       <section className="shell mt-section">
-        <SectionHeader label={tr.home.about} title={t(settings.name, lang)} className="mb-12" />
-        <div className="grid gap-10 md:grid-cols-12 md:gap-12">
-          <Reveal className="md:col-span-4">
-            <SmartImage
-              src={settings.about.portrait.src}
-              alt={t(settings.about.portrait.alt, lang)}
-              width={settings.about.portrait.width}
-              height={settings.about.portrait.height}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full"
-            />
-          </Reveal>
-          <Reveal className="md:col-span-7 md:col-start-6">
-            <p className="text-h3 font-light leading-snug">{t(settings.about.intro, lang)}</p>
-            <p className="mt-6 max-w-prose text-lead text-muted">
-              {t(settings.about.body[0], lang)}
-            </p>
-            <ArrowLink href={localePath(lang, '/about')} className="mt-8">
-              {tr.home.readMore}
-            </ArrowLink>
-          </Reveal>
+        <SectionHeader label={tr.home.about} title={t(settings.name, lang)} className="mb-9 md:mb-12" />
+        <div className="card overflow-hidden p-2.5 sm:p-3">
+          <div className="grid gap-6 lg:grid-cols-12">
+            <Reveal className="lg:col-span-5 xl:col-span-4">
+              <div className="relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken">
+                <SmartImage
+                  src={settings.about.portrait.src}
+                  alt={t(settings.about.portrait.alt, lang)}
+                  width={settings.about.portrait.width}
+                  height={settings.about.portrait.height}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="w-full"
+                />
+              </div>
+            </Reveal>
+            <Reveal className="flex flex-col justify-center px-3 pb-4 lg:col-span-7 lg:px-8 lg:py-8 xl:col-span-8 xl:px-12">
+              <p className="text-h3 font-normal leading-snug">{t(settings.about.intro, lang)}</p>
+              <p className="mt-5 max-w-prose text-lead text-muted">
+                {t(settings.about.body[0], lang)}
+              </p>
+              <ArrowLink href={localePath(lang, '/about')} className="mt-7 self-start">
+                {tr.home.readMore}
+              </ArrowLink>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- Contact CTA */}
+      {/* ---------------------------------------------------------- Contact CTA */}
       <section className="shell mt-section">
-        <div className="rule pt-10 md:pt-14">
-          <p className="label">{tr.contact.title}</p>
-          <Link href={localePath(lang, '/contact')} className="group mt-6 block">
-            <h2 className="text-mega font-light">
-              <span className="link-underline">{tr.home.ctaTitle}</span>
-            </h2>
-          </Link>
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-6">
-            <a
-              href={`mailto:${settings.contact.email}`}
-              className="link-underline text-h3 font-light"
-            >
-              {settings.contact.email}
-            </a>
-            <p className="text-small text-muted">{t(settings.contact.availability, lang)}</p>
+        <div className="surface-invert relative overflow-hidden rounded-xl3 px-6 py-14 sm:rounded-xl4 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          <BloomField hues={['mint', 'lilac', 'peach']} intensity="strong" className="opacity-50" />
+
+          <div className="relative">
+            <span className="chip bg-white/10 text-ink">{tr.contact.title}</span>
+            <h2 className="mt-6 max-w-[14ch] text-display">{tr.home.ctaTitle}</h2>
+
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link
+                href={localePath(lang, '/contact')}
+                className="btn btn-light btn-lg"
+              >
+                {tr.home.contactMe}
+                <Icon name="arrowRight" size={19} flipRtl />
+              </Link>
+              <a
+                href={`mailto:${settings.contact.email}`}
+                className="btn btn-lg border border-line-strong text-ink hover:bg-white/10"
+              >
+                {settings.contact.email}
+              </a>
+            </div>
+
+            <p className="mt-8 text-small text-muted">{t(settings.contact.availability, lang)}</p>
           </div>
         </div>
       </section>
