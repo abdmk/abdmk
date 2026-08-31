@@ -32,7 +32,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
     <div className="mx-auto flex min-h-dvh w-full max-w-[100rem] flex-col lg:flex-row">
       <aside className="shrink-0 border-b border-line lg:w-60 lg:border-b-0 lg:border-e">
         <div className="flex items-center justify-between p-5 lg:block">
-          <Link href="/admin" className="text-h3 font-semibold">
+          <Link href="/admin" className="block text-h3 font-semibold leading-tight">
             Admin
           </Link>
           <Link
