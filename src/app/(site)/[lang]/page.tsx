@@ -153,7 +153,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
                     width={160}
                     height={60}
                     sizes="160px"
-                    className="h-8 w-auto opacity-45 transition-opacity duration-500 group-hover:opacity-100 md:h-10"
+                    className="h-8 w-auto opacity-45 transition-opacity duration-500 group-hover:opacity-100 dark:invert md:h-10"
                   />
                 ) : (
                   <span className="text-center text-small text-muted transition-colors group-hover:text-ink">
@@ -278,20 +278,20 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Lan
           <BloomField hues={['mint', 'lilac', 'peach']} intensity="strong" className="opacity-50" />
 
           <div className="relative">
-            <span className="chip bg-white/10 text-ink">{tr.contact.title}</span>
+            <span className="chip bg-ink/10 text-ink">{tr.contact.title}</span>
             <h2 className="mt-6 max-w-[14ch] text-display">{tr.home.ctaTitle}</h2>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link
                 href={localePath(lang, '/contact')}
-                className="btn btn-light btn-lg"
+                className="btn btn-primary btn-lg"
               >
                 {tr.home.contactMe}
                 <Icon name="arrowRight" size={19} flipRtl />
               </Link>
               <a
                 href={`mailto:${settings.contact.email}`}
-                className="btn btn-lg border border-line-strong text-ink hover:bg-white/10"
+                className="btn btn-lg border border-line-strong text-ink hover:bg-ink/10"
               >
                 {settings.contact.email}
               </a>

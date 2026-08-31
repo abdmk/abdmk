@@ -102,7 +102,7 @@ export default async function CompanyPage({
                     width={160}
                     height={60}
                     sizes="160px"
-                    className="h-7 w-auto"
+                    className="h-7 w-auto dark:invert"
                   />
                 </span>
               ) : null}

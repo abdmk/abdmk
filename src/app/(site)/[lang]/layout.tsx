@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import '@/app/globals.css';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
+import { THEME_INIT_SCRIPT } from '@/components/layout/ThemeToggle';
 import type { Lang } from '@/lib/content/types';
 import { settings as getSettings } from '@/lib/content/queries';
 import { DIR, LANGS, isLang, t } from '@/lib/i18n/config';
@@ -13,7 +14,10 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F4F5F7',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F4F5F7' },
+    { media: '(prefers-color-scheme: dark)', color: '#0C0D10' },
+  ],
   width: 'device-width',
   initialScale: 1,
 };
@@ -63,8 +67,12 @@ export default async function SiteLayout({
   const s = await getSettings();
 
   return (
-    <html lang={typed} dir={DIR[typed]}>
+    <html lang={typed} dir={DIR[typed]} suppressHydrationWarning>
       <head>
+        {/* Applies a saved or OS-level dark preference before first paint, so
+            there is no flash of the light theme for dark-mode visitors. Must
+            run before hydration — hence a plain inline script, not an effect. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         {/* Scroll reveals start at opacity 0 and are animated in by JS. Without
             JS there is nothing to animate them, so show them outright. */}
         <noscript>

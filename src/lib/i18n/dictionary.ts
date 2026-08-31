@@ -19,6 +19,8 @@ const dict = {
     close: { ar: 'إغلاق', en: 'Close' },
     skipToContent: { ar: 'تخطَّ إلى المحتوى', en: 'Skip to content' },
     switchLanguage: { ar: 'Switch to English', en: 'التبديل إلى العربية' },
+    switchToDark: { ar: 'تفعيل الوضع الداكن', en: 'Switch to dark mode' },
+    switchToLight: { ar: 'تفعيل الوضع الفاتح', en: 'Switch to light mode' },
   },
   home: {
     featuredWork: { ar: 'أعمال مختارة', en: 'Selected Work' },

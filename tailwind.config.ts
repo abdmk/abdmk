@@ -6,6 +6,7 @@ import type { Config } from 'tailwindcss';
  * near-black actions and pastel blooms for colour. Tokens live in globals.css.
  */
 const config: Config = {
+  darkMode: 'class',
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     screens: {

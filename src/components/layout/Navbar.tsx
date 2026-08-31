@@ -11,6 +11,7 @@ import { ui } from '@/lib/i18n/dictionary';
 import { cn } from '@/lib/utils';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { SocialLinks } from './SocialLinks';
+import { ThemeToggle } from './ThemeToggle';
 
 interface NavbarProps {
   lang: Lang;
@@ -112,6 +113,11 @@ export function Navbar({ lang, settings }: NavbarProps) {
             </nav>
 
             <div className="flex items-center gap-2">
+              <ThemeToggle
+                labelToDark={t.nav.switchToDark}
+                labelToLight={t.nav.switchToLight}
+                className="hidden sm:inline-flex"
+              />
               <LanguageSwitcher lang={lang} />
               <Link
                 href={localePath(lang, '/contact')}
@@ -167,12 +173,19 @@ export function Navbar({ lang, settings }: NavbarProps) {
               </ul>
 
               <div className="mt-8 flex flex-col gap-5 rounded-card bg-surface p-6 shadow-soft">
-                <a
-                  href={`mailto:${settings.contact.email}`}
-                  className="link-underline text-small font-medium"
-                >
-                  {settings.contact.email}
-                </a>
+                <div className="flex items-center justify-between gap-4">
+                  <a
+                    href={`mailto:${settings.contact.email}`}
+                    className="link-underline text-small font-medium"
+                  >
+                    {settings.contact.email}
+                  </a>
+                  <ThemeToggle
+                    labelToDark={t.nav.switchToDark}
+                    labelToLight={t.nav.switchToLight}
+                    className="sm:hidden"
+                  />
+                </div>
                 <SocialLinks links={settings.social} />
               </div>
             </nav>

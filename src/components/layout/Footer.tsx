@@ -41,7 +41,7 @@ export function Footer({ lang, settings }: { lang: Lang; settings: Settings }) {
               </p>
               <Link
                 href={localePath(lang, '/contact')}
-                className="btn btn-light mt-7"
+                className="btn btn-primary mt-7"
               >
                 {t.footer.startProject}
                 <Icon name="arrowRight" size={17} flipRtl />
@@ -106,7 +106,7 @@ export function Footer({ lang, settings }: { lang: Lang; settings: Settings }) {
               <LanguageSwitcher lang={lang} />
               <a
                 href="#main"
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-small text-ink transition-colors duration-300 hover:bg-white/20"
+                className="inline-flex items-center gap-2 rounded-full bg-ink/10 px-4 py-2 text-small text-ink transition-colors duration-300 hover:bg-ink/20"
               >
                 {t.footer.backToTop}
                 <Icon name="arrowUpRight" size={14} />

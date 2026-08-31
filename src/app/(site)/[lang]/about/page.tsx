@@ -208,14 +208,14 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: La
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link
                 href={localePath(lang, '/contact')}
-                className="btn btn-light"
+                className="btn btn-primary"
               >
                 {tr.home.contactMe}
                 <Icon name="arrowRight" size={17} flipRtl />
               </Link>
               <a
                 href={`mailto:${settings.contact.email}`}
-                className="btn border border-line-strong text-ink hover:bg-white/10"
+                className="btn border border-line-strong text-ink hover:bg-ink/10"
               >
                 {settings.contact.email}
               </a>

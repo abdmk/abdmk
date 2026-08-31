@@ -65,7 +65,7 @@ export default async function CompaniesPage({ params }: { params: Promise<{ lang
                         width={100}
                         height={38}
                         sizes="100px"
-                        className="h-5 w-auto opacity-50 transition-opacity duration-500 group-hover:opacity-100"
+                        className="h-5 w-auto opacity-50 transition-opacity duration-500 group-hover:opacity-100 dark:invert"
                       />
                     </span>
                   ) : null}

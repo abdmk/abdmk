@@ -80,6 +80,9 @@ ICONS = {
     "alignCenter":     ("rs", "align-center"),
     "alignJustify":    ("rs", "align-justify"),
     "text":            ("rs", "text"),
+    # theme toggle
+    "sun":             ("rs", "sun"),
+    "moon":            ("rs", "moon"),
     # social (brands)
     "instagram":       ("brands", "instagram"),
     "behance":         ("brands", "behance"),

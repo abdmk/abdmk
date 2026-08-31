@@ -146,12 +146,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         <div className="surface-invert relative overflow-hidden rounded-xl3 px-6 py-12 sm:rounded-xl4 sm:px-10 sm:py-16 lg:px-14">
           <BloomField hues={['peach', 'lilac', 'mint']} intensity="strong" className="opacity-50" />
           <div className="relative">
-            <span className="chip bg-white/10 text-ink">{tr.contact.title}</span>
+            <span className="chip bg-ink/10 text-ink">{tr.contact.title}</span>
             <h2 className="mt-5 max-w-[16ch] text-h1">{tr.home.ctaTitle}</h2>
             <p className="mt-4 text-small text-muted">{t(settings.contact.availability, lang)}</p>
             <Link
               href={localePath(lang, '/contact')}
-              className="btn btn-light mt-7"
+              className="btn btn-primary mt-7"
             >
               {tr.home.contactMe}
               <Icon name="arrowRight" size={17} flipRtl />

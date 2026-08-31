@@ -94,7 +94,9 @@
 @media (min-width: 1280px) { :root { --gutter: 3rem;   --radius-card: 2rem; } }
 
 /* Inverted surfaces (project heroes, footer) swap the roles of the same tokens
-   rather than introducing a second palette. */
+   rather than introducing a second palette. In dark mode "invert" flips the
+   other way — a light slab on the dark page — so the class always reads as a
+   deliberate pop against whatever the current theme is. */
 .surface-invert {
   --paper: 15 17 21;
   --surface: 25 28 34;
@@ -107,6 +109,51 @@
   --accent: 165 158 255;
   background-color: rgb(var(--paper));
   color: rgb(var(--ink));
+}
+
+/* ---------------------------------------------------------------------------
+   Dark mode
+
+   A manual toggle (see ThemeToggle) sets .dark on <html>; a small inline
+   script in the document head applies it before first paint from a saved
+   preference or the OS setting, so there is no flash of the wrong theme.
+   Every token flips places rather than the page picking up a second system.
+--------------------------------------------------------------------------- */
+.dark {
+  --paper: 12 13 16;
+  --surface: 23 25 30;
+  --sunken: 31 34 40;
+  --ink: 246 247 249;
+  --muted: 168 174 184;    /* 8.1:1 on paper */
+  --faint: 136 143 154;    /* 5.3:1 on paper */
+  --line: 42 45 52;
+  --line-strong: 56 60 68;
+  --accent: 165 158 255;
+}
+
+.dark .surface-invert {
+  --paper: 246 247 249;
+  --surface: 255 255 255;
+  --sunken: 241 243 246;
+  --ink: 15 17 21;
+  --muted: 86 92 102;
+  --faint: 103 109 119;
+  --line: 230 232 236;
+  --line-strong: 216 219 224;
+  --accent: 79 70 229;
+}
+
+/* Shadows are cut from black, which reads as nothing on a dark canvas — the
+   card boundary falls back to a hairline instead so surfaces stay legible. */
+.dark .card,
+.dark .card-flat {
+  border: 1px solid rgb(var(--line));
+}
+.dark .card {
+  box-shadow: none;
+}
+.dark .card-hover:hover {
+  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 0.5);
 }
 
 @layer base {
@@ -241,14 +288,6 @@
     background-color: rgb(var(--surface));
     border-color: rgb(var(--ink) / 0.3);
   }
-
-  /* Stays white on any surface. `.btn-primary` inverts with its surface, which
-     makes it disappear on a dark slab — this is the pill to use there. */
-  .btn-light {
-    background-color: rgb(255 255 255);
-    color: rgb(15 17 21);
-  }
-  .btn-light:hover { background-color: rgb(255 255 255 / 0.88); }
 
   .btn-sm { padding: 0.625rem 1.125rem; font-size: 0.875rem; }
   .btn-lg { padding: 1.0625rem 1.875rem; font-size: 1rem; }
