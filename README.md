@@ -280,6 +280,20 @@ npm run seed          # re-seed demo content (destructive)
 npm run placeholders  # regenerate demo artwork
 ```
 
+## Deployment
+
+To deploy to **Netlify** (recommended for free hosting):
+
+1. Push this repository to GitHub
+2. Connect it to [netlify.com](https://netlify.com)
+3. Set environment variables `ADMIN_PASSWORD` and `ADMIN_SECRET`
+4. Site builds and deploys automatically
+
+When you edit content in `/admin`, changes are committed to GitHub and Netlify
+redeploys automatically (takes ~1-2 minutes).
+
+**Full deployment guide**: See [`DEPLOYMENT.md`](./DEPLOYMENT.md)
+
 ## Adding real content
 
 1. `/admin/settings` — your name, role, tagline, contact details, social links,
