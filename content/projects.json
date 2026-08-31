@@ -33,9 +33,7 @@
       "art-direction"
     ],
     "services": [
-      "brand-identity",
-      "arabic-typography",
-      "art-direction"
+      "brand-identity"
     ],
     "company": "shorouk-studio",
     "role": {
@@ -278,9 +276,7 @@
       "digital"
     ],
     "services": [
-      "font-design",
-      "art-direction",
-      "arabic-typography"
+      "font-design"
     ],
     "company": null,
     "role": {
@@ -546,9 +542,7 @@
       "art-direction"
     ],
     "services": [
-      "brand-identity",
-      "art-direction",
-      "editorial-design"
+      "brand-identity"
     ],
     "company": "beirut-book-fair-org",
     "role": {
@@ -791,7 +785,6 @@
       "print"
     ],
     "services": [
-      "packaging-design",
       "brand-identity"
     ],
     "company": "qamar-foods",
@@ -1022,10 +1015,7 @@
       "print",
       "arabic-typography"
     ],
-    "services": [
-      "editorial-design",
-      "arabic-typography"
-    ],
+    "services": [],
     "company": "nahda-press",
     "role": {
       "ar": "مصمم تحريري",
@@ -1266,8 +1256,7 @@
       "graphic-design"
     ],
     "services": [
-      "social-media-design",
-      "art-direction"
+      "social-media-design"
     ],
     "company": "aswat-media",
     "role": {
@@ -1497,10 +1486,7 @@
       "arabic-typography",
       "print"
     ],
-    "services": [
-      "arabic-typography",
-      "art-direction"
-    ],
+    "services": [],
     "company": "shorouk-studio",
     "role": {
       "ar": "مصمم نظام",
@@ -1730,8 +1716,7 @@
       "digital"
     ],
     "services": [
-      "motion-design",
-      "art-direction"
+      "motion-design"
     ],
     "company": "aswat-media",
     "role": {
@@ -1922,8 +1907,7 @@
       "digital"
     ],
     "services": [
-      "ui-ux",
-      "arabic-typography"
+      "ui-ux"
     ],
     "company": "madad-tech",
     "role": {
@@ -2153,10 +2137,7 @@
       "arabic-typography",
       "print"
     ],
-    "services": [
-      "arabic-calligraphy",
-      "art-direction"
-    ],
+    "services": [],
     "company": null,
     "role": {
       "ar": "مصمم",

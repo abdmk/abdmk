@@ -79,8 +79,7 @@
       "nahda-editorial"
     ],
     "relatedServices": [
-      "font-design",
-      "arabic-typography"
+      "font-design"
     ],
     "featured": true
   },
@@ -247,8 +246,7 @@
       "nahda-editorial"
     ],
     "relatedServices": [
-      "font-design",
-      "arabic-typography"
+      "font-design"
     ],
     "featured": false
   },
@@ -342,18 +340,18 @@
     "order": 4,
     "kind": "course",
     "title": {
-      "ar": "تصميم الخط العربي — كورس كامل",
+      "ar": "تصميم الخط العربي — دورة كاملة",
       "en": "Arabic Type Design — Full Course"
     },
     "description": {
-      "ar": "كورس من ثمانية أسابيع: من الرسم الأول إلى ملف OpenType مختبَر وجاهز للنشر.",
+      "ar": "دورة من ثمانية أسابيع: من الرسم الأول إلى ملف OpenType مختبَر وجاهز للنشر.",
       "en": "An eight-week course: from first drawings to a tested, shippable OpenType file."
     },
     "cover": {
       "src": "/media/workshops/type-design-course/cover.svg",
       "kind": "image",
       "alt": {
-        "ar": "تصميم الخط العربي — كورس كامل",
+        "ar": "تصميم الخط العربي — دورة كاملة",
         "en": "Arabic Type Design — Full Course"
       },
       "width": 1600,
@@ -402,7 +400,7 @@
         "src": "/media/workshops/type-design-course/01.svg",
         "kind": "image",
         "alt": {
-          "ar": "تصميم الخط العربي — كورس كامل",
+          "ar": "تصميم الخط العربي — دورة كاملة",
           "en": "Arabic Type Design — Full Course"
         },
         "width": 1400,
@@ -415,8 +413,7 @@
       "nahda-editorial"
     ],
     "relatedServices": [
-      "font-design",
-      "arabic-typography"
+      "font-design"
     ],
     "featured": true
   },
@@ -431,7 +428,7 @@
       "en": "Brand Systems"
     },
     "description": {
-      "ar": "كورس من ستة أسابيع في بناء أنظمة هوية تعمل بالعربية واللاتينية.",
+      "ar": "دورة من ستة أسابيع في بناء أنظمة هوية تعمل بالعربية واللاتينية.",
       "en": "A six-week course on building identity systems that work in Arabic and Latin."
     },
     "cover": {

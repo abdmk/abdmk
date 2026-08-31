@@ -1,0 +1,186 @@
+[
+  {
+    "id": "sard-family",
+    "slug": "sard-family",
+    "published": true,
+    "order": 0,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "name": {
+      "ar": "عائلة خط سرد",
+      "en": "Sard Type Family"
+    },
+    "kind": "font",
+    "description": {
+      "ar": "خط نصي عربي بخمسة أوزان، مصمّم للقراءة الطويلة — كتب، مجلات، وواجهات كثيفة النص.",
+      "en": "A five-weight Arabic text family built for long reading — books, magazines and text-heavy interfaces."
+    },
+    "cover": {
+      "src": "/media/products/sard-family.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "عائلة خط سرد",
+        "en": "Sard Type Family"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "price": {
+      "ar": "١٢٠ دولار",
+      "en": "$120"
+    },
+    "purchaseUrl": "https://example.com/buy",
+    "highlights": [
+      {
+        "ar": "خمسة أوزان حقيقية",
+        "en": "Five real weights"
+      },
+      {
+        "ar": "دعم عربي ولاتيني كامل",
+        "en": "Full Arabic and Latin coverage"
+      },
+      {
+        "ar": "ترخيص سطح مكتب وويب",
+        "en": "Desktop and web licence"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "identity-kit",
+    "slug": "identity-kit",
+    "published": true,
+    "order": 1,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "name": {
+      "ar": "عدّة الهوية البصرية",
+      "en": "Brand Identity Kit"
+    },
+    "kind": "template",
+    "description": {
+      "ar": "قوالب جاهزة لبناء دليل هوية عربي كامل — من الشبكة إلى تطبيقات الطباعة.",
+      "en": "Ready templates for building a complete Arabic brand book — from grid to print applications."
+    },
+    "cover": {
+      "src": "/media/products/identity-kit.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "عدّة الهوية البصرية",
+        "en": "Brand Identity Kit"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "price": {
+      "ar": "٦٥ دولار",
+      "en": "$65"
+    },
+    "purchaseUrl": "https://example.com/buy",
+    "highlights": [
+      {
+        "ar": "٤٨ صفحة قابلة للتحرير",
+        "en": "48 editable pages"
+      },
+      {
+        "ar": "شبكة عربية جاهزة",
+        "en": "RTL-ready grid"
+      },
+      {
+        "ar": "ملفات InDesign و Figma",
+        "en": "InDesign and Figma files"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "arabic-type-guide",
+    "slug": "arabic-type-guide",
+    "published": true,
+    "order": 2,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "name": {
+      "ar": "دليل التايبوغرافي العربي",
+      "en": "The Arabic Typography Guide"
+    },
+    "kind": "ebook",
+    "description": {
+      "ar": "كتيّب عملي في ضبط النص العربي: التشكيل، التباعد، ارتفاع السطر، ومزج الحرفين.",
+      "en": "A practical handbook on setting Arabic text: diacritics, spacing, leading and mixing scripts."
+    },
+    "cover": {
+      "src": "/media/products/arabic-type-guide.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "دليل التايبوغرافي العربي",
+        "en": "The Arabic Typography Guide"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "price": {
+      "ar": "٢٥ دولار",
+      "en": "$25"
+    },
+    "purchaseUrl": "https://example.com/buy",
+    "highlights": [
+      {
+        "ar": "١٤٠ صفحة",
+        "en": "140 pages"
+      },
+      {
+        "ar": "أمثلة قبل وبعد",
+        "en": "Before-and-after examples"
+      },
+      {
+        "ar": "تحديثات مجانية",
+        "en": "Free updates"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "motion-presets",
+    "slug": "motion-presets",
+    "published": true,
+    "order": 3,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "name": {
+      "ar": "بريسيتات موشن عربي",
+      "en": "Arabic Motion Presets"
+    },
+    "kind": "preset",
+    "description": {
+      "ar": "حزمة حركات جاهزة للنص العربي في أفتر إفكتس، مضبوطة على اتجاه القراءة من اليمين.",
+      "en": "An After Effects pack for Arabic text, timed to right-to-left reading."
+    },
+    "cover": {
+      "src": "/media/products/motion-presets.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "بريسيتات موشن عربي",
+        "en": "Arabic Motion Presets"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "price": {
+      "ar": "٤٠ دولار",
+      "en": "$40"
+    },
+    "purchaseUrl": "https://example.com/buy",
+    "highlights": [
+      {
+        "ar": "٣٢ حركة",
+        "en": "32 presets"
+      },
+      {
+        "ar": "تعمل مع أي خط عربي",
+        "en": "Works with any Arabic face"
+      },
+      {
+        "ar": "شرح بالفيديو",
+        "en": "Video walkthrough"
+      }
+    ],
+    "featured": true
+  }
+]

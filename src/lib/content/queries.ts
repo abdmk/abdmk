@@ -13,6 +13,9 @@ export const companies = cache(() => getCollection('companies'));
 export const typefaces = cache(() => getCollection('fonts'));
 export const services = cache(() => getCollection('services'));
 export const workshops = cache(() => getCollection('workshops'));
+export const products = cache(() => getCollection('products'));
+export const testimonials = cache(() => getCollection('testimonials'));
+export const faq = cache(() => getCollection('faq'));
 export const categories = cache(() => getCategories());
 export const settings = cache(() => getSettings());
 

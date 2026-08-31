@@ -261,6 +261,42 @@ export interface Workshop extends Entity {
   featured: boolean;
 }
 
+/**
+ * A client's own words. Displayed as large set type rather than a review card,
+ * so the quote reads as part of the site's voice.
+ */
+export interface Testimonial extends Entity {
+  quote: Localized;
+  author: Localized;
+  /** The person's title — kept separate so it can be set smaller than the name. */
+  role: Localized;
+  organisation: Localized;
+  /** Optional company slug, to link the quote back to the work. */
+  company: string | null;
+  avatar?: Media;
+  featured: boolean;
+}
+
+export type ProductKind = 'font' | 'template' | 'preset' | 'ebook' | 'other';
+
+/** Something readers can buy or download — the shop side of the portfolio. */
+export interface Product extends Entity {
+  name: Localized;
+  kind: ProductKind;
+  description: Localized;
+  cover: Media;
+  price: Localized;
+  purchaseUrl?: string;
+  highlights: Localized[];
+  featured: boolean;
+}
+
+/** One row of the closing FAQ. `slug` doubles as the anchor id. */
+export interface FaqItem extends Entity {
+  question: Localized;
+  answer: Localized;
+}
+
 export interface Category {
   slug: string;
   name: Localized;
@@ -280,6 +316,8 @@ export interface Settings {
   tagline: Localized;
   heroStatement: Localized;
   shortBio: Localized;
+  /** The proof band under the hero — a figure and what it counts. */
+  stats: { value: string; label: Localized }[];
   about: {
     portrait: Media;
     intro: Localized;
@@ -316,6 +354,17 @@ export interface ContentData {
   fonts: TypefaceItem[];
   services: Service[];
   workshops: Workshop[];
+  products: Product[];
+  testimonials: Testimonial[];
+  faq: FaqItem[];
 }
 
-export type CollectionName = 'projects' | 'companies' | 'fonts' | 'services' | 'workshops';
+export type CollectionName =
+  | 'projects'
+  | 'companies'
+  | 'fonts'
+  | 'services'
+  | 'workshops'
+  | 'products'
+  | 'testimonials'
+  | 'faq';

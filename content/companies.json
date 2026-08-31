@@ -32,8 +32,7 @@
     },
     "type": "studio",
     "services": [
-      "brand-identity",
-      "art-direction"
+      "brand-identity"
     ],
     "url": "https://example.com/shorouk-studio",
     "images": [
@@ -94,8 +93,7 @@
     },
     "type": "agency",
     "services": [
-      "brand-identity",
-      "art-direction"
+      "brand-identity"
     ],
     "url": "https://example.com/levant-agency",
     "images": [

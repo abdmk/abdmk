@@ -6,7 +6,6 @@ import { Gallery } from '@/components/media/Gallery';
 import { SmartImage } from '@/components/media/SmartImage';
 import { ProjectGrid } from '@/components/project/ProjectGrid';
 import { ArrowLink } from '@/components/ui/ArrowLink';
-import { BloomField } from '@/components/ui/Bloom';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import {
   companies as getCompanies,
@@ -63,7 +62,7 @@ export default async function CompanyPage({
   ]);
 
   return (
-    <article className="shell pb-section pt-6 sm:pt-8">
+    <article className="shell pb-section">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -80,103 +79,95 @@ export default async function CompanyPage({
         }}
       />
 
-      <header className="card relative overflow-hidden p-6 sm:p-8 lg:p-12">
-        <BloomField hues={['sky', 'mint', 'lilac']} />
+      <header className="pt-14 md:pt-20">
+        <Link
+          href={localePath(lang, '/companies')}
+          className="label inline-flex items-center gap-2 hover:text-ink"
+        >
+          <Icon name="arrowLeft" size={12} flipRtl />
+          {tr.companies.title}
+        </Link>
 
-        <div className="relative">
-          <Link
-            href={localePath(lang, '/companies')}
-            className="chip transition-colors duration-300 hover:bg-ink hover:text-surface"
-          >
-            <Icon name="arrowLeft" size={13} flipRtl />
-            {tr.companies.title}
-          </Link>
+        {company.logo ? (
+          <SmartImage
+            src={company.logo.src}
+            alt={`${t(company.name, lang)} logo`}
+            width={160}
+            height={60}
+            sizes="160px"
+            className="mt-8 h-9 w-auto dark:invert"
+          />
+        ) : null}
 
-          <div className="mt-7 grid gap-8 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-7">
-              {company.logo ? (
-                <span className="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-sunken">
-                  <SmartImage
-                    src={company.logo.src}
-                    alt={`${t(company.name, lang)} logo`}
-                    width={160}
-                    height={60}
-                    sizes="160px"
-                    className="h-7 w-auto dark:invert"
-                  />
-                </span>
+        <h1 className="mt-6 max-w-[14ch] text-mega md:mt-8">{t(company.name, lang)}</h1>
+
+        <div className="grid-editorial mt-8 md:mt-12">
+          <p className="measure col-span-4 text-lead text-muted md:col-span-6">
+            {t(company.description, lang)}
+          </p>
+
+          <div className="col-span-4 md:col-span-4 md:col-start-9">
+            <dl className="m-0">
+              <div className="border-t border-line py-3">
+                <dt className="label mb-1.5">{tr.companies.role}</dt>
+                <dd className="text-small">{t(company.role, lang)}</dd>
+              </div>
+              <div className="border-t border-line py-3">
+                <dt className="label mb-1.5">{tr.companies.period}</dt>
+                <dd className="numeric text-small">{t(company.period, lang)}</dd>
+              </div>
+              <div className="border-t border-line py-3">
+                <dt className="label mb-1.5">{tr.companies.type}</dt>
+                <dd className="text-small">{tr.companies.types[company.type]}</dd>
+              </div>
+              {companyServices.length ? (
+                <div className="border-t border-line py-3">
+                  <dt className="label mb-1.5">{tr.project.services}</dt>
+                  <dd>
+                    <ul className="list-none space-y-1 p-0 text-small">
+                      {companyServices.map((service) => (
+                        <li key={service.id}>
+                          <Link
+                            href={`${localePath(lang, '/services')}#${service.slug}`}
+                            className="link-underline"
+                          >
+                            {t(service.name, lang)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
               ) : null}
-              <h1 className="text-display">{t(company.name, lang)}</h1>
-              <p className="mt-5 max-w-prose text-lead text-muted">
-                {t(company.description, lang)}
-              </p>
-            </div>
+            </dl>
 
-            <div className="lg:col-span-5">
-              <dl className="m-0 space-y-2">
-                <div className="rounded-xl2 bg-sunken px-4 py-3">
-                  <dt className="label mb-1.5">{tr.companies.role}</dt>
-                  <dd className="text-small">{t(company.role, lang)}</dd>
-                </div>
-                <div className="rounded-xl2 bg-sunken px-4 py-3">
-                  <dt className="label mb-1.5">{tr.companies.period}</dt>
-                  <dd className="numeric text-small">{t(company.period, lang)}</dd>
-                </div>
-                <div className="rounded-xl2 bg-sunken px-4 py-3">
-                  <dt className="label mb-1.5">{tr.companies.type}</dt>
-                  <dd className="text-small">{tr.companies.types[company.type]}</dd>
-                </div>
-                {companyServices.length ? (
-                  <div className="rounded-xl2 bg-sunken px-4 py-3">
-                    <dt className="label mb-1.5">{tr.project.services}</dt>
-                    <dd>
-                      <ul className="list-none space-y-1 p-0 text-small">
-                        {companyServices.map((service) => (
-                          <li key={service.id}>
-                            <Link
-                              href={`${localePath(lang, '/services')}#${service.slug}`}
-                              className="link-underline"
-                            >
-                              {t(service.name, lang)}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </dd>
-                  </div>
-                ) : null}
-              </dl>
-
-              {company.url ? (
-                <a
-                  href={company.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="btn btn-primary btn-sm mt-5"
-                >
-                  {tr.companies.visitSite}
-                  <Icon name="arrowUpRight" size={15} />
-                </a>
-              ) : null}
-            </div>
+            {company.url ? (
+              <a
+                href={company.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="btn btn-ghost btn-sm mt-6"
+              >
+                {tr.companies.visitSite}
+                <Icon name="arrowUpRight" size={14} />
+              </a>
+            ) : null}
           </div>
         </div>
       </header>
 
       {company.images.length ? (
-        <div className="mt-5 lg:mt-6">
+        <div className="mt-14 md:mt-20">
           <Gallery media={company.images} lang={lang} columns={2} />
         </div>
       ) : null}
 
       <section className="mt-section">
-        <SectionHeader title={tr.companies.selectedProjects} className="mb-9 md:mb-12" />
+        <SectionHeader title={tr.companies.selectedProjects} className="mb-10 md:mb-16" />
         {projects.length ? (
           <ProjectGrid projects={projects} lang={lang} companies={companies} priorityCount={1} />
         ) : (
-          <div className="card p-10 text-center">
-            <p className="text-lead text-muted">{tr.companies.noProjects}</p>
-          </div>
+          <p className="rule py-12 text-lead text-muted">{tr.companies.noProjects}</p>
         )}
       </section>
     </article>

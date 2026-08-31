@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { Icon } from '@/components/icons';
 import { SmartImage } from '@/components/media/SmartImage';
-import type { Company, Lang, Project } from '@/lib/content/types';
+import type { Category, Company, Lang, Project } from '@/lib/content/types';
 import { localePath, t } from '@/lib/i18n/config';
+import { ui } from '@/lib/i18n/dictionary';
 import { cn } from '@/lib/utils';
 
 export type CardScale = 'hero' | 'wide' | 'tall' | 'regular';
@@ -11,49 +12,53 @@ interface ProjectCardProps {
   project: Project;
   lang: Lang;
   company?: Company;
+  categories?: Category[];
   scale?: CardScale;
   priority?: boolean;
-  /** Shown as a chip beside the year — usually the position in the list. */
+  /** Index in the list, shown as a running number in the caption. */
   index?: number;
 }
 
 const RATIO: Record<CardScale, string> = {
   hero: '16 / 9',
-  wide: '3 / 2',
-  tall: '4 / 5',
-  regular: '4 / 3',
+  wide: '4 / 3',
+  tall: '3 / 4',
+  regular: '5 / 4',
 };
 
 const SIZES: Record<CardScale, string> = {
-  hero: '(max-width: 768px) 100vw, 90vw',
-  wide: '(max-width: 768px) 100vw, 60vw',
-  tall: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 34vw',
-  regular: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 44vw',
+  hero: '(max-width: 768px) 100vw, 92vw',
+  wide: '(max-width: 768px) 100vw, 58vw',
+  tall: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 38vw',
+  regular: '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 46vw',
 };
 
 /**
- * A project as a floating white card: the artwork sits in a rounded well inside
- * the surface, the title and client sit under it, and the whole card lifts a few
- * pixels on hover. One card shape, four aspect ratios.
+ * A project entry.
+ *
+ * There is no card: the image is the object and the type sits beneath it, the
+ * way a plate is captioned in a printed monograph. The caption carries the four
+ * things a prospective client actually looks for — what it is, who it was for,
+ * what kind of work it was, and when — because a wall of untitled images tells
+ * a visitor nothing about whether this designer has done their kind of job.
  */
 export function ProjectCard({
   project,
   lang,
   company,
+  categories = [],
   scale = 'regular',
   priority,
   index,
 }: ProjectCardProps) {
-  const title = t(project.title, lang);
+  const tr = ui(lang);
+  const discipline = categories.find((c) => project.categories.includes(c.slug));
 
   return (
-    <article className="group h-full">
-      <Link
-        href={localePath(lang, `/project/${project.slug}`)}
-        className="card card-hover flex h-full flex-col overflow-hidden p-2.5 sm:p-3"
-      >
+    <article className="group">
+      <Link href={localePath(lang, `/project/${project.slug}`)} className="block">
         <div
-          className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
+          className="media-zoom well relative"
           style={{ aspectRatio: RATIO[scale] }}
         >
           <SmartImage
@@ -63,39 +68,49 @@ export function ProjectCard({
             sizes={SIZES[scale]}
             priority={priority}
           />
-        </div>
 
-        <div className="flex flex-1 flex-col px-2.5 pb-2 pt-4 sm:px-3.5 sm:pt-5">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className={cn('leading-tight', scale === 'hero' ? 'text-h2' : 'text-h3')}>
-              {title}
-            </h3>
-            <span className="chip numeric shrink-0 text-faint">
-              {index !== undefined ? String(index + 1).padStart(2, '0') : project.year}
-            </span>
-          </div>
-
-          <p className="mt-2 text-small text-muted">
-            {company ? t(company.name, lang) : t(project.shortDescription, lang)}
-          </p>
-
-          {scale === 'hero' ? (
-            <p className="mt-3 max-w-prose text-lead text-muted">
-              {t(project.shortDescription, lang)}
-            </p>
-          ) : null}
-
+          {/* The "open" affordance only resolves on hover, so at rest the grid
+              is nothing but artwork. */}
           <span
             aria-hidden
             className={cn(
-              'mt-4 inline-flex h-9 w-9 items-center justify-center self-start rounded-full',
-              'bg-sunken text-ink transition-colors duration-500 ease-editorial',
-              'group-hover:bg-ink group-hover:text-surface',
+              'absolute bottom-4 end-4 hidden items-center gap-2 rounded-full bg-paper px-4 py-2.5',
+              'text-small font-medium text-ink opacity-0 transition-all duration-500 ease-editorial',
+              'group-hover:translate-y-0 group-hover:opacity-100 md:flex md:translate-y-2',
             )}
           >
-            <Icon name="arrowRight" size={15} flipRtl />
+            {tr.project.visitProject}
+            <Icon name="arrowUpRight" size={14} />
           </span>
         </div>
+
+        <div className="mt-5 flex items-start justify-between gap-6 md:mt-6">
+          <div className="min-w-0">
+            <h3 className={cn('leading-tight', scale === 'hero' ? 'text-h1' : 'text-h2')}>
+              <span className="link-underline">{t(project.title, lang)}</span>
+            </h3>
+
+            <p className="meta-line mt-2.5 md:mt-3">
+              {[
+                company ? t(company.name, lang) : null,
+                discipline ? t(discipline.name, lang) : null,
+              ]
+                .filter(Boolean)
+                .join('  ·  ')}
+            </p>
+          </div>
+
+          <p className="label numeric shrink-0 pt-1">
+            {index !== undefined ? `${String(index + 1).padStart(2, '0')} — ` : ''}
+            {project.year}
+          </p>
+        </div>
+
+        {scale === 'hero' ? (
+          <p className="measure mt-4 text-lead text-muted">
+            {t(project.shortDescription, lang)}
+          </p>
+        ) : null}
       </Link>
     </article>
   );
@@ -116,18 +131,14 @@ export function ProjectCardMini({
   return (
     <Link
       href={localePath(lang, `/project/${project.slug}`)}
-      className={cn(
-        'card card-hover group flex flex-col gap-4 p-2.5 sm:p-3',
-        align === 'end' && 'items-end text-end',
-      )}
+      className={cn('group block', align === 'end' && 'text-end')}
     >
-      <span className="label inline-flex items-center gap-2 px-2 pt-2">
-        {align === 'start' ? <Icon name="arrowLeft" size={13} flipRtl /> : null}
+      <span className={cn('label inline-flex items-center gap-2', align === 'end' && 'flex-row-reverse')}>
+        <Icon name={align === 'start' ? 'arrowLeft' : 'arrowRight'} size={12} flipRtl />
         {label}
-        {align === 'end' ? <Icon name="arrowRight" size={13} flipRtl /> : null}
       </span>
       <span
-        className="media-zoom relative block w-full overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
+        className="media-zoom well relative mt-5 block w-full"
         style={{ aspectRatio: '16 / 10' }}
       >
         <SmartImage
@@ -137,7 +148,10 @@ export function ProjectCardMini({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </span>
-      <span className="px-2 pb-2 text-h3">{t(project.title, lang)}</span>
+      <span className="mt-5 block text-h2">
+        <span className="link-underline">{t(project.title, lang)}</span>
+      </span>
+      <span className="meta-line mt-2 block numeric">{project.year}</span>
     </Link>
   );
 }

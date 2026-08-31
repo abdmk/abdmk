@@ -215,6 +215,68 @@ export const SCHEMAS: Record<CollectionName, CollectionSchema> = {
       ...PUBLISHING,
     ],
   },
+
+  products: {
+    name: 'products',
+    label: 'Products',
+    singular: 'Product',
+    titleField: 'name',
+    publicPath: 'products',
+    fields: [
+      { name: 'name', label: 'Name', type: 'localized' },
+      { name: 'slug', label: 'Slug', type: 'slug', half: true },
+      {
+        name: 'kind',
+        label: 'Kind',
+        type: 'select',
+        half: true,
+        options: [
+          { value: 'font', label: 'Typeface' },
+          { value: 'template', label: 'Template' },
+          { value: 'preset', label: 'Preset' },
+          { value: 'ebook', label: 'Ebook / guide' },
+          { value: 'other', label: 'Other' },
+        ],
+      },
+      { name: 'cover', label: 'Cover', type: 'media' },
+      { name: 'description', label: 'Description', type: 'localizedArea' },
+      { name: 'price', label: 'Price', type: 'localized', half: true },
+      { name: 'purchaseUrl', label: 'Purchase URL', type: 'text', half: true },
+      { name: 'highlights', label: "What's included", type: 'localizedList' },
+      ...PUBLISHING,
+    ],
+  },
+
+  testimonials: {
+    name: 'testimonials',
+    label: 'Testimonials',
+    singular: 'Testimonial',
+    titleField: 'author',
+    fields: [
+      { name: 'quote', label: 'Quote', type: 'localizedArea' },
+      { name: 'author', label: 'Author', type: 'localized' },
+      { name: 'slug', label: 'Slug', type: 'slug', half: true },
+      { name: 'role', label: 'Role / title', type: 'localized', half: true },
+      { name: 'organisation', label: 'Organisation', type: 'localized', half: true },
+      { name: 'company', label: 'Linked company', type: 'relationSingle', collection: 'companies' },
+      { name: 'avatar', label: 'Portrait', type: 'media' },
+      ...PUBLISHING,
+    ],
+  },
+
+  faq: {
+    name: 'faq',
+    label: 'FAQ',
+    singular: 'Question',
+    titleField: 'question',
+    fields: [
+      { name: 'question', label: 'Question', type: 'localized' },
+      { name: 'answer', label: 'Answer', type: 'localizedArea' },
+      { name: 'slug', label: 'Slug', type: 'slug', half: true },
+      { name: 'published', label: 'Published', type: 'boolean', half: true },
+      { name: 'order', label: 'Sort order', type: 'number', half: true, help: 'Lower sorts first.' },
+    ],
+  },
 };
 
 /** Blank record for a new item, derived from the schema. */

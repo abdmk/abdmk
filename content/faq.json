@@ -1,0 +1,92 @@
+[
+  {
+    "id": "project-types",
+    "slug": "project-types",
+    "published": true,
+    "order": 0,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "ما نوع المشاريع التي تعمل عليها؟",
+      "en": "What kind of projects do you take on?"
+    },
+    "answer": {
+      "ar": "هويات بصرية كاملة، خطوط عربية مخصّصة، أنظمة موشن، وواجهات عربية. أفضّل المشاريع التي تحتاج نظامًا يعيش سنوات، لا تنفيذًا لمرة واحدة.",
+      "en": "Full visual identities, custom Arabic typefaces, motion systems and Arabic interfaces. I prefer work that needs a system built to last years, not a one-off execution."
+    }
+  },
+  {
+    "id": "remote",
+    "slug": "remote",
+    "published": true,
+    "order": 1,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "هل تعمل مع العملاء عن بُعد؟",
+      "en": "Do you work with clients remotely?"
+    },
+    "answer": {
+      "ar": "نعم — أغلب مشاريعي عن بُعد مع عملاء في المنطقة العربية وأوروبا. الاجتماعات أونلاين والملفات تُسلَّم رقميًا، والفروق الزمنية لم تكن مشكلة حتى الآن.",
+      "en": "Yes — most of my work is remote, with clients across the Arab region and Europe. Meetings are online and files are delivered digitally; time zones have not been a problem."
+    }
+  },
+  {
+    "id": "timeline",
+    "slug": "timeline",
+    "published": true,
+    "order": 2,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "ما مدة تنفيذ المشاريع؟",
+      "en": "How long does a project take?"
+    },
+    "answer": {
+      "ar": "الشعار وحده من أسبوعين إلى ثلاثة. الهوية الكاملة من ٦ إلى ١٠ أسابيع. الخط المخصّص من ٣ إلى ٦ أشهر حسب عدد الأوزان والمحارف.",
+      "en": "A mark alone takes two to three weeks. A full identity, six to ten weeks. A custom typeface runs three to six months depending on weights and character set."
+    }
+  },
+  {
+    "id": "process",
+    "slug": "process",
+    "published": true,
+    "order": 3,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "كيف تبدأ عملية العمل؟",
+      "en": "How does the process start?"
+    },
+    "answer": {
+      "ar": "مكالمة قصيرة نفهم فيها المشروع، ثم عرض سعر وجدول زمني واضح. بعد الموافقة نبدأ بمرحلة بحث وتوجيه فني قبل أي رسم، لأن القرارات الأولى هي التي تحدّد النتيجة.",
+      "en": "A short call to understand the project, then a clear quote and timeline. After sign-off we begin with research and art direction before any drawing — the first decisions are the ones that decide the result."
+    }
+  },
+  {
+    "id": "outside-scope",
+    "slug": "outside-scope",
+    "published": true,
+    "order": 4,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "هل تقبل مشاريع خارج تخصصك؟",
+      "en": "Do you take work outside your specialism?"
+    },
+    "answer": {
+      "ar": "نادرًا. إن كان المشروع خارج ما أتقنه أرشّح لك من هو أفضل مني فيه. أفضّل أن أرفض عملًا على أن أسلّمه بمستوى أقل مما يستحق.",
+      "en": "Rarely. If a project sits outside what I do well, I will point you to someone better suited. I would rather turn work down than deliver it below the level it deserves."
+    }
+  },
+  {
+    "id": "how-to-request",
+    "slug": "how-to-request",
+    "published": true,
+    "order": 5,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "question": {
+      "ar": "كيف يمكنني طلب مشروع؟",
+      "en": "How do I request a project?"
+    },
+    "answer": {
+      "ar": "من صفحة التواصل — اكتب نوع المشروع والمدى الزمني والميزانية التقريبية. أردّ عادة خلال يومَي عمل.",
+      "en": "Through the contact page — tell me the project type, timeline and rough budget. I usually reply within two working days."
+    }
+  }
+]

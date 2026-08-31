@@ -205,10 +205,11 @@ COMPANIES = [
 ]
 
 SERVICES = [
-    "brand-identity", "logo-design", "arabic-typography", "font-design",
-    "arabic-calligraphy", "art-direction", "motion-design", "editorial-design",
-    "social-media-design", "packaging-design", "ui-ux",
+    "brand-identity", "logo-design", "font-design", "motion-design",
+    "ui-ux", "social-media-design",
 ]
+
+PRODUCTS = ["sard-family", "identity-kit", "arabic-type-guide", "motion-presets"]
 
 WORKSHOPS = [
     "arabic-type-foundations", "identity-sprint", "calligraphy-to-type",
@@ -225,6 +226,10 @@ def main() -> None:
             ratio = [(1600, 1000), (1200, 1500), (1600, 900), (1400, 1400)][i % 4]
             write(f"projects/{slug}/{i:02d}.svg", composition(f"{slug}-{i}", *ratio))
             count += 1
+
+    for slug in PRODUCTS:
+        write(f"products/{slug}.svg", composition(f"product-{slug}", 1200, 900, slug.replace("-", " ")))
+        count += 1
 
     for slug, n in FONTS:
         write(f"fonts/{slug}/preview.svg", composition(f"font-{slug}", 1600, 1000, slug))

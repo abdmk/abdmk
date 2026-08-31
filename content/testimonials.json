@@ -1,0 +1,127 @@
+[
+  {
+    "id": "nour-shorouk",
+    "slug": "nour-shorouk",
+    "published": true,
+    "order": 0,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "quote": {
+      "ar": "سلّمنا هوية كاملة نقرأها قبل أن نراها. الحرف العربي عنده ليس زخرفة — هو النظام كله.",
+      "en": "He delivered an identity we read before we saw. For him the Arabic letter is not ornament — it is the whole system."
+    },
+    "author": {
+      "ar": "نور العبد",
+      "en": "Nour Al-Abd"
+    },
+    "role": {
+      "ar": "مديرة الاستوديو",
+      "en": "Studio Director"
+    },
+    "organisation": {
+      "ar": "استوديو الشروق",
+      "en": "Shorouk Studio"
+    },
+    "company": "shorouk-studio",
+    "featured": true
+  },
+  {
+    "id": "rami-levant",
+    "slug": "rami-levant",
+    "published": true,
+    "order": 1,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "quote": {
+      "ar": "اشتغلنا مع مصممين كثر. الفرق هنا أنه يفكّر كمخرج فني، لا كمنفّذ.",
+      "en": "We have worked with many designers. The difference here is that he thinks like an art director, not an executor."
+    },
+    "author": {
+      "ar": "رامي حداد",
+      "en": "Rami Haddad"
+    },
+    "role": {
+      "ar": "مدير إبداعي",
+      "en": "Creative Director"
+    },
+    "organisation": {
+      "ar": "وكالة المشرق",
+      "en": "Levant Agency"
+    },
+    "company": "levant-agency",
+    "featured": true
+  },
+  {
+    "id": "layla-nahda",
+    "slug": "layla-nahda",
+    "published": true,
+    "order": 2,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "quote": {
+      "ar": "أعطانا خطًّا نصيًّا احتمل ٣٢٠ صفحة دون أن يتعب القارئ. هذا اختبار لا ينجح فيه كثيرون.",
+      "en": "He gave us a text face that carried 320 pages without tiring the reader. Few pass that test."
+    },
+    "author": {
+      "ar": "ليلى منصور",
+      "en": "Layla Mansour"
+    },
+    "role": {
+      "ar": "رئيسة التحرير",
+      "en": "Editor in Chief"
+    },
+    "organisation": {
+      "ar": "دار النهضة",
+      "en": "Nahda Press"
+    },
+    "company": "nahda-press",
+    "featured": true
+  },
+  {
+    "id": "sami-aswat",
+    "slug": "sami-aswat",
+    "published": true,
+    "order": 3,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "quote": {
+      "ar": "الهوية المتحركة اللي بناها صارت لغة القناة كلها، مش مجرد شعار بيتحرك.",
+      "en": "The motion identity he built became the whole channel’s language, not a logo that moves."
+    },
+    "author": {
+      "ar": "سامي درويش",
+      "en": "Sami Darwish"
+    },
+    "role": {
+      "ar": "مؤسس",
+      "en": "Founder"
+    },
+    "organisation": {
+      "ar": "أصوات ميديا",
+      "en": "Aswat Media"
+    },
+    "company": "aswat-media",
+    "featured": true
+  },
+  {
+    "id": "hind-madad",
+    "slug": "hind-madad",
+    "published": true,
+    "order": 4,
+    "updatedAt": "2026-08-31T18:25:28Z",
+    "quote": {
+      "ar": "أول مرة نشوف واجهة عربية مصمّمة من اليمين، مش مقلوبة عن تصميم إنجليزي.",
+      "en": "The first time we saw an Arabic interface designed from the right, not flipped from an English one."
+    },
+    "author": {
+      "ar": "هند القاسم",
+      "en": "Hind Al-Qasim"
+    },
+    "role": {
+      "ar": "مديرة المنتج",
+      "en": "Head of Product"
+    },
+    "organisation": {
+      "ar": "مدد",
+      "en": "Madad Tech"
+    },
+    "company": "madad-tech",
+    "featured": true
+  }
+]

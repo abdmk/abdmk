@@ -12,7 +12,8 @@ const dict = {
     services: { ar: 'الخدمات', en: 'Services' },
     companies: { ar: 'الشركات', en: 'Companies' },
     workshops: { ar: 'الورش', en: 'Workshops' },
-    courses: { ar: 'الكورسات', en: 'Courses' },
+    courses: { ar: 'الدورات', en: 'Courses' },
+    products: { ar: 'المنتجات', en: 'Products' },
     about: { ar: 'نبذة', en: 'About' },
     contact: { ar: 'تواصل', en: 'Contact' },
     menu: { ar: 'القائمة', en: 'Menu' },
@@ -27,7 +28,7 @@ const dict = {
     selectedFonts: { ar: 'خطوط مختارة', en: 'Selected Fonts' },
     workedWith: { ar: 'عملت مع', en: 'Worked With' },
     services: { ar: 'الخدمات', en: 'Services' },
-    workshops: { ar: 'ورش وكورسات', en: 'Workshops & Courses' },
+    workshops: { ar: 'ورش ودورات', en: 'Workshops & Courses' },
     about: { ar: 'نبذة عني', en: 'About' },
     viewWork: { ar: 'شاهد الأعمال', en: 'View My Work' },
     contactMe: { ar: 'تواصل معي', en: 'Contact Me' },
@@ -35,6 +36,8 @@ const dict = {
     viewAllFonts: { ar: 'كل الخطوط', en: 'View All Fonts' },
     viewAllCompanies: { ar: 'كل الشركات', en: 'View All Companies' },
     viewAllWorkshops: { ar: 'كل الورش', en: 'View All Workshops' },
+    viewAllProducts: { ar: 'كل المنتجات', en: 'View All Products' },
+    availability: { ar: 'متاح لمشاريع مختارة', en: 'Available for select projects' },
     viewAllServices: { ar: 'كل الخدمات', en: 'View All Services' },
     readMore: { ar: 'اقرأ المزيد', en: 'Read More' },
     ctaTitle: { ar: 'لنعمل معًا', en: "Let's work together" },
@@ -150,9 +153,9 @@ const dict = {
   },
   workshops: {
     title: { ar: 'ورش العمل', en: 'Workshops' },
-    coursesTitle: { ar: 'الكورسات', en: 'Courses' },
+    coursesTitle: { ar: 'الدورات', en: 'Courses' },
     intro: {
-      ar: 'ورش وكورسات في التايبوغرافي العربي والهوية البصرية.',
+      ar: 'ورش ودورات في التايبوغرافي العربي والهوية البصرية.',
       en: 'Workshops and courses in Arabic typography and visual identity.',
     },
     upcoming: { ar: 'القادمة', en: 'Upcoming' },
@@ -172,6 +175,48 @@ const dict = {
       hybrid: { ar: 'مدمج', en: 'Hybrid' },
     },
     noUpcoming: { ar: 'لا توجد مواعيد قادمة حاليًا.', en: 'Nothing scheduled right now.' },
+  },
+  products: {
+    title: { ar: 'المنتجات', en: 'Products' },
+    intro: {
+      ar: 'خطوط وقوالب وأدلّة أصنعها لتستخدمها في عملك مباشرة.',
+      en: 'Typefaces, templates and guides I make for you to put straight to work.',
+    },
+    buy: { ar: 'احصل عليه', en: 'Get it' },
+    price: { ar: 'السعر', en: 'Price' },
+    includes: { ar: 'يتضمّن', en: 'Includes' },
+    kinds: {
+      font: { ar: 'خط', en: 'Typeface' },
+      template: { ar: 'قوالب', en: 'Template' },
+      preset: { ar: 'بريسيت', en: 'Presets' },
+      ebook: { ar: 'كتاب', en: 'Guide' },
+      other: { ar: 'منتج', en: 'Product' },
+    },
+    empty: { ar: 'لا توجد منتجات منشورة بعد.', en: 'No published products yet.' },
+  },
+  testimonials: {
+    title: { ar: 'ماذا قالوا عني', en: 'What they said' },
+    intro: {
+      ar: 'كلمات من أشخاص سلّمتُ لهم عملًا.',
+      en: 'Words from people I have delivered work to.',
+    },
+  },
+  faq: {
+    title: { ar: 'أسئلة قد تراودك', en: 'Questions you might have' },
+    intro: {
+      ar: 'ما يسألني عنه العملاء عادةً قبل أن نبدأ.',
+      en: 'What clients usually ask before we start.',
+    },
+  },
+  stats: {
+    title: { ar: 'بالأرقام', en: 'By the numbers' },
+  },
+  impact: {
+    title: { ar: 'التأثير الرقمي', en: 'Digital impact' },
+    intro: {
+      ar: 'التصميم الذي لا يُقاس أثره زخرفة. هذه هي المواضع التي يُحدث فيها عملي فرقًا فعليًا.',
+      en: 'Design whose effect is not measured is decoration. These are the places my work actually moves something.',
+    },
   },
   contact: {
     title: { ar: 'تواصل', en: 'Contact' },

@@ -7,9 +7,12 @@ import type {
   CollectionName,
   Company,
   ContentData,
+  FaqItem,
+  Product,
   Project,
   Service,
   Settings,
+  Testimonial,
   TypefaceItem,
   Workshop,
 } from './types';
@@ -34,6 +37,9 @@ const FILES = {
   fonts: 'fonts.json',
   services: 'services.json',
   workshops: 'workshops.json',
+  products: 'products.json',
+  testimonials: 'testimonials.json',
+  faq: 'faq.json',
 } as const;
 
 type FileKey = keyof typeof FILES;
@@ -77,17 +83,41 @@ async function writeFile(key: FileKey, value: unknown): Promise<void> {
 
 /** Read the entire content graph. */
 export async function getContent(): Promise<ContentData> {
-  const [settings, categories, projects, companies, fonts, services, workshops] =
-    await Promise.all([
-      readFile<Settings>('settings'),
-      readFile<Category[]>('categories'),
-      readFile<Project[]>('projects'),
-      readFile<Company[]>('companies'),
-      readFile<TypefaceItem[]>('fonts'),
-      readFile<Service[]>('services'),
-      readFile<Workshop[]>('workshops'),
-    ]);
-  return { settings, categories, projects, companies, fonts, services, workshops };
+  const [
+    settings,
+    categories,
+    projects,
+    companies,
+    fonts,
+    services,
+    workshops,
+    products,
+    testimonials,
+    faq,
+  ] = await Promise.all([
+    readFile<Settings>('settings'),
+    readFile<Category[]>('categories'),
+    readFile<Project[]>('projects'),
+    readFile<Company[]>('companies'),
+    readFile<TypefaceItem[]>('fonts'),
+    readFile<Service[]>('services'),
+    readFile<Workshop[]>('workshops'),
+    readFile<Product[]>('products'),
+    readFile<Testimonial[]>('testimonials'),
+    readFile<FaqItem[]>('faq'),
+  ]);
+  return {
+    settings,
+    categories,
+    projects,
+    companies,
+    fonts,
+    services,
+    workshops,
+    products,
+    testimonials,
+    faq,
+  };
 }
 
 export async function getSettings(): Promise<Settings> {

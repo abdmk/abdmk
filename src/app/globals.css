@@ -52,32 +52,35 @@
 /* ---------------------------------------------------------------------------
    Tokens
 
-   Soft-light product system: a cool near-white canvas, pure white surfaces
-   floating on it with generous radii and wide, low-opacity shadows, near-black
-   as the primary action colour, and saturated pastel blooms used as light —
-   never as flat fills.
+   Editorial art direction: an off-white page that reads as paper, near-black
+   ink, hairline rules instead of boxes, and a type scale with real distance
+   between its ends — a display line is roughly ten times a caption, so
+   hierarchy is carried by size and space rather than by weight and colour.
+
+   Colour is deliberately scarce. The pastel blooms are the only chroma in the
+   system and they appear at most once or twice per page, as light behind type.
 --------------------------------------------------------------------------- */
 :root {
   --font-graphik: 'Graphik Arabic';
 
   /* Surfaces */
-  --paper: 244 245 247;    /* canvas — the page sits on this */
-  --surface: 255 255 255;  /* cards, sheets, popovers */
-  --sunken: 241 243 246;   /* nested fills inside a white card */
+  --paper: 249 248 246;    /* the page — warm off-white, not UI grey */
+  --surface: 255 255 255;  /* the few places that need to sit above the page */
+  --sunken: 242 241 238;   /* quiet fills: media wells, tags, inputs */
 
-  /* Text */
-  --ink: 15 17 21;         /* headings, primary buttons */
-  --muted: 86 92 102;      /* body copy      — 7.1:1 on surface */
-  --faint: 103 109 119;    /* metadata — 5.2:1 on surface, 4.7:1 on sunken */
+  /* Ink */
+  --ink: 13 13 13;         /* headlines, rules at full strength */
+  --muted: 84 82 79;       /* body copy    — 9.4:1 on paper */
+  --faint: 106 103 98;     /* captions — 5.3:1 on paper, 5.0:1 on sunken */
 
-  /* Edges */
-  --line: 230 232 236;     /* hairlines on canvas */
-  --line-strong: 216 219 224;
+  /* Edges — hairlines carry structure here, so they are the only "border" */
+  --line: 224 221 216;
+  --line-strong: 205 201 194;
 
   /* Interactive */
-  --accent: 79 70 229;     /* indigo — links, focus, active state */
+  --accent: 79 70 229;
 
-  /* Pastel blooms — decorative light inside cards and heroes */
+  /* Pastel light. Used behind type, never as a fill. */
   --bloom-peach: 255 176 136;
   --bloom-mint: 134 231 190;
   --bloom-lilac: 196 181 253;
@@ -85,75 +88,54 @@
   --bloom-lime: 217 249 157;
 
   --gutter: 1.25rem;
-  --radius-card: 1.5rem;
+  --radius-card: 0.75rem;
 }
 
-@media (min-width: 640px)  { :root { --gutter: 1.5rem; } }
-@media (min-width: 768px)  { :root { --gutter: 2rem;   --radius-card: 1.75rem; } }
-@media (min-width: 1024px) { :root { --gutter: 2.5rem; } }
-@media (min-width: 1280px) { :root { --gutter: 3rem;   --radius-card: 2rem; } }
+@media (min-width: 640px)  { :root { --gutter: 2rem; } }
+@media (min-width: 1024px) { :root { --gutter: 3rem;   --radius-card: 1rem; } }
+@media (min-width: 1440px) { :root { --gutter: 4.5rem; } }
 
-/* Inverted surfaces (project heroes, footer) swap the roles of the same tokens
-   rather than introducing a second palette. In dark mode "invert" flips the
-   other way — a light slab on the dark page — so the class always reads as a
-   deliberate pop against whatever the current theme is. */
+/* Inverted surfaces flip ink and paper. In dark mode they flip the other way,
+   so the class always means "the opposite of the page it sits on". */
 .surface-invert {
-  --paper: 15 17 21;
-  --surface: 25 28 34;
-  --sunken: 32 36 43;
-  --ink: 248 249 251;
-  --muted: 170 176 186;    /* 8.3:1 on ink */
-  --faint: 138 145 156;    /* 5.4:1 on ink */
-  --line: 44 48 56;
-  --line-strong: 58 63 72;
+  --paper: 13 13 13;
+  --surface: 26 26 26;
+  --sunken: 33 33 33;
+  --ink: 249 248 246;
+  --muted: 172 168 162;
+  --faint: 140 136 130;
+  --line: 44 44 44;
+  --line-strong: 60 60 60;
   --accent: 165 158 255;
   background-color: rgb(var(--paper));
   color: rgb(var(--ink));
 }
 
 /* ---------------------------------------------------------------------------
-   Dark mode
-
-   A manual toggle (see ThemeToggle) sets .dark on <html>; a small inline
-   script in the document head applies it before first paint from a saved
-   preference or the OS setting, so there is no flash of the wrong theme.
-   Every token flips places rather than the page picking up a second system.
+   Dark mode — set by ThemeToggle; applied before paint by a head script.
 --------------------------------------------------------------------------- */
 .dark {
-  --paper: 12 13 16;
-  --surface: 23 25 30;
-  --sunken: 31 34 40;
-  --ink: 246 247 249;
-  --muted: 168 174 184;    /* 8.1:1 on paper */
-  --faint: 136 143 154;    /* 5.3:1 on paper */
-  --line: 42 45 52;
-  --line-strong: 56 60 68;
+  --paper: 12 12 12;
+  --surface: 24 24 24;
+  --sunken: 31 31 31;
+  --ink: 246 245 243;
+  --muted: 170 166 160;    /* 8.4:1 on paper */
+  --faint: 138 134 128;    /* 5.4:1 on paper */
+  --line: 40 40 40;
+  --line-strong: 56 56 56;
   --accent: 165 158 255;
 }
 
 .dark .surface-invert {
-  --paper: 246 247 249;
+  --paper: 246 245 243;
   --surface: 255 255 255;
-  --sunken: 241 243 246;
-  --ink: 15 17 21;
-  --muted: 86 92 102;
-  --faint: 103 109 119;
-  --line: 230 232 236;
-  --line-strong: 216 219 224;
+  --sunken: 238 237 234;
+  --ink: 13 13 13;
+  --muted: 84 82 79;
+  --faint: 106 103 98;
+  --line: 222 220 216;
+  --line-strong: 202 199 194;
   --accent: 79 70 229;
-}
-
-/* Shadows are cut from black, which reads as nothing on a dark canvas — the
-   card boundary falls back to a hairline instead so surfaces stay legible. */
-.dark .card,
-.dark .card-flat {
-  border: 1px solid rgb(var(--line));
-}
-.dark .card {
-  box-shadow: none;
-}
-.dark .card-hover:hover {
-  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 0.5);
 }
 
 @layer base {
@@ -182,21 +164,38 @@
     line-height: 1.8;
   }
 
-  /* Latin numerals inside Arabic copy should stay LTR. */
-  html[lang='ar'] .numeric { direction: ltr; unicode-bidi: embed; }
+  /* Tight negative tracking is a Latin display trick. Arabic is a joined
+     script — pulling letters together closes counters and breaks connections,
+     so every display size loosens back up in Arabic. */
+  html[lang='ar'] h1,
+  html[lang='ar'] h2,
+  html[lang='ar'] h3,
+  html[lang='ar'] .display-line { letter-spacing: normal; }
+
+  /* Latin numerals inside Arabic copy should stay LTR so "2025" and "18+" are
+     not reordered. On a block element that also flips the text alignment to
+     the left, which is wrong in an RTL column — so the alignment is restored
+     explicitly. On inline runs `text-align` simply does not apply. */
+  html[lang='ar'] .numeric {
+    direction: ltr;
+    unicode-bidi: embed;
+    text-align: right;
+  }
 
   ::selection {
     background-color: rgb(var(--ink));
-    color: rgb(var(--surface));
+    color: rgb(var(--paper));
   }
 
   :focus-visible {
     outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
-    border-radius: 6px;
+    border-radius: 2px;
   }
 
-  h1, h2, h3, h4 { text-wrap: balance; font-weight: 600; }
+  /* Display sizes carry hierarchy by scale, so they stay at medium weight —
+     a 7rem line set at 600 shouts; at 500 it speaks. */
+  h1, h2, h3, h4 { text-wrap: balance; font-weight: 500; }
   p { text-wrap: pretty; }
 }
 
@@ -209,144 +208,98 @@
     padding-inline: var(--gutter);
   }
 
-  /* A narrower measure for reading-first pages. */
-  .shell-narrow {
-    width: 100%;
-    max-width: 56rem;
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-  }
+  /* Reading measure for running copy. */
+  .measure { max-width: 62ch; }
+  .measure-tight { max-width: 46ch; }
 
-  /* -------- Surfaces -------------------------------------------------- */
-  .card {
+  /* The editorial grid. Twelve columns everywhere above `md`, so a section can
+     start at column 4 or run 7 wide without inventing a one-off layout. */
+  .grid-editorial {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .grid-editorial { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 1.5rem; }
+  }
+  @media (min-width: 1280px) { .grid-editorial { column-gap: 2rem; } }
+
+  /* -------- Rules ------------------------------------------------------ */
+  /* A hairline is the only structural device in the system: it separates,
+     it does not enclose. Nothing here draws a box. */
+  .rule { border-top: 1px solid rgb(var(--line)); }
+  .rule-ink { border-top: 1px solid rgb(var(--ink)); }
+
+  /* -------- Surfaces --------------------------------------------------- */
+  /* Used sparingly — a media well or a genuinely raised panel, not every item. */
+  .panel {
     background-color: rgb(var(--surface));
     border-radius: var(--radius-card);
-    box-shadow:
-      0 1px 2px rgb(15 17 21 / 0.04),
-      0 12px 32px -16px rgb(15 17 21 / 0.12);
   }
 
-  .card-hover {
-    transition:
-      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 2px 6px rgb(15 17 21 / 0.05),
-      0 28px 56px -24px rgb(15 17 21 / 0.22);
-  }
-
-  /* Hairline-only surface — used where a shadow would be too much weight. */
-  .card-flat {
-    background-color: rgb(var(--surface));
+  .well {
+    background-color: rgb(var(--sunken));
     border-radius: var(--radius-card);
-    border: 1px solid rgb(var(--line));
+    overflow: hidden;
   }
 
-  /* -------- Buttons --------------------------------------------------- */
+  /* -------- Buttons ---------------------------------------------------- */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.625rem;
     border-radius: 999px;
     font-weight: 500;
     font-size: 0.9375rem;
     line-height: 1;
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 1.75rem;
     white-space: nowrap;
     transition:
-      background-color 0.25s ease,
-      color 0.25s ease,
-      border-color 0.25s ease,
-      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
-      box-shadow 0.25s ease;
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      opacity 0.3s ease;
   }
-  .btn:active { transform: scale(0.975); }
 
   .btn-primary {
     background-color: rgb(var(--ink));
-    color: rgb(var(--surface));
-    box-shadow: 0 8px 20px -10px rgb(15 17 21 / 0.5);
+    color: rgb(var(--paper));
   }
-  .btn-primary:hover { background-color: rgb(var(--ink) / 0.88); }
-
-  .btn-secondary {
-    background-color: rgb(var(--sunken));
-    color: rgb(var(--ink));
-  }
-  .btn-secondary:hover { background-color: rgb(var(--line-strong)); }
+  .btn-primary:hover { opacity: 0.85; }
 
   .btn-ghost {
-    background-color: transparent;
     color: rgb(var(--ink));
     border: 1px solid rgb(var(--line-strong));
   }
-  .btn-ghost:hover {
-    background-color: rgb(var(--surface));
-    border-color: rgb(var(--ink) / 0.3);
-  }
+  .btn-ghost:hover { border-color: rgb(var(--ink)); }
 
-  .btn-sm { padding: 0.625rem 1.125rem; font-size: 0.875rem; }
-  .btn-lg { padding: 1.0625rem 1.875rem; font-size: 1rem; }
+  .btn-sm { padding: 0.75rem 1.25rem; font-size: 0.875rem; }
+  .btn-lg { padding: 1.1875rem 2.25rem; font-size: 1rem; }
 
-  /* Circular icon button — the floating control from the reference set. */
-  .btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 999px;
-    background-color: rgb(var(--surface));
-    color: rgb(var(--ink));
-    box-shadow:
-      0 1px 2px rgb(15 17 21 / 0.06),
-      0 8px 20px -12px rgb(15 17 21 / 0.24);
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
-  }
-  .btn-icon:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 2px 4px rgb(15 17 21 / 0.08),
-      0 14px 28px -14px rgb(15 17 21 / 0.3);
-  }
-
-  /* -------- Chips ----------------------------------------------------- */
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    border-radius: 999px;
-    background-color: rgb(var(--sunken));
-    color: rgb(var(--muted));
-    font-size: 0.8125rem;
-    font-weight: 500;
-    line-height: 1;
-    padding: 0.5rem 0.875rem;
-    white-space: nowrap;
-  }
-
-  .chip-solid {
-    background-color: rgb(var(--ink));
-    color: rgb(var(--surface));
-  }
-
-  /* -------- Type helpers ---------------------------------------------- */
-  /* All-caps metadata label. Arabic has no case, so tracking alone carries it. */
+  /* -------- Type helpers ----------------------------------------------- */
+  /* The caption voice: small, tracked, quiet. Every section opens with one. */
   .label {
-    font-size: 0.75rem;
-    line-height: 1.4;
-    letter-spacing: 0.1em;
+    font-size: 0.6875rem;
+    line-height: 1.3;
+    letter-spacing: 0.16em;
     font-weight: 500;
     text-transform: uppercase;
     color: rgb(var(--faint));
   }
-  html[lang='ar'] .label { letter-spacing: 0.02em; text-transform: none; }
+  html[lang='ar'] .label {
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-size: 0.8125rem;
+  }
 
-  .rule { border-top: 1px solid rgb(var(--line)); }
+  /* Metadata set inline next to a title — year, discipline, client. */
+  .meta-line {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: rgb(var(--faint));
+  }
 
   /* Text link with an underline that grows from the leading edge. */
   .link-underline {
@@ -354,26 +307,37 @@
     background-size: 0% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
   [dir='rtl'] .link-underline { background-position: 100% 100%; }
   .link-underline:hover,
   .link-underline:focus-visible { background-size: 100% 1px; }
+
+  /* A link whose underline is present and retreats on hover — used where the
+     link is the primary object on the row, not an accent inside a sentence. */
+  .link-rule {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [dir='rtl'] .link-rule { background-position: 100% 100%; }
+  .link-rule:hover { background-size: 0% 1px; }
 }
 
 @layer utilities {
   .text-pretty { text-wrap: pretty; }
 
-  /* Pastel light sources. Layered behind content inside a rounded surface;
-     the surface's overflow clips them into soft washes. */
+  /* Pastel light. Layered behind type inside a clipping parent. */
   .bloom {
     position: absolute;
     border-radius: 999px;
-    filter: blur(64px);
-    opacity: 0.55;
+    filter: blur(70px);
+    opacity: 0.5;
     pointer-events: none;
   }
-  @media (min-width: 1024px) { .bloom { filter: blur(88px); } }
+  @media (min-width: 1024px) { .bloom { filter: blur(110px); } }
 
   .bloom-peach { background-color: rgb(var(--bloom-peach)); }
   .bloom-mint  { background-color: rgb(var(--bloom-mint)); }
@@ -381,20 +345,20 @@
   .bloom-sky   { background-color: rgb(var(--bloom-sky)); }
   .bloom-lime  { background-color: rgb(var(--bloom-lime)); }
 
-  /* Frosted bar used by the floating navigation. */
+  /* Frosted bar for the floating navigation. */
   .glass {
-    background-color: rgb(var(--surface) / 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgb(var(--paper) / 0.8);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
   }
 
-  /* Media hover reveal used across project and font grids. */
+  /* Media hover: the image moves, nothing else does. */
   .media-zoom img,
   .media-zoom video {
-    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .media-zoom:hover img,
-  .media-zoom:hover video { transform: scale(1.04); }
+  .media-zoom:hover video { transform: scale(1.045); }
 
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -409,6 +373,6 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .card-hover:hover,
-  .btn-icon:hover { transform: none; }
+  .media-zoom:hover img,
+  .media-zoom:hover video { transform: none; }
 }

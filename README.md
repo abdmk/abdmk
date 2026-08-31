@@ -171,12 +171,15 @@ though pages are statically generated.
 | `/admin/fonts`          | Typefaces, weights, features, specimens, licence                      |
 | `/admin/services`       | Services and deliverables                                             |
 | `/admin/workshops`      | Workshops and courses (one collection, split by `kind`)               |
+| `/admin/products`       | Typefaces, templates and guides for sale                              |
+| `/admin/testimonials`   | Client quotes shown as pull quotes on the homepage                    |
+| `/admin/faq`            | The closing "questions you might have" accordion                      |
 | `/admin/categories`     | The work taxonomy                                                     |
 | `/admin/settings`       | Identity, About page, contact, social links, SEO defaults             |
 
 Every editor is generated from a **field schema** in `src/lib/admin/schema.ts`.
 Adding a field to the CMS is a line there, not a new form — which is what keeps
-seven collections from drifting into seven bespoke screens.
+ten collections from drifting into ten bespoke screens.
 
 The case-study builder supports drag-and-drop reordering **and** move-up/-down
 buttons, because a builder that only works with a mouse is not finished.
@@ -250,8 +253,8 @@ canonical URLs, `hreflang`, a generated sitemap and `robots.txt`, and JSON-LD:
 ## Demo content
 
 The repository ships with realistic bilingual demo content — 10 projects with
-full case studies, 8 companies, 4 typefaces, 11 services, 6 workshops and
-courses — so the layouts can be judged at real density.
+full case studies, 8 companies, 4 typefaces, 6 services, 4 products,
+5 testimonials, 6 workshops and courses — so the layouts can be judged at real density.
 
 The artwork is generated, not stock: `scripts/generate-placeholders.py` draws
 abstract editorial compositions in the site palette at the aspect ratios the grid

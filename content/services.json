@@ -44,7 +44,8 @@
       "width": 1200,
       "height": 900
     },
-    "featured": true
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
   },
   {
     "id": "svc_logo-design",
@@ -87,52 +88,14 @@
       "width": 1200,
       "height": 900
     },
-    "featured": true
-  },
-  {
-    "id": "svc_arabic-typography",
-    "slug": "arabic-typography",
-    "published": true,
-    "order": 2,
-    "name": {
-      "ar": "التايبوغرافي العربي",
-      "en": "Arabic Typography"
-    },
-    "description": {
-      "ar": "ضبط النص العربي: الاختيار، التنسيق، الشبكة، والعلاقة بين العربي واللاتيني.",
-      "en": "Setting Arabic well: selection, composition, grid, and how Arabic and Latin sit together."
-    },
-    "deliverables": [
-      {
-        "ar": "نظام تايبوغرافي",
-        "en": "Type system"
-      },
-      {
-        "ar": "شبكة وتخطيط",
-        "en": "Grid & layout"
-      },
-      {
-        "ar": "قواعد الاستخدام",
-        "en": "Usage rules"
-      }
-    ],
-    "image": {
-      "src": "/media/services/arabic-typography.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "التايبوغرافي العربي",
-        "en": "Arabic Typography"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
   },
   {
     "id": "svc_font-design",
     "slug": "font-design",
     "published": true,
-    "order": 3,
+    "order": 2,
     "name": {
       "ar": "تصميم الخطوط",
       "en": "Font Design"
@@ -173,94 +136,17 @@
       "width": 1200,
       "height": 900
     },
-    "featured": true
-  },
-  {
-    "id": "svc_arabic-calligraphy",
-    "slug": "arabic-calligraphy",
-    "published": true,
-    "order": 4,
-    "name": {
-      "ar": "الخط العربي",
-      "en": "Arabic Calligraphy"
-    },
-    "description": {
-      "ar": "أعمال خط يدوي ورقمنة للأعمال الخطية للاستخدام في الهويات والمطبوعات.",
-      "en": "Hand-lettered Arabic and digitised calligraphy for identities and print."
-    },
-    "deliverables": [
-      {
-        "ar": "عمل خطي أصلي",
-        "en": "Original lettering"
-      },
-      {
-        "ar": "رقمنة ومعالجة",
-        "en": "Digitisation & clean-up"
-      },
-      {
-        "ar": "ملفات متجهة",
-        "en": "Vector files"
-      }
-    ],
-    "image": {
-      "src": "/media/services/arabic-calligraphy.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "الخط العربي",
-        "en": "Arabic Calligraphy"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": false
-  },
-  {
-    "id": "svc_art-direction",
-    "slug": "art-direction",
-    "published": true,
-    "order": 5,
-    "name": {
-      "ar": "الإدارة الفنية",
-      "en": "Art Direction"
-    },
-    "description": {
-      "ar": "توجيه بصري لحملة أو منتج أو إصدار — من المزاج إلى التنفيذ.",
-      "en": "Visual direction for a campaign, product or issue — from mood to final execution."
-    },
-    "deliverables": [
-      {
-        "ar": "لوحة اتجاه بصري",
-        "en": "Art direction deck"
-      },
-      {
-        "ar": "إشراف على التصوير",
-        "en": "Shoot supervision"
-      },
-      {
-        "ar": "مراجعة التنفيذ",
-        "en": "Execution review"
-      }
-    ],
-    "image": {
-      "src": "/media/services/art-direction.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "الإدارة الفنية",
-        "en": "Art Direction"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
   },
   {
     "id": "svc_motion-design",
     "slug": "motion-design",
     "published": true,
-    "order": 6,
+    "order": 3,
     "name": {
-      "ar": "الموشن",
-      "en": "Motion Design"
+      "ar": "موشن جرافيك",
+      "en": "Motion Graphics"
     },
     "description": {
       "ar": "تحريك الهوية: شعار متحرك، عناوين، ومحتوى قصير للمنصات.",
@@ -290,130 +176,14 @@
       "width": 1200,
       "height": 900
     },
-    "featured": false
-  },
-  {
-    "id": "svc_editorial-design",
-    "slug": "editorial-design",
-    "published": true,
-    "order": 7,
-    "name": {
-      "ar": "التصميم التحريري",
-      "en": "Editorial Design"
-    },
-    "description": {
-      "ar": "كتب ومجلات وتقارير: شبكة، تسلسل، وإيقاع صفحات يخدم القراءة.",
-      "en": "Books, magazines and reports: grid, sequence and a page rhythm that serves reading."
-    },
-    "deliverables": [
-      {
-        "ar": "شبكة وأنماط صفحات",
-        "en": "Grid & page styles"
-      },
-      {
-        "ar": "تنضيد كامل",
-        "en": "Full typesetting"
-      },
-      {
-        "ar": "تجهيز للطباعة",
-        "en": "Print preparation"
-      }
-    ],
-    "image": {
-      "src": "/media/services/editorial-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "التصميم التحريري",
-        "en": "Editorial Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true
-  },
-  {
-    "id": "svc_social-media-design",
-    "slug": "social-media-design",
-    "published": true,
-    "order": 8,
-    "name": {
-      "ar": "تصميم السوشيال ميديا",
-      "en": "Social Media Design"
-    },
-    "description": {
-      "ar": "نظام قوالب يحافظ على الهوية ويسهّل الإنتاج اليومي.",
-      "en": "A template system that holds the identity together and makes daily output easy."
-    },
-    "deliverables": [
-      {
-        "ar": "نظام قوالب",
-        "en": "Template system"
-      },
-      {
-        "ar": "ملفات قابلة للتحرير",
-        "en": "Editable source files"
-      },
-      {
-        "ar": "دليل استخدام مختصر",
-        "en": "A short usage guide"
-      }
-    ],
-    "image": {
-      "src": "/media/services/social-media-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "تصميم السوشيال ميديا",
-        "en": "Social Media Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": false
-  },
-  {
-    "id": "svc_packaging-design",
-    "slug": "packaging-design",
-    "published": true,
-    "order": 9,
-    "name": {
-      "ar": "تصميم التغليف",
-      "en": "Packaging Design"
-    },
-    "description": {
-      "ar": "تغليف يقرأ على الرف: تسلسل معلومات واضح وحضور بصري قوي.",
-      "en": "Packaging that reads on the shelf: a clear information hierarchy and real presence."
-    },
-    "deliverables": [
-      {
-        "ar": "تصميم العبوة",
-        "en": "Structural & surface design"
-      },
-      {
-        "ar": "نظام معلومات",
-        "en": "Information system"
-      },
-      {
-        "ar": "ملفات دايلاين",
-        "en": "Dieline files"
-      }
-    ],
-    "image": {
-      "src": "/media/services/packaging-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "تصميم التغليف",
-        "en": "Packaging Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": false
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
   },
   {
     "id": "svc_ui-ux",
     "slug": "ui-ux",
     "published": true,
-    "order": 10,
+    "order": 4,
     "name": {
       "ar": "واجهات وتجربة المستخدم",
       "en": "UI/UX"
@@ -446,6 +216,47 @@
       "width": 1200,
       "height": 900
     },
-    "featured": true
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
+  },
+  {
+    "id": "svc_social-media-design",
+    "slug": "social-media-design",
+    "published": true,
+    "order": 5,
+    "name": {
+      "ar": "تصميم السوشيال ميديا",
+      "en": "Social Media Design"
+    },
+    "description": {
+      "ar": "نظام قوالب يحافظ على الهوية ويسهّل الإنتاج اليومي.",
+      "en": "A template system that holds the identity together and makes daily output easy."
+    },
+    "deliverables": [
+      {
+        "ar": "نظام قوالب",
+        "en": "Template system"
+      },
+      {
+        "ar": "ملفات قابلة للتحرير",
+        "en": "Editable source files"
+      },
+      {
+        "ar": "دليل استخدام مختصر",
+        "en": "A short usage guide"
+      }
+    ],
+    "image": {
+      "src": "/media/services/social-media-design.svg",
+      "kind": "image",
+      "alt": {
+        "ar": "تصميم السوشيال ميديا",
+        "en": "Social Media Design"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    "featured": true,
+    "updatedAt": "2026-08-31T18:24:32Z"
   }
 ]

@@ -34,15 +34,16 @@ export default async function WorkPage({ params }: { params: Promise<{ lang: Lan
   ]);
 
   return (
-    <div className="shell pb-section pt-6 sm:pt-8">
+    <div className="shell pb-section">
       <PageHeader
         title={tr.work.title}
+        eyebrow={tr.home.featuredWork}
         meta={
-          <span className="chip numeric">
+          <span className="numeric">
             {projects.length} {tr.work.projectCount}
           </span>
         }
-        className="mb-9 md:mb-12"
+        className="mb-12 md:mb-16"
       />
 
       <Suspense fallback={<div className="py-20 text-center text-muted">{tr.common.loading}</div>}>

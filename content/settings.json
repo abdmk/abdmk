@@ -40,7 +40,7 @@
         "en": "I started with hand lettering before moving to digital design, and it still shows in how I work: I start from the shape, not the grid."
       },
       {
-        "ar": "اليوم أقسم وقتي بين ثلاثة أشياء — هويات بصرية لمؤسسات ثقافية، خطوط عربية أطوّرها وأنشرها، وتدريس ما تعلّمته في ورش وكورسات.",
+        "ar": "اليوم أقسم وقتي بين ثلاثة أشياء — هويات بصرية لمؤسسات ثقافية، خطوط عربية أطوّرها وأنشرها، وتدريس ما تعلّمته في ورش ودورات.",
         "en": "Today I split my time three ways — identities for cultural institutions, Arabic typefaces I develop and release, and teaching what I have learned through workshops and courses."
       },
       {
@@ -149,8 +149,8 @@
       "en": "Beirut, Lebanon — working remotely"
     },
     "availability": {
-      "ar": "متاح لمشاريع تبدأ من الربع القادم.",
-      "en": "Taking on projects starting next quarter."
+      "ar": "متاح لمشاريع مختارة",
+      "en": "Available for select projects"
     },
     "projectTypes": [
       {
@@ -170,7 +170,7 @@
         "en": "Art direction"
       },
       {
-        "ar": "ورشة أو كورس",
+        "ar": "ورشة أو دورة",
         "en": "Workshop or course"
       },
       {
@@ -240,8 +240,38 @@
       "en": "Abdulmalek — Graphic & Arabic Type Designer"
     },
     "description": {
-      "ar": "أعمال في الهوية البصرية والتايبوغرافي العربي وتصميم الخطوط، مع ورش وكورسات.",
+      "ar": "أعمال في الهوية البصرية والتايبوغرافي العربي وتصميم الخطوط، مع ورش ودورات.",
       "en": "Work in brand identity, Arabic typography and type design, plus workshops and courses."
     }
-  }
+  },
+  "stats": [
+    {
+      "value": "18+",
+      "label": {
+        "ar": "دول صمّمت لها",
+        "en": "Countries designed for"
+      }
+    },
+    {
+      "value": "34+",
+      "label": {
+        "ar": "مجالات صمّمت لها",
+        "en": "Sectors designed for"
+      }
+    },
+    {
+      "value": "98+",
+      "label": {
+        "ar": "مشروعات مكتملة",
+        "en": "Projects completed"
+      }
+    },
+    {
+      "value": "9",
+      "label": {
+        "ar": "سنوات خبرة",
+        "en": "Years of experience"
+      }
+    }
+  ]
 }

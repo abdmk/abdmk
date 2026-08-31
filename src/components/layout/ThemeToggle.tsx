@@ -56,7 +56,7 @@ export function ThemeToggle({
       aria-label={dark ? labelToLight : labelToDark}
       aria-pressed={mounted ? dark : undefined}
       className={cn(
-        'btn-icon h-11 w-11',
+        'grid h-10 w-10 place-items-center text-ink transition-opacity duration-300 hover:opacity-60',
         // Avoid rendering the wrong icon for one frame before mount reads the
         // real class; the button is still clickable either way.
         !mounted && 'invisible',
