@@ -204,7 +204,7 @@ export function AccountView({
                     type="email"
                     required
                     autoComplete="email"
-                    className="w-full rounded-xl2 border border-border bg-sunken px-4 py-3 text-small outline-none transition-colors focus:border-ink"
+                    className="w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none transition-colors focus:border-ink"
                   />
                 </div>
                 <div>
@@ -217,7 +217,7 @@ export function AccountView({
                     type="password"
                     required
                     autoComplete="current-password"
-                    className="w-full rounded-xl2 border border-border bg-sunken px-4 py-3 text-small outline-none transition-colors focus:border-ink"
+                    className="w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none transition-colors focus:border-ink"
                   />
                 </div>
                 <button
@@ -250,7 +250,7 @@ export function AccountView({
                     type="text"
                     required
                     autoComplete="name"
-                    className="w-full rounded-xl2 border border-border bg-sunken px-4 py-3 text-small outline-none transition-colors focus:border-ink"
+                    className="w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none transition-colors focus:border-ink"
                   />
                 </div>
                 <div>
@@ -263,7 +263,7 @@ export function AccountView({
                     type="email"
                     required
                     autoComplete="email"
-                    className="w-full rounded-xl2 border border-border bg-sunken px-4 py-3 text-small outline-none transition-colors focus:border-ink"
+                    className="w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none transition-colors focus:border-ink"
                   />
                 </div>
                 <div>
@@ -277,7 +277,7 @@ export function AccountView({
                     required
                     minLength={8}
                     autoComplete="new-password"
-                    className="w-full rounded-xl2 border border-border bg-sunken px-4 py-3 text-small outline-none transition-colors focus:border-ink"
+                    className="w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none transition-colors focus:border-ink"
                   />
                 </div>
                 <button
