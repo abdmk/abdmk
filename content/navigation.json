@@ -1,0 +1,53 @@
+{
+  "main": [
+    {
+      "id": "nav_home",
+      "label": { "ar": "الرئيسية", "en": "Home" },
+      "href": "/",
+      "order": 0,
+      "visible": true
+    },
+    {
+      "id": "nav_work",
+      "label": { "ar": "الأعمال", "en": "Work" },
+      "href": "/work",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "nav_services",
+      "label": { "ar": "الخدمات", "en": "Services" },
+      "href": "/services",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "nav_courses",
+      "label": { "ar": "الدورات", "en": "Courses" },
+      "href": "/courses",
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "nav_products",
+      "label": { "ar": "المنتجات", "en": "Products" },
+      "href": "/products",
+      "order": 4,
+      "visible": true
+    },
+    {
+      "id": "nav_about",
+      "label": { "ar": "عنّي", "en": "About" },
+      "href": "/about",
+      "order": 5,
+      "visible": true
+    },
+    {
+      "id": "nav_contact",
+      "label": { "ar": "تواصل", "en": "Contact" },
+      "href": "/contact",
+      "order": 6,
+      "visible": true
+    }
+  ]
+}

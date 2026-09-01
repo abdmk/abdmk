@@ -11,12 +11,13 @@ const pick = (value: Localized | undefined, fallback: string) =>
  * can offer real choices instead of asking the author to type slugs.
  */
 export async function loadRelations(): Promise<RelationOptions> {
-  const [projects, companies, fonts, services, workshops, categories] = await Promise.all([
+  const [projects, companies, fonts, services, workshops, courses, categories] = await Promise.all([
     getCollectionRaw('projects'),
     getCollectionRaw('companies'),
     getCollectionRaw('fonts'),
     getCollectionRaw('services'),
     getCollectionRaw('workshops'),
+    getCollectionRaw('courses'),
     getCategories(),
   ]);
 
@@ -26,6 +27,7 @@ export async function loadRelations(): Promise<RelationOptions> {
     fonts: fonts.map((f) => ({ value: f.slug, label: pick(f.name, f.slug) })),
     services: services.map((s) => ({ value: s.slug, label: pick(s.name, s.slug) })),
     workshops: workshops.map((w) => ({ value: w.slug, label: pick(w.title, w.slug) })),
+    courses: courses.map((c) => ({ value: c.slug, label: pick(c.title, c.slug) })),
     categories: categories.map((c) => ({ value: c.slug, label: pick(c.name, c.slug) })),
   };
 }

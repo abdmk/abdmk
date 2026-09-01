@@ -20,14 +20,20 @@ export default async function AdminHome() {
     }),
   );
 
+  const quickActions = [
+    { href: '/admin/projects/new', label: 'New project' },
+    { href: '/admin/courses/new', label: 'New course' },
+    { href: '/admin/services/new', label: 'New service' },
+  ];
+
   return (
     <AdminShell>
-      <h1 className="text-h1 font-light">Content</h1>
+      <h1 className="text-h1 font-light">Dashboard</h1>
       <p className="mt-3 max-w-prose text-small text-muted">
-        Everything here is stored as JSON under <code>/content</code> and read directly by the
-        site. Uploads go to <code>/public/uploads</code>.
+        Welcome back. Here is an overview of your content.
       </p>
 
+      {/* Stats grid */}
       <ul className="mt-10 grid list-none gap-px border border-line bg-line p-0 sm:grid-cols-2 lg:grid-cols-3">
         {collections.map(({ schema, total, drafts }) => (
           <li key={schema.name} className="bg-paper">
@@ -48,6 +54,23 @@ export default async function AdminHome() {
           </li>
         ))}
       </ul>
+
+      {/* Quick actions */}
+      <div className="mt-12">
+        <h2 className="text-h3 font-medium">Quick actions</h2>
+        <div className="mt-4 flex flex-wrap gap-3">
+          {quickActions.map((action) => (
+            <Link
+              key={action.href}
+              href={action.href}
+              className="inline-flex items-center gap-2 bg-ink px-5 py-2.5 text-small font-medium text-paper"
+            >
+              <Icon name="plus" size={14} />
+              {action.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </AdminShell>
   );
 }

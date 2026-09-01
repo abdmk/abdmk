@@ -14,6 +14,10 @@ const LINKS = [
     label: schema.label,
     icon: 'list' as const,
   })),
+  // Management
+  { href: '/admin/inquiries', label: 'Inquiries', icon: 'list' as const },
+  { href: '/admin/navigation', label: 'Navigation', icon: 'menu' as const },
+  { href: '/admin/analytics', label: 'Analytics', icon: 'search' as const },
   { href: '/admin/categories', label: 'Categories', icon: 'filter' as const },
   { href: '/admin/settings', label: 'Site settings', icon: 'settings' as const },
 ];

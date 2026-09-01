@@ -1,7 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
-import { getCategories, getCollection, getSettings } from './store';
-import type { Company, Project, Service, TypefaceItem, Workshop } from './types';
+import { getCategories, getCollection, getNavigation, getSettings } from './store';
+import type { Company, Course, Project, Service, TypefaceItem, Workshop } from './types';
 
 /**
  * Read helpers for pages. Each is wrapped in React's `cache` so a single render
@@ -16,8 +16,10 @@ export const workshops = cache(() => getCollection('workshops'));
 export const products = cache(() => getCollection('products'));
 export const testimonials = cache(() => getCollection('testimonials'));
 export const faq = cache(() => getCollection('faq'));
+export const courses = cache(() => getCollection('courses'));
 export const categories = cache(() => getCategories());
 export const settings = cache(() => getSettings());
+export const navigation = cache(() => getNavigation());
 
 const bySlug = <T extends { slug: string }>(list: T[], slug: string) =>
   list.find((item) => item.slug === slug);
@@ -125,4 +127,17 @@ export async function activeCategories() {
   return cats
     .map((c) => ({ ...c, count: list.filter((p) => p.categories.includes(c.slug)).length }))
     .filter((c) => c.count > 0);
+}
+
+export async function getCourse(slug: string): Promise<Course | undefined> {
+  return bySlug(await courses(), slug);
+}
+
+export async function getCoursesByPricing(pricing: 'free' | 'paid'): Promise<Course[]> {
+  return (await courses()).filter((c) => c.pricing === pricing);
+}
+
+export async function getService(slug: string): Promise<Service | undefined> {
+  const all = await services();
+  return all.find((s) => s.slug === slug);
 }

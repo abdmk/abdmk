@@ -13,250 +13,440 @@
       "en": "A complete identity from concept to guidelines: mark, colour, typography and the applications that carry them."
     },
     "deliverables": [
+      { "ar": "بحث واستراتيجية بصرية", "en": "Research & visual strategy" },
+      { "ar": "شعار ونظام علامة", "en": "Logo & mark system" },
+      { "ar": "نظام تايبوغرافي عربي ولاتيني", "en": "Arabic & Latin type system" },
+      { "ar": "دليل الهوية", "en": "Brand guidelines" },
+      { "ar": "ملفات جاهزة للإنتاج", "en": "Production-ready files" }
+    ],
+    "image": { "src": "/media/services/brand-identity.svg", "kind": "image", "alt": { "ar": "الهوية البصرية", "en": "Brand Identity" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "بحث واستراتيجية بصرية",
-        "en": "Research & visual strategy"
+        "id": "pkg_bi_basic",
+        "name": { "ar": "أساسي", "en": "Basic" },
+        "price": 3000,
+        "currency": "USD",
+        "description": { "ar": "هوية بصرية أساسية للمشاريع الناشئة", "en": "Essential branding for startups" },
+        "features": [
+          { "ar": "شعار بنسختين", "en": "Logo in 2 versions" },
+          { "ar": "لوحة ألوان", "en": "Color palette" },
+          { "ar": "اختيار خطوط", "en": "Typography selection" },
+          { "ar": "ملفات متجهة", "en": "Vector files" }
+        ],
+        "duration": { "ar": "٢-٣ أسابيع", "en": "2-3 weeks" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0,
+        "visible": true,
+        "recommended": false
       },
       {
-        "ar": "شعار ونظام علامة",
-        "en": "Logo & mark system"
+        "id": "pkg_bi_standard",
+        "name": { "ar": "قياسي", "en": "Standard" },
+        "price": 7000,
+        "currency": "USD",
+        "description": { "ar": "هوية بصرية متكاملة مع دليل استخدام", "en": "Complete identity with brand guidelines" },
+        "features": [
+          { "ar": "شعار بثلاث نسخ", "en": "Logo in 3 versions" },
+          { "ar": "نظام ألوان كامل", "en": "Full color system" },
+          { "ar": "نظام تايبوغرافي", "en": "Typography system" },
+          { "ar": "دليل هوية مختصر", "en": "Brand guidelines booklet" },
+          { "ar": "قوالب سوشيال ميديا", "en": "Social media templates" },
+          { "ar": "ملفات جاهزة للإنتاج", "en": "Production-ready files" }
+        ],
+        "duration": { "ar": "٤-٦ أسابيع", "en": "4-6 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1,
+        "visible": true,
+        "recommended": true
       },
       {
-        "ar": "نظام تايبوغرافي عربي ولاتيني",
-        "en": "Arabic & Latin type system"
-      },
-      {
-        "ar": "دليل الهوية",
-        "en": "Brand guidelines"
-      },
-      {
-        "ar": "ملفات جاهزة للإنتاج",
-        "en": "Production-ready files"
+        "id": "pkg_bi_premium",
+        "name": { "ar": "متميّز", "en": "Premium" },
+        "price": 15000,
+        "currency": "USD",
+        "description": { "ar": "نظام هوية شامل مع تطبيقات كاملة", "en": "Comprehensive identity system with full applications" },
+        "features": [
+          { "ar": "بحث واستراتيجية معمّقة", "en": "In-depth research & strategy" },
+          { "ar": "شعار بجميع النسخ", "en": "Logo in all versions" },
+          { "ar": "نظام بصري كامل", "en": "Complete visual system" },
+          { "ar": "دليل هوية تفصيلي", "en": "Detailed brand guidelines" },
+          { "ar": "تطبيقات مطبوعة ورقمية", "en": "Print & digital applications" },
+          { "ar": "قوالب قابلة للتحرير", "en": "Editable templates" },
+          { "ar": "دعم ما بعد التسليم", "en": "Post-delivery support" }
+        ],
+        "duration": { "ar": "٦-١٠ أسابيع", "en": "6-10 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2,
+        "visible": true,
+        "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/brand-identity.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "الهوية البصرية",
-        "en": "Brand Identity"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "updatedAt": "2026-09-01T00:00:00Z"
   },
   {
     "id": "svc_logo-design",
     "slug": "logo-design",
     "published": true,
     "order": 1,
-    "name": {
-      "ar": "تصميم الشعارات",
-      "en": "Logo Design"
-    },
-    "description": {
-      "ar": "شعار مبني على معنى، يعمل بالعربية والإنكليزية وبكل المقاسات.",
-      "en": "A mark built on meaning that holds up in Arabic and Latin, at every size."
-    },
+    "name": { "ar": "تصميم الشعارات", "en": "Logo Design" },
+    "description": { "ar": "شعار مبني على معنى، يعمل بالعربية والإنكليزية وبكل المقاسات.", "en": "A mark built on meaning that holds up in Arabic and Latin, at every size." },
     "deliverables": [
+      { "ar": "ثلاثة اتجاهات أولية", "en": "Three initial directions" },
+      { "ar": "جولتا تعديل", "en": "Two revision rounds" },
+      { "ar": "نسخ أفقية ورأسية وأيقونية", "en": "Horizontal, vertical & icon lockups" },
+      { "ar": "ملفات متجهة", "en": "Vector files" }
+    ],
+    "image": { "src": "/media/services/logo-design.svg", "kind": "image", "alt": { "ar": "تصميم الشعارات", "en": "Logo Design" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "ثلاثة اتجاهات أولية",
-        "en": "Three initial directions"
+        "id": "pkg_logo_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 1500, "currency": "USD",
+        "description": { "ar": "شعار احترافي بسيط", "en": "Simple professional logo" },
+        "features": [
+          { "ar": "اتجاهان أوليان", "en": "2 initial concepts" },
+          { "ar": "ملفات متجهة", "en": "Vector files" }
+        ],
+        "duration": { "ar": "١-٢ أسابيع", "en": "1-2 weeks" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
       },
       {
-        "ar": "جولتا تعديل",
-        "en": "Two revision rounds"
+        "id": "pkg_logo_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 3500, "currency": "USD",
+        "description": { "ar": "شعار متكامل بنسخ متعددة", "en": "Complete logo with multiple versions" },
+        "features": [
+          { "ar": "ثلاثة اتجاهات أولية", "en": "3 initial concepts" },
+          { "ar": "نسخ أفقية ورأسية وأيقونية", "en": "Horizontal, vertical & icon lockups" },
+          { "ar": "نظام ألوان", "en": "Color system" },
+          { "ar": "ملفات بجميع الصيغ", "en": "All file formats" }
+        ],
+        "duration": { "ar": "٢-٣ أسابيع", "en": "2-3 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
       },
       {
-        "ar": "نسخ أفقية ورأسية وأيقونية",
-        "en": "Horizontal, vertical & icon lockups"
-      },
-      {
-        "ar": "ملفات متجهة",
-        "en": "Vector files"
+        "id": "pkg_logo_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 6000, "currency": "USD",
+        "description": { "ar": "شعار مع دليل استخدام كامل", "en": "Logo with complete usage guide" },
+        "features": [
+          { "ar": "بحث وتحليل", "en": "Research & analysis" },
+          { "ar": "أربعة اتجاهات أولية", "en": "4 initial concepts" },
+          { "ar": "جميع النسخ والتطبيقات", "en": "All versions & applications" },
+          { "ar": "دليل استخدام الشعار", "en": "Logo usage guide" },
+          { "ar": "ملفات متحركة", "en": "Animated versions" }
+        ],
+        "duration": { "ar": "٣-٤ أسابيع", "en": "3-4 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/logo-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "تصميم الشعارات",
-        "en": "Logo Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "updatedAt": "2026-09-01T00:00:00Z"
   },
   {
     "id": "svc_font-design",
     "slug": "font-design",
     "published": true,
     "order": 2,
-    "name": {
-      "ar": "تصميم الخطوط",
-      "en": "Font Design"
-    },
-    "description": {
-      "ar": "خط عربي مخصص لعلامتك، من الرسم الأول إلى ملف OpenType مختبَر.",
-      "en": "A bespoke Arabic typeface for your brand, from first drawings to a tested OpenType file."
-    },
+    "name": { "ar": "تصميم الخطوط", "en": "Font Design" },
+    "description": { "ar": "خط عربي مخصص لعلامتك، من الرسم الأول إلى ملف OpenType مختبَر.", "en": "A bespoke Arabic typeface for your brand, from first drawings to a tested OpenType file." },
     "deliverables": [
+      { "ar": "رسم الحروف والأشكال", "en": "Letterform & shape design" },
+      { "ar": "أوزان متعددة", "en": "Multiple weights" },
+      { "ar": "تشكيل وتراكيب", "en": "Vocalisation & ligatures" },
+      { "ar": "ملفات OTF/TTF/WOFF", "en": "OTF / TTF / WOFF files" },
+      { "ar": "ترخيص واضح", "en": "A clear licence" }
+    ],
+    "image": { "src": "/media/services/font-design.svg", "kind": "image", "alt": { "ar": "تصميم الخطوط", "en": "Font Design" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "رسم الحروف والأشكال",
-        "en": "Letterform & shape design"
+        "id": "pkg_font_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 5000, "currency": "USD",
+        "description": { "ar": "خط بوزن واحد", "en": "Single weight typeface" },
+        "features": [
+          { "ar": "وزن واحد", "en": "Single weight" },
+          { "ar": "حروف عربية أساسية", "en": "Core Arabic glyphs" },
+          { "ar": "ملفات OTF", "en": "OTF files" }
+        ],
+        "duration": { "ar": "٤-٦ أسابيع", "en": "4-6 weeks" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
       },
       {
-        "ar": "أوزان متعددة",
-        "en": "Multiple weights"
+        "id": "pkg_font_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 12000, "currency": "USD",
+        "description": { "ar": "عائلة خط بثلاثة أوزان", "en": "Font family with 3 weights" },
+        "features": [
+          { "ar": "ثلاثة أوزان", "en": "3 weights" },
+          { "ar": "تشكيل وتراكيب", "en": "Diacritics & ligatures" },
+          { "ar": "دعم لاتيني", "en": "Latin support" },
+          { "ar": "ملفات OTF/WOFF", "en": "OTF/WOFF files" }
+        ],
+        "duration": { "ar": "٨-١٢ أسبوعًا", "en": "8-12 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
       },
       {
-        "ar": "تشكيل وتراكيب",
-        "en": "Vocalisation & ligatures"
-      },
-      {
-        "ar": "ملفات OTF/TTF/WOFF",
-        "en": "OTF / TTF / WOFF files"
-      },
-      {
-        "ar": "ترخيص واضح",
-        "en": "A clear licence"
+        "id": "pkg_font_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 25000, "currency": "USD",
+        "description": { "ar": "عائلة خط كاملة بخمسة أوزان أو أكثر", "en": "Complete font family with 5+ weights" },
+        "features": [
+          { "ar": "خمسة أوزان أو أكثر", "en": "5+ weights" },
+          { "ar": "ميزات OpenType متقدمة", "en": "Advanced OpenType features" },
+          { "ar": "دعم لغات متعددة", "en": "Multi-language support" },
+          { "ar": "ترخيص حصري", "en": "Exclusive licence" },
+          { "ar": "ملفات بجميع الصيغ", "en": "All file formats" }
+        ],
+        "duration": { "ar": "١٢-٢٠ أسبوعًا", "en": "12-20 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/font-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "تصميم الخطوط",
-        "en": "Font Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "updatedAt": "2026-09-01T00:00:00Z"
   },
   {
     "id": "svc_motion-design",
     "slug": "motion-design",
     "published": true,
     "order": 3,
-    "name": {
-      "ar": "موشن جرافيك",
-      "en": "Motion Graphics"
-    },
-    "description": {
-      "ar": "تحريك الهوية: شعار متحرك، عناوين، ومحتوى قصير للمنصات.",
-      "en": "Identity in motion: animated marks, titles and short-form content for platforms."
-    },
+    "name": { "ar": "موشن جرافيك", "en": "Motion Graphics" },
+    "description": { "ar": "تحريك الهوية: شعار متحرك، عناوين، ومحتوى قصير للمنصات.", "en": "Identity in motion: animated marks, titles and short-form content for platforms." },
     "deliverables": [
+      { "ar": "شعار متحرك", "en": "Animated logo" },
+      { "ar": "قوالب عناوين", "en": "Title templates" },
+      { "ar": "ملفات جاهزة للنشر", "en": "Export-ready files" }
+    ],
+    "image": { "src": "/media/services/motion-design.svg", "kind": "image", "alt": { "ar": "موشن جرافيك", "en": "Motion Graphics" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "شعار متحرك",
-        "en": "Animated logo"
+        "id": "pkg_motion_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 2000, "currency": "USD",
+        "description": { "ar": "شعار متحرك بسيط", "en": "Simple logo animation" },
+        "features": [
+          { "ar": "شعار متحرك", "en": "Animated logo" },
+          { "ar": "مقاسان", "en": "2 sizes" },
+          { "ar": "ملفات MP4/GIF", "en": "MP4/GIF files" }
+        ],
+        "duration": { "ar": "١-٢ أسابيع", "en": "1-2 weeks" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
       },
       {
-        "ar": "قوالب عناوين",
-        "en": "Title templates"
+        "id": "pkg_motion_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 5000, "currency": "USD",
+        "description": { "ar": "حزمة موشن متكاملة", "en": "Complete motion package" },
+        "features": [
+          { "ar": "شعار متحرك", "en": "Animated logo" },
+          { "ar": "قوالب عناوين", "en": "Title templates" },
+          { "ar": "انتقالات", "en": "Transitions" },
+          { "ar": "جميع المقاسات", "en": "All sizes" }
+        ],
+        "duration": { "ar": "٢-٣ أسابيع", "en": "2-3 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
       },
       {
-        "ar": "ملفات جاهزة للنشر",
-        "en": "Export-ready files"
+        "id": "pkg_motion_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 10000, "currency": "USD",
+        "description": { "ar": "نظام حركة كامل للعلامة", "en": "Full motion system for the brand" },
+        "features": [
+          { "ar": "نظام حركة متكامل", "en": "Complete motion system" },
+          { "ar": "فيديو ترويجي قصير", "en": "Short promo video" },
+          { "ar": "قوالب قابلة للتحرير", "en": "Editable templates" },
+          { "ar": "ملفات After Effects", "en": "After Effects files" }
+        ],
+        "duration": { "ar": "٣-٥ أسابيع", "en": "3-5 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/motion-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "الموشن",
-        "en": "Motion Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "updatedAt": "2026-09-01T00:00:00Z"
   },
   {
     "id": "svc_ui-ux",
     "slug": "ui-ux",
     "published": true,
     "order": 4,
-    "name": {
-      "ar": "واجهات وتجربة المستخدم",
-      "en": "UI/UX"
-    },
-    "description": {
-      "ar": "واجهات عربية تُقرأ فعلاً: اتجاه صحيح، تايبوغرافي مضبوط، ونظام واضح.",
-      "en": "Arabic interfaces that actually read: correct direction, tuned typography, a clear system."
-    },
+    "name": { "ar": "واجهات وتجربة المستخدم", "en": "UI/UX" },
+    "description": { "ar": "واجهات عربية تُقرأ فعلاً: اتجاه صحيح، تايبوغرافي مضبوط، ونظام واضح.", "en": "Arabic interfaces that actually read: correct direction, tuned typography, a clear system." },
     "deliverables": [
+      { "ar": "نظام تصميم", "en": "Design system" },
+      { "ar": "شاشات أساسية", "en": "Key screens" },
+      { "ar": "تسليم للمطوّرين", "en": "Developer handoff" }
+    ],
+    "image": { "src": "/media/services/ui-ux.svg", "kind": "image", "alt": { "ar": "واجهات وتجربة المستخدم", "en": "UI/UX" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "نظام تصميم",
-        "en": "Design system"
+        "id": "pkg_uiux_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 3000, "currency": "USD",
+        "description": { "ar": "تصميم واجهات أساسية", "en": "Basic UI design" },
+        "features": [
+          { "ar": "٥ شاشات", "en": "5 screens" },
+          { "ar": "نسخة واحدة (ويب أو موبايل)", "en": "Single platform (web or mobile)" },
+          { "ar": "ملفات Figma", "en": "Figma files" }
+        ],
+        "duration": { "ar": "٢-٣ أسابيع", "en": "2-3 weeks" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
       },
       {
-        "ar": "شاشات أساسية",
-        "en": "Key screens"
+        "id": "pkg_uiux_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 8000, "currency": "USD",
+        "description": { "ar": "تصميم واجهات مع نظام تصميم", "en": "UI design with design system" },
+        "features": [
+          { "ar": "١٠-١٥ شاشة", "en": "10-15 screens" },
+          { "ar": "نظام تصميم", "en": "Design system" },
+          { "ar": "تسليم للمطوّرين", "en": "Developer handoff" },
+          { "ar": "نسخة عربية وإنكليزية", "en": "Arabic & English versions" }
+        ],
+        "duration": { "ar": "٤-٦ أسابيع", "en": "4-6 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
       },
       {
-        "ar": "تسليم للمطوّرين",
-        "en": "Developer handoff"
+        "id": "pkg_uiux_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 18000, "currency": "USD",
+        "description": { "ar": "تجربة مستخدم كاملة مع بحث واختبار", "en": "Full UX with research & testing" },
+        "features": [
+          { "ar": "بحث المستخدم", "en": "User research" },
+          { "ar": "شاشات غير محدودة", "en": "Unlimited screens" },
+          { "ar": "نموذج تفاعلي", "en": "Interactive prototype" },
+          { "ar": "نظام تصميم متكامل", "en": "Complete design system" },
+          { "ar": "اختبار قابلية الاستخدام", "en": "Usability testing" }
+        ],
+        "duration": { "ar": "٨-١٢ أسبوعًا", "en": "8-12 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/ui-ux.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "واجهات وتجربة المستخدم",
-        "en": "UI/UX"
-      },
-      "width": 1200,
-      "height": 900
-    },
-    "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "updatedAt": "2026-09-01T00:00:00Z"
   },
   {
     "id": "svc_social-media-design",
     "slug": "social-media-design",
     "published": true,
     "order": 5,
-    "name": {
-      "ar": "تصميم السوشيال ميديا",
-      "en": "Social Media Design"
-    },
-    "description": {
-      "ar": "نظام قوالب يحافظ على الهوية ويسهّل الإنتاج اليومي.",
-      "en": "A template system that holds the identity together and makes daily output easy."
-    },
+    "name": { "ar": "تصميم السوشيال ميديا", "en": "Social Media Design" },
+    "description": { "ar": "نظام قوالب يحافظ على الهوية ويسهّل الإنتاج اليومي.", "en": "A template system that holds the identity together and makes daily output easy." },
     "deliverables": [
+      { "ar": "نظام قوالب", "en": "Template system" },
+      { "ar": "ملفات قابلة للتحرير", "en": "Editable source files" },
+      { "ar": "دليل استخدام مختصر", "en": "A short usage guide" }
+    ],
+    "image": { "src": "/media/services/social-media-design.svg", "kind": "image", "alt": { "ar": "تصميم السوشيال ميديا", "en": "Social Media Design" }, "width": 1200, "height": 900 },
+    "featured": true,
+    "packages": [
       {
-        "ar": "نظام قوالب",
-        "en": "Template system"
+        "id": "pkg_social_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 1500, "currency": "USD",
+        "description": { "ar": "قوالب سوشيال أساسية", "en": "Basic social templates" },
+        "features": [
+          { "ar": "٥ قوالب", "en": "5 templates" },
+          { "ar": "منصة واحدة", "en": "Single platform" },
+          { "ar": "ملفات قابلة للتحرير", "en": "Editable files" }
+        ],
+        "duration": { "ar": "١ أسبوع", "en": "1 week" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
       },
       {
-        "ar": "ملفات قابلة للتحرير",
-        "en": "Editable source files"
+        "id": "pkg_social_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 3500, "currency": "USD",
+        "description": { "ar": "نظام قوالب متكامل", "en": "Complete template system" },
+        "features": [
+          { "ar": "١٥ قالبًا", "en": "15 templates" },
+          { "ar": "جميع المنصات", "en": "All platforms" },
+          { "ar": "قوالب Stories", "en": "Stories templates" },
+          { "ar": "دليل استخدام", "en": "Usage guide" }
+        ],
+        "duration": { "ar": "٢ أسابيع", "en": "2 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
       },
       {
-        "ar": "دليل استخدام مختصر",
-        "en": "A short usage guide"
+        "id": "pkg_social_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 6000, "currency": "USD",
+        "description": { "ar": "نظام قوالب شامل مع محتوى متحرك", "en": "Comprehensive system with animated content" },
+        "features": [
+          { "ar": "٣٠+ قالبًا", "en": "30+ templates" },
+          { "ar": "محتوى متحرك", "en": "Animated content" },
+          { "ar": "Highlights Covers", "en": "Highlights covers" },
+          { "ar": "نظام Canva/Figma", "en": "Canva/Figma system" },
+          { "ar": "استراتيجية بصرية", "en": "Visual strategy" }
+        ],
+        "duration": { "ar": "٣-٤ أسابيع", "en": "3-4 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
       }
     ],
-    "image": {
-      "src": "/media/services/social-media-design.svg",
-      "kind": "image",
-      "alt": {
-        "ar": "تصميم السوشيال ميديا",
-        "en": "Social Media Design"
-      },
-      "width": 1200,
-      "height": 900
-    },
+    "updatedAt": "2026-09-01T00:00:00Z"
+  },
+  {
+    "id": "svc_digital-design",
+    "slug": "digital-design",
+    "published": true,
+    "order": 6,
+    "name": { "ar": "التصميم الرقمي", "en": "Digital Design" },
+    "description": { "ar": "تصميم رقمي للمنصات والمنتجات: من الفكرة إلى التنفيذ.", "en": "Digital design for platforms and products: from concept to execution." },
+    "deliverables": [
+      { "ar": "تصميم صفحات هبوط", "en": "Landing page design" },
+      { "ar": "تصميم عروض رقمية", "en": "Digital presentation design" },
+      { "ar": "تصميم بريد إلكتروني", "en": "Email design" },
+      { "ar": "إعلانات رقمية", "en": "Digital ads" }
+    ],
+    "image": { "src": "/media/services/digital-design.svg", "kind": "image", "alt": { "ar": "التصميم الرقمي", "en": "Digital Design" }, "width": 1200, "height": 900 },
     "featured": true,
-    "updatedAt": "2026-08-31T18:24:32Z"
+    "packages": [
+      {
+        "id": "pkg_digital_basic", "name": { "ar": "أساسي", "en": "Basic" }, "price": 2000, "currency": "USD",
+        "description": { "ar": "تصميم رقمي أساسي", "en": "Basic digital design" },
+        "features": [
+          { "ar": "صفحة هبوط واحدة", "en": "Single landing page" },
+          { "ar": "تصميم متجاوب", "en": "Responsive design" },
+          { "ar": "ملفات Figma", "en": "Figma files" }
+        ],
+        "duration": { "ar": "١ أسبوع", "en": "1 week" },
+        "revisions": { "ar": "جولتا تعديل", "en": "2 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 0, "visible": true, "recommended": false
+      },
+      {
+        "id": "pkg_digital_standard", "name": { "ar": "قياسي", "en": "Standard" }, "price": 5000, "currency": "USD",
+        "description": { "ar": "حزمة تصميم رقمي متكاملة", "en": "Complete digital design package" },
+        "features": [
+          { "ar": "٣-٥ صفحات", "en": "3-5 pages" },
+          { "ar": "تصميم متجاوب", "en": "Responsive design" },
+          { "ar": "إعلانات رقمية", "en": "Digital ads" },
+          { "ar": "قوالب بريد إلكتروني", "en": "Email templates" }
+        ],
+        "duration": { "ar": "٢-٣ أسابيع", "en": "2-3 weeks" },
+        "revisions": { "ar": "ثلاث جولات تعديل", "en": "3 revision rounds" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 1, "visible": true, "recommended": true
+      },
+      {
+        "id": "pkg_digital_premium", "name": { "ar": "متميّز", "en": "Premium" }, "price": 10000, "currency": "USD",
+        "description": { "ar": "نظام تصميم رقمي شامل", "en": "Comprehensive digital design system" },
+        "features": [
+          { "ar": "صفحات غير محدودة", "en": "Unlimited pages" },
+          { "ar": "نظام تصميم رقمي", "en": "Digital design system" },
+          { "ar": "عروض تفاعلية", "en": "Interactive presentations" },
+          { "ar": "حملات إعلانية", "en": "Ad campaigns" },
+          { "ar": "قوالب قابلة للتحرير", "en": "Editable templates" }
+        ],
+        "duration": { "ar": "٤-٦ أسابيع", "en": "4-6 weeks" },
+        "revisions": { "ar": "تعديلات غير محدودة", "en": "Unlimited revisions" },
+        "cta": { "ar": "ابدأ مشروعك", "en": "Start your project" },
+        "order": 2, "visible": true, "recommended": false
+      }
+    ],
+    "updatedAt": "2026-09-01T00:00:00Z"
   }
 ]

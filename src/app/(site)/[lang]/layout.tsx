@@ -5,6 +5,7 @@ import '@/app/globals.css';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 import { THEME_INIT_SCRIPT } from '@/components/layout/ThemeToggle';
+import { AnalyticsTracker } from '@/components/ui/AnalyticsTracker';
 import type { Lang } from '@/lib/content/types';
 import { settings as getSettings } from '@/lib/content/queries';
 import { DIR, LANGS, isLang, t } from '@/lib/i18n/config';
@@ -96,6 +97,7 @@ export default async function SiteLayout({
       </head>
       <body className="min-h-dvh antialiased">
         <Navbar lang={typed} settings={s} />
+        <AnalyticsTracker />
         <main id="main" className="pt-[76px] sm:pt-[88px]">
           {children}
         </main>

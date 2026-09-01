@@ -3,13 +3,15 @@ import { NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/auth';
 import {
   getCollectionRaw,
+  getNavigation,
   getSettings,
   saveCategories,
+  saveNavigation,
   saveSettings,
   upsertItem,
 } from '@/lib/content/store';
 import { SCHEMAS } from '@/lib/admin/schema';
-import type { Category, CollectionName, ContentData, Settings } from '@/lib/content/types';
+import type { Category, CollectionName, ContentData, Navigation, Settings } from '@/lib/content/types';
 import { getCategories } from '@/lib/content/store';
 
 const isCollection = (name: string): name is CollectionName => name in SCHEMAS;
@@ -32,6 +34,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ nam
   const { name } = await params;
   if (name === 'settings') return NextResponse.json(await getSettings());
   if (name === 'categories') return NextResponse.json(await getCategories());
+  if (name === 'navigation') return NextResponse.json(await getNavigation());
   if (!isCollection(name)) return NextResponse.json({ error: 'unknown collection' }, { status: 404 });
 
   return NextResponse.json(await getCollectionRaw(name));
@@ -53,6 +56,11 @@ export async function PUT(request: Request, { params }: { params: Promise<{ name
   }
   if (name === 'categories') {
     await saveCategories(body as Category[]);
+    revalidateSite();
+    return NextResponse.json({ ok: true });
+  }
+  if (name === 'navigation') {
+    await saveNavigation(body as Navigation);
     revalidateSite();
     return NextResponse.json({ ok: true });
   }

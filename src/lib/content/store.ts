@@ -7,7 +7,9 @@ import type {
   CollectionName,
   Company,
   ContentData,
+  Course,
   FaqItem,
+  Navigation,
   Product,
   Project,
   Service,
@@ -40,6 +42,8 @@ const FILES = {
   products: 'products.json',
   testimonials: 'testimonials.json',
   faq: 'faq.json',
+  courses: 'courses.json',
+  navigation: 'navigation.json',
 } as const;
 
 type FileKey = keyof typeof FILES;
@@ -94,6 +98,8 @@ export async function getContent(): Promise<ContentData> {
     products,
     testimonials,
     faq,
+    courses,
+    navigation,
   ] = await Promise.all([
     readFile<Settings>('settings'),
     readFile<Category[]>('categories'),
@@ -105,6 +111,8 @@ export async function getContent(): Promise<ContentData> {
     readFile<Product[]>('products'),
     readFile<Testimonial[]>('testimonials'),
     readFile<FaqItem[]>('faq'),
+    readFile<Course[]>('courses'),
+    readFile<Navigation>('navigation'),
   ]);
   return {
     settings,
@@ -117,7 +125,17 @@ export async function getContent(): Promise<ContentData> {
     products,
     testimonials,
     faq,
+    courses,
+    navigation,
   };
+}
+
+export async function getNavigation(): Promise<Navigation> {
+  return readFile<Navigation>('navigation');
+}
+
+export async function saveNavigation(navigation: Navigation): Promise<void> {
+  await writeFile('navigation', navigation);
 }
 
 export async function getSettings(): Promise<Settings> {

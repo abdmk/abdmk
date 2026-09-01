@@ -230,12 +230,28 @@ export interface TypefaceItem extends Entity {
   featured: boolean;
 }
 
+export interface ServicePackage {
+  id: string;
+  name: Localized;
+  price: number;
+  currency: string;
+  description: Localized;
+  features: Localized[];
+  duration: Localized;
+  revisions: Localized;
+  cta: Localized;
+  order: number;
+  visible: boolean;
+  recommended: boolean;
+}
+
 export interface Service extends Entity {
   name: Localized;
   description: Localized;
   deliverables: Localized[];
   image?: Media;
   featured: boolean;
+  packages: ServicePackage[];
 }
 
 export interface Workshop extends Entity {
@@ -259,6 +275,89 @@ export interface Workshop extends Entity {
   relatedProjects: string[];
   relatedServices: string[];
   featured: boolean;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Courses (LMS)                                                              */
+/* -------------------------------------------------------------------------- */
+
+export interface LessonResource {
+  id: string;
+  name: Localized;
+  description: Localized;
+  type: 'pdf' | 'zip' | 'image' | 'font' | 'link' | 'file';
+  url: string;
+  external: boolean;
+}
+
+export interface LessonProject {
+  brief: Localized;
+  description: Localized;
+  instructions: Localized;
+  resources: LessonResource[];
+}
+
+export interface Lesson {
+  id: string;
+  title: Localized;
+  description: Localized;
+  videoUrl: string;
+  videoSource: 'upload' | 'youtube';
+  videoDuration: number;
+  notes: Localized;
+  freePreview: boolean;
+  resources: LessonResource[];
+  project?: LessonProject;
+  order: number;
+}
+
+export interface CourseSection {
+  id: string;
+  title: Localized;
+  lessons: Lesson[];
+  order: number;
+}
+
+export type CourseLevel = 'beginner' | 'intermediate' | 'advanced';
+
+export interface Course extends Entity {
+  title: Localized;
+  shortDescription: Localized;
+  fullDescription: Localized;
+  cover: Media;
+  instructor: Localized;
+  level: CourseLevel;
+  duration: Localized;
+  totalLessons: number;
+  learningOutcomes: Localized[];
+  requirements: Localized[];
+  tags: string[];
+  category: string;
+  pricing: 'free' | 'paid';
+  price: number;
+  currency: string;
+  sections: CourseSection[];
+  faq: { question: Localized; answer: Localized }[];
+  relatedCourses: string[];
+  seoTitle: Localized;
+  metaDescription: Localized;
+  featured: boolean;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Navigation                                                                 */
+/* -------------------------------------------------------------------------- */
+
+export interface NavLink {
+  id: string;
+  label: Localized;
+  href: string;
+  order: number;
+  visible: boolean;
+}
+
+export interface Navigation {
+  main: NavLink[];
 }
 
 /**
@@ -357,6 +456,8 @@ export interface ContentData {
   products: Product[];
   testimonials: Testimonial[];
   faq: FaqItem[];
+  courses: Course[];
+  navigation: Navigation;
 }
 
 export type CollectionName =
@@ -367,4 +468,5 @@ export type CollectionName =
   | 'workshops'
   | 'products'
   | 'testimonials'
-  | 'faq';
+  | 'faq'
+  | 'courses';
