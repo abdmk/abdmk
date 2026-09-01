@@ -15,6 +15,7 @@ const LINKS = [
     icon: 'list' as const,
   })),
   // Management
+  { href: '/admin/media', label: 'Media', icon: 'image' as const },
   { href: '/admin/inquiries', label: 'Inquiries', icon: 'list' as const },
   { href: '/admin/navigation', label: 'Navigation', icon: 'menu' as const },
   { href: '/admin/analytics', label: 'Analytics', icon: 'search' as const },

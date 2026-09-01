@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { Icon, type IconName } from '@/components/icons';
 import { ContactForm } from '@/components/ui/ContactForm';
+import { InquiryForm } from '@/components/ui/InquiryForm';
 import { SocialLinks } from '@/components/layout/SocialLinks';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { services as getServices, settings as getSettings } from '@/lib/content/queries';
@@ -74,10 +75,13 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       />
 
       <div className="grid gap-5 lg:grid-cols-12 lg:gap-6">
-        <div className="card p-6 sm:p-8 lg:col-span-7 lg:p-10">
-          <Suspense fallback={<p className="text-muted">{tr.common.loading}</p>}>
-            <ContactForm settings={settings} lang={lang} serviceLabels={serviceLabels} />
-          </Suspense>
+        <div className="lg:col-span-7 space-y-5 lg:space-y-6">
+          <InquiryForm lang={lang} services={services} />
+          <div className="card p-6 sm:p-8 lg:p-10">
+            <Suspense fallback={<p className="text-muted">{tr.common.loading}</p>}>
+              <ContactForm settings={settings} lang={lang} serviceLabels={serviceLabels} />
+            </Suspense>
+          </div>
         </div>
 
         <aside className="flex flex-col gap-4 lg:col-span-5 lg:gap-5">

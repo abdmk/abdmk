@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Icon } from '@/components/icons';
+import { ServicePricing } from '@/components/home/ServicePricing';
 import { SmartImage } from '@/components/media/SmartImage';
 import { ArrowLink } from '@/components/ui/ArrowLink';
 import { BloomField } from '@/components/ui/Bloom';
@@ -95,6 +96,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                         </li>
                       ))}
                     </ul>
+
+                    <ServicePricing service={service} lang={lang} />
 
                     <div className="mt-8">
                       <ArrowLink href={`${localePath(lang, '/contact')}?service=${service.slug}`}>
