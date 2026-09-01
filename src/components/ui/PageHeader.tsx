@@ -1,40 +1,51 @@
 import type { ReactNode } from 'react';
+import { BloomField } from './Bloom';
 import { cn } from '@/lib/utils';
+
+type Hue = 'peach' | 'mint' | 'lilac' | 'sky' | 'lime';
 
 interface PageHeaderProps {
   title: string;
   intro?: string;
-  /** Small tracked caption above the title. */
+  /** Small pill above the title — a section name or a count. */
   eyebrow?: string;
-  /** A single line of context under the copy — a count, a period, a status. */
+  /** Pills under the copy: counts, taxonomy, availability. */
   meta?: ReactNode;
+  hues?: Hue[];
   className?: string;
   children?: ReactNode;
 }
 
 /**
- * The opening of an inner page: caption, one very large title, a lead held to a
- * reading measure, and a hairline to close it. No panel, no background — the
- * title's size is the whole design, which is what keeps eight section pages
- * reading as one publication.
+ * The opening slab every index page wears: one rounded surface, a pastel light
+ * behind it, a title and a lead. Keeping it in one component is what makes the
+ * section pages read as one family rather than eight separate designs.
  */
 export function PageHeader({
   title,
   intro,
   eyebrow,
   meta,
+  hues = ['peach', 'lilac', 'sky'],
   className,
   children,
 }: PageHeaderProps) {
   return (
-    <header className={cn('pt-14 md:pt-20', className)}>
-      {eyebrow ? <p className="label mb-5 md:mb-7">{eyebrow}</p> : null}
+    <header
+      className={cn(
+        'card relative overflow-hidden px-6 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-16',
+        className,
+      )}
+    >
+      <BloomField hues={hues} />
 
-      <h1 className="max-w-[16ch] text-display">{title}</h1>
-
-      {intro ? <p className="measure mt-7 text-lead text-muted md:mt-10">{intro}</p> : null}
-      {meta ? <div className="meta-line mt-7 md:mt-10">{meta}</div> : null}
-      {children}
+      <div className="relative lg:max-w-[72%]">
+        {eyebrow ? <span className="chip mb-5 bg-sunken text-muted">{eyebrow}</span> : null}
+        <h1 className="text-display">{title}</h1>
+        {intro ? <p className="mt-5 max-w-prose text-lead text-muted">{intro}</p> : null}
+        {meta ? <div className="mt-7 flex flex-wrap items-center gap-2">{meta}</div> : null}
+        {children}
+      </div>
     </header>
   );
 }

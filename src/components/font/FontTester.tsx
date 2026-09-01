@@ -64,7 +64,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="h-px w-full cursor-pointer appearance-none bg-line-strong accent-ink"
+        className="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-line accent-ink"
       />
     </div>
   );
@@ -133,15 +133,15 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
   };
 
   return (
-    <section aria-labelledby="tester-heading" className="rule pt-6">
-      <div className="mb-10 flex flex-wrap items-baseline justify-between gap-4">
-        <h2 id="tester-heading" className="text-h1">
+    <section aria-labelledby="tester-heading" className="card p-6 sm:p-8 lg:p-10">
+      <div className="mb-8 flex flex-wrap items-baseline justify-between gap-4">
+        <h2 id="tester-heading" className="text-h2">
           {tr.tester.title}
         </h2>
         <button
           type="button"
           onClick={reset}
-          className="label inline-flex items-center gap-2 transition-colors hover:text-ink"
+          className="chip transition-colors duration-300 hover:bg-ink hover:text-surface"
         >
           <Icon name="settings" size={15} />
           {tr.tester.reset}
@@ -162,7 +162,7 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
             dir={script === 'ar' ? 'rtl' : 'ltr'}
             lang={script}
             spellCheck={false}
-            className="min-h-[3.5em] w-full resize-y border-0 bg-transparent p-0 outline-none placeholder:text-faint/60"
+            className="min-h-[3.5em] w-full resize-y rounded-card border-0 bg-sunken p-5 outline-none placeholder:text-faint/60 sm:p-7"
             style={{
               fontFamily: family,
               fontSize: `${size}px`,
@@ -177,7 +177,7 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
           ) : null}
         </div>
 
-        <div className="order-1 space-y-6 lg:order-2">
+        <div className="order-1 space-y-6 rounded-card bg-sunken p-5 lg:order-2 lg:p-6">
           <fieldset>
             <legend className="label mb-2">{tr.tester.script}</legend>
             <div className="flex gap-1.5">
@@ -188,10 +188,10 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
                   onClick={() => setScript(value)}
                   aria-pressed={script === value}
                   className={cn(
-                    'flex-1 border border-line px-3 py-2 text-small transition-colors duration-300',
+                    'flex-1 rounded-full px-3 py-2 text-small transition-colors duration-300',
                     script === value
-                      ? 'border-ink bg-ink font-medium text-paper'
-                      : 'text-muted hover:border-ink hover:text-ink',
+                      ? 'bg-ink font-medium text-surface'
+                      : 'bg-surface text-muted hover:text-ink',
                   )}
                 >
                   {value === 'ar' ? tr.tester.arabic : tr.tester.latin}
@@ -228,7 +228,7 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
               step={100}
               value={weight}
               onChange={(e) => setWeight(Number(e.target.value))}
-              className="h-px w-full cursor-pointer appearance-none bg-line-strong accent-ink"
+              className="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-line accent-ink"
             />
           </div>
 
@@ -265,10 +265,10 @@ export function FontTester({ typeface, lang }: FontTesterProps) {
                   aria-pressed={align === option.value}
                   aria-label={tr.tester[option.key]}
                   className={cn(
-                    'grid h-10 flex-1 place-items-center border border-line transition-colors duration-300',
+                    'grid h-10 flex-1 place-items-center rounded-full transition-colors duration-300',
                     align === option.value
-                      ? 'border-ink bg-ink text-paper'
-                      : 'text-muted hover:border-ink hover:text-ink',
+                      ? 'bg-ink text-surface'
+                      : 'bg-surface text-muted hover:text-ink',
                   )}
                 >
                   <Icon name={option.icon} size={15} />

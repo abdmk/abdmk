@@ -65,44 +65,52 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   ];
 
   return (
-    <div className="shell pb-section">
+    <div className="shell pb-section pt-6 sm:pt-8">
       <PageHeader
         title={tr.contact.title}
         intro={tr.contact.intro}
-        className="mb-12 md:mb-16"
+        hues={['mint', 'peach', 'lilac']}
+        className="mb-9 md:mb-12"
       />
 
-      <div className="grid-editorial rule gap-y-14 pt-10 md:pt-14">
-        <div className="col-span-4 md:col-span-7">
+      <div className="grid gap-5 lg:grid-cols-12 lg:gap-6">
+        <div className="card p-6 sm:p-8 lg:col-span-7 lg:p-10">
           <Suspense fallback={<p className="text-muted">{tr.common.loading}</p>}>
             <ContactForm settings={settings} lang={lang} serviceLabels={serviceLabels} />
           </Suspense>
         </div>
 
-        <aside className="col-span-4 md:col-span-4 md:col-start-9">
-          <div>
-            <h2 className="label">{tr.contact.elsewhere}</h2>
-            <ul className="mt-5 list-none p-0">
+        <aside className="flex flex-col gap-4 lg:col-span-5 lg:gap-5">
+          <div className="card p-6 sm:p-7">
+            <h2 className="text-h3">{tr.contact.elsewhere}</h2>
+            <ul className="mt-5 list-none space-y-2 p-0">
               {direct.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     target={item.href.startsWith('http') ? '_blank' : undefined}
                     rel={item.href.startsWith('http') ? 'noreferrer noopener' : undefined}
-                    className="group flex items-center gap-3.5 border-b border-line py-3.5 transition-colors"
+                    className="group flex items-center gap-3.5 rounded-xl2 bg-sunken px-4 py-3.5 transition-colors duration-300 hover:bg-ink"
                   >
-                    <Icon name={item.icon} size={16} className="text-faint" />
-                    <span className="link-underline text-small" dir="ltr">
+                    <Icon
+                      name={item.icon}
+                      size={17}
+                      className="text-faint transition-colors group-hover:text-surface"
+                    />
+                    <span
+                      className="text-small transition-colors group-hover:text-surface"
+                      dir="ltr"
+                    >
                       {item.value}
                     </span>
                   </a>
                 </li>
               ))}
             </ul>
-            <SocialLinks links={settings.social} className="mt-6" />
+            <SocialLinks links={settings.social} className="mt-5" />
           </div>
 
-          <div className="mt-10 border-t border-line pt-6">
+          <div className="card p-6 sm:p-7">
             <h2 className="label mb-2">{tr.contact.availability}</h2>
             <p className="text-small text-muted">{t(settings.contact.availability, lang)}</p>
 

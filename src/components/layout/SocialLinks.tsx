@@ -19,14 +19,14 @@ const isKnownIcon = (name: string): name is IconName => name in ICON_PATHS;
 export function SocialLinks({ links, className, size = 18 }: SocialLinksProps) {
   if (!links.length) return null;
   return (
-    <ul className={cn('-mx-1.5 flex list-none flex-wrap items-center gap-1 p-0', className)}>
+    <ul className={cn('flex list-none flex-wrap items-center gap-2 p-0', className)}>
       {links.map((link) => (
         <li key={link.href} className="m-0">
           <a
             href={link.href}
             target="_blank"
             rel="noreferrer noopener me"
-            className="grid h-9 w-9 place-items-center text-muted transition-colors duration-300 hover:text-ink"
+            className="grid h-10 w-10 place-items-center rounded-full bg-sunken text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
             aria-label={link.label}
             title={link.label}
           >

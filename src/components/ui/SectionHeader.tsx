@@ -3,21 +3,20 @@ import { ArrowLink } from './ArrowLink';
 import { cn } from '@/lib/utils';
 
 interface SectionHeaderProps {
-  /** Small tracked caption above the title — the section's name. */
+  /** Small pill label above the title. */
   label?: string;
   title: string;
   intro?: string;
   action?: { href: string; label: string };
   className?: string;
-  /** The title's weight in the page. `lead` is for the one section that matters most. */
-  size?: 'default' | 'lead';
+  /** Centre the block. Used for full-width feature sections. */
+  align?: 'start' | 'center';
   children?: ReactNode;
 }
 
 /**
- * The repeating section opener: a hairline, a numbered caption, a title, and an
- * optional link parked on the far edge. The rule is what separates sections
- * here — there are no boxes, so the line does the structural work.
+ * The repeating section opener: a quiet pill label, a tight title, an optional
+ * lead paragraph and an optional link parked on the far edge.
  */
 export function SectionHeader({
   label,
@@ -25,26 +24,42 @@ export function SectionHeader({
   intro,
   action,
   className,
-  size = 'default',
+  align = 'start',
   children,
 }: SectionHeaderProps) {
-  return (
-    <header className={cn('rule pt-6 md:pt-8', className)}>
-      <div className="grid-editorial items-baseline">
-        <div className="col-span-4 md:col-span-8">
-          {label ? <p className="label mb-4 md:mb-6">{label}</p> : null}
-          <h2 className={size === 'lead' ? 'text-display' : 'text-h1'}>{title}</h2>
-        </div>
+  const centered = align === 'center';
 
+  return (
+    <header className={cn(centered && 'text-center', className)}>
+      <div
+        className={cn(
+          'flex flex-wrap gap-x-8 gap-y-5',
+          centered
+            ? 'flex-col items-center'
+            : 'items-end justify-between',
+        )}
+      >
+        <div className={cn('min-w-0', centered && 'flex flex-col items-center')}>
+          {label ? (
+            <span className="chip mb-4 bg-surface text-faint shadow-soft">{label}</span>
+          ) : null}
+          <h2 className="text-h2">{title}</h2>
+        </div>
         {action ? (
-          <div className="col-span-4 md:col-span-4 md:justify-self-end md:self-end">
-            <ArrowLink href={action.href}>{action.label}</ArrowLink>
-          </div>
+          <ArrowLink href={action.href} className="shrink-0">
+            {action.label}
+          </ArrowLink>
         ) : null}
       </div>
-
       {intro ? (
-        <p className="measure mt-6 text-lead text-muted md:mt-8">{intro}</p>
+        <p
+          className={cn(
+            'mt-5 max-w-prose text-lead text-muted',
+            centered && 'mx-auto',
+          )}
+        >
+          {intro}
+        </p>
       ) : null}
       {children}
     </header>

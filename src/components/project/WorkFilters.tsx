@@ -47,14 +47,14 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
 
   return (
     <>
-      <div className="mb-12 md:mb-16">
+      <div className="mb-8 md:mb-12">
         {/* Mobile: a disclosure card, so a long taxonomy does not push work down. */}
         <div className="md:hidden">
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="flex w-full items-center justify-between border-y border-line py-4"
+            className="card flex w-full items-center justify-between px-5 py-4"
           >
             <span className="inline-flex items-center gap-2.5 text-small font-medium">
               <Icon name="filter" size={15} className="text-faint" />
@@ -67,7 +67,7 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
             />
           </button>
           {open ? (
-            <ul className="list-none border-b border-line p-0 py-2">
+            <ul className="card mt-2 list-none p-2">
               {options.map((option) => (
                 <li key={option.slug}>
                   <button
@@ -75,12 +75,14 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
                     onClick={() => select(option.slug)}
                     aria-current={active === option.slug ? 'true' : undefined}
                     className={cn(
-                      'flex w-full items-center justify-between py-2.5 text-small transition-colors',
-                      active === option.slug ? 'font-medium text-ink' : 'text-muted',
+                      'flex w-full items-center justify-between rounded-full px-4 py-2.5 text-small transition-colors',
+                      active === option.slug
+                        ? 'bg-ink font-medium text-surface'
+                        : 'text-muted hover:bg-sunken',
                     )}
                   >
                     {t(option.name, lang)}
-                    <span className="numeric text-faint">{option.count}</span>
+                    <span className="numeric opacity-70">{option.count}</span>
                   </button>
                 </li>
               ))}
@@ -90,7 +92,7 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
 
         {/* Desktop: the taxonomy as a wrapping row of pills. */}
         <ul
-          className="hidden list-none flex-wrap gap-x-7 gap-y-2 border-y border-line p-0 py-4 md:flex"
+          className="hidden list-none flex-wrap gap-2 p-0 md:flex"
           aria-label={tr.work.filter}
         >
           {options.map((option) => (
@@ -100,14 +102,22 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
                 onClick={() => select(option.slug)}
                 aria-current={active === option.slug ? 'true' : undefined}
                 className={cn(
-                  'inline-flex items-baseline gap-1.5 whitespace-nowrap text-small transition-colors duration-300',
-                  active === option.slug ? 'font-medium text-ink' : 'text-muted hover:text-ink',
+                  'inline-flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2.5 text-small',
+                  'transition-colors duration-300',
+                  active === option.slug
+                    ? 'bg-ink font-medium text-surface shadow-pill'
+                    : 'bg-surface text-muted shadow-soft hover:text-ink',
                 )}
               >
-                <span className={cn(active === option.slug && 'link-rule')}>
-                  {t(option.name, lang)}
+                {t(option.name, lang)}
+                <span
+                  className={cn(
+                    'numeric text-meta',
+                    active === option.slug ? 'opacity-70' : 'text-faint',
+                  )}
+                >
+                  {option.count}
                 </span>
-                <span className="numeric text-micro text-faint">{option.count}</span>
               </button>
             </li>
           ))}
@@ -120,12 +130,10 @@ export function WorkFilters({ projects, categories, companies, lang }: WorkFilte
           projects={filtered}
           lang={lang}
           companies={companies}
-          categories={categories}
           priorityCount={2}
-          numbered
         />
       ) : (
-        <p className="rule py-20 text-lead text-muted">{tr.work.empty}</p>
+        <p className="py-20 text-center text-lead text-muted">{tr.work.empty}</p>
       )}
     </>
   );

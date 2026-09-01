@@ -3,15 +3,20 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Icon, type IconName } from '@/components/icons';
 import { cn } from '@/lib/utils';
 
-type Variant = 'primary' | 'ghost';
+type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'sm' | 'md' | 'lg';
 
 const VARIANT: Record<Variant, string> = {
   primary: 'btn-primary',
+  secondary: 'btn-secondary',
   ghost: 'btn-ghost',
 };
 
-const SIZE: Record<Size, string> = { sm: 'btn-sm', md: '', lg: 'btn-lg' };
+const SIZE: Record<Size, string> = {
+  sm: 'btn-sm',
+  md: '',
+  lg: 'btn-lg',
+};
 
 interface CommonProps {
   children: ReactNode;
@@ -29,16 +34,16 @@ function inner(children: ReactNode, icon?: IconName, size?: Size) {
       {icon ? (
         <Icon
           name={icon}
-          size={size === 'lg' ? 18 : 16}
+          size={size === 'lg' ? 19 : 17}
           flipRtl={icon === 'arrowRight' || icon === 'arrowLeft'}
-          className="transition-transform duration-500 ease-editorial group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
+          className="transition-transform duration-500 ease-editorial group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5"
         />
       ) : null}
     </>
   );
 }
 
-/** Pill button. Only two variants exist: the solid ink one, and an outline. */
+/** Pill button. The primary is near-black; secondary and ghost stay quiet. */
 export function Button({
   children,
   variant = 'primary',
@@ -48,7 +53,10 @@ export function Button({
   ...rest
 }: CommonProps & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button className={cn('btn group', VARIANT[variant], SIZE[size], className)} {...rest}>
+    <button
+      className={cn('btn group', VARIANT[variant], SIZE[size], className)}
+      {...rest}
+    >
       {inner(children, icon, size)}
     </button>
   );

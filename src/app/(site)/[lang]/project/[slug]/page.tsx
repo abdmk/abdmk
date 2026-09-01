@@ -8,6 +8,7 @@ import { ProjectCardMini } from '@/components/project/ProjectCard';
 import { ProjectGrid } from '@/components/project/ProjectGrid';
 import { ShareBar } from '@/components/project/ShareBar';
 import { ArrowLink } from '@/components/ui/ArrowLink';
+import { BloomField } from '@/components/ui/Bloom';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import {
@@ -64,7 +65,7 @@ export async function generateMetadata({
 /** A labelled row in the project meta column. */
 function Meta({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="border-t border-line py-3.5">
+    <div className="rounded-xl2 bg-sunken px-4 py-3">
       <dt className="label mb-1.5">{label}</dt>
       <dd className="text-small">{children}</dd>
     </div>
@@ -112,52 +113,48 @@ export default async function ProjectPage({
   };
 
   return (
-    <article className="shell pb-section">
+    <article className="shell pb-section pt-6 sm:pt-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* ---------------------------------------------------------------- Hero */}
-      <header className="pt-14 md:pt-20">
-        <Link
-          href={localePath(lang, '/work')}
-          className="label inline-flex items-center gap-2 hover:text-ink"
-        >
-          <Icon name="arrowLeft" size={12} flipRtl />
-          {tr.project.backToWork}
-        </Link>
+      <header className="card relative overflow-hidden p-2.5 sm:p-3">
+        <BloomField hues={['peach', 'sky', 'lilac']} />
 
-        <h1 className="mt-8 max-w-[15ch] text-mega md:mt-12">{t(project.title, lang)}</h1>
+        <div className="relative px-3.5 pb-8 pt-5 sm:px-6 sm:pb-10 sm:pt-7 lg:px-10 lg:pb-12">
+          <Link
+            href={localePath(lang, '/work')}
+            className="chip transition-colors duration-300 hover:bg-ink hover:text-surface"
+          >
+            <Icon name="arrowLeft" size={13} flipRtl />
+            {tr.project.backToWork}
+          </Link>
 
-        <div className="grid-editorial mt-8 md:mt-12">
-          <p className="measure col-span-4 text-lead text-muted md:col-span-6">
+          <h1 className="mt-7 max-w-[20ch] text-display">{t(project.title, lang)}</h1>
+          <p className="mt-5 max-w-prose text-lead text-muted">
             {t(project.shortDescription, lang)}
           </p>
-          <p className="meta-line col-span-4 md:col-span-3 md:col-start-10 md:justify-self-end md:text-end">
-            {company ? t(company.name, lang) : null}
-            {company ? <span aria-hidden> · </span> : null}
-            <span className="numeric">{project.year}</span>
-          </p>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken">
+          <SmartImage
+            src={project.cover.src}
+            alt={t(project.cover.alt, lang)}
+            width={project.cover.width}
+            height={project.cover.height}
+            sizes="(max-width: 1024px) 100vw, 88vw"
+            priority
+            className="w-full"
+          />
         </div>
       </header>
 
-      <div className="well mt-12 md:mt-16">
-        <SmartImage
-          src={project.cover.src}
-          alt={t(project.cover.alt, lang)}
-          width={project.cover.width}
-          height={project.cover.height}
-          sizes="100vw"
-          priority
-          className="w-full"
-        />
-      </div>
-
       {/* ---------------------------------------------------------------- Meta */}
-      <div className="grid-editorial mt-section-sm">
-        <div className="col-span-4 md:col-span-4">
-          <dl className="m-0">
+      <div className="mt-5 grid gap-5 lg:mt-6 lg:grid-cols-12 lg:gap-6">
+        <div className="card p-6 sm:p-7 lg:col-span-5 xl:col-span-4">
+          <dl className="m-0 space-y-2">
           <Meta label={tr.project.year}>
               <span className="numeric">{project.year}</span>
             </Meta>
@@ -230,7 +227,7 @@ export default async function ProjectPage({
           </dl>
 
           {/* Actions sit outside the definition list: they are not terms. */}
-          <div className="mt-8 border-t border-line pt-6">
+          <div className="mt-6 border-t border-line pt-6">
             {project.projectUrl ? (
               <ArrowLink href={project.projectUrl} external className="mb-5">
                 {tr.project.visitProject}
@@ -244,8 +241,8 @@ export default async function ProjectPage({
           </div>
         </div>
 
-        <div className="col-span-4 md:col-span-7 md:col-start-6">
-          <p className="text-h1">{t(project.fullDescription, lang)}</p>
+        <div className="card flex items-center p-6 sm:p-8 lg:col-span-7 lg:p-12 xl:col-span-8">
+          <p className="text-h3 font-normal leading-snug">{t(project.fullDescription, lang)}</p>
         </div>
       </div>
 
@@ -257,7 +254,7 @@ export default async function ProjectPage({
       {/* --------------------------------------------------------- Navigation */}
       <nav
         aria-label={tr.project.nextProject}
-        className="rule mt-section grid gap-12 pt-10 md:grid-cols-2 md:gap-8"
+        className="mt-section grid gap-5 md:grid-cols-2 lg:gap-6"
       >
         {neighbours.previous ? (
           <ProjectCardMini

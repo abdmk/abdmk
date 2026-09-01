@@ -28,25 +28,32 @@ export default async function FontsPage({ params }: { params: Promise<{ lang: La
   const fonts = await getTypefaces();
 
   return (
-    <div className="shell pb-section">
+    <div className="shell pb-section pt-6 sm:pt-8">
       <PageHeader
         title={tr.fonts.title}
         intro={tr.fonts.intro}
+        hues={['lilac', 'sky', 'mint']}
         meta={
-          <span className="numeric">
+          <span className="chip numeric">
             {fonts.length} {tr.fonts.title}
           </span>
         }
-        className="mb-12 md:mb-16"
+        className="mb-9 md:mb-12"
       />
 
       {/* Typefaces get a full-width card each — a font is judged at size, not in
           a thumbnail — with the specimen doing the talking. */}
-      <ul className="list-none space-y-20 p-0 md:space-y-28">
+      <ul className="list-none space-y-5 p-0 lg:space-y-6">
         {fonts.map((font, i) => (
           <Reveal as="li" key={font.id} index={i % 2}>
-            <Link href={localePath(lang, `/font/${font.slug}`)} className="group block">
-              <div className="media-zoom well relative" style={{ aspectRatio: '16 / 9' }}>
+            <Link
+              href={localePath(lang, `/font/${font.slug}`)}
+              className="card card-hover group block overflow-hidden p-2.5 sm:p-3"
+            >
+              <div
+                className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
+                style={{ aspectRatio: '16 / 9' }}
+              >
                 <SmartImage
                   src={font.preview.src}
                   alt={t(font.preview.alt, lang)}
@@ -56,20 +63,17 @@ export default async function FontsPage({ params }: { params: Promise<{ lang: La
                 />
               </div>
 
-              <div className="grid-editorial mt-6 items-baseline md:mt-8">
-                <h2 className="col-span-4 text-h1 md:col-span-4">
-                  <span className="link-underline">{t(font.name, lang)}</span>
-                </h2>
-                <p className="measure col-span-4 text-lead text-muted md:col-span-5">
+              <div className="grid gap-x-8 gap-y-4 px-2.5 pb-3 pt-6 sm:px-4 md:grid-cols-12 md:items-start">
+                <h2 className="text-h1 md:col-span-4">{t(font.name, lang)}</h2>
+                <p className="max-w-prose text-lead text-muted md:col-span-5">
                   {t(font.description, lang)}
                 </p>
-                <p className="meta-line col-span-4 md:col-span-3 md:justify-self-end md:text-end">
-                  {t(font.type, lang)}
-                  <span aria-hidden> · </span>
-                  <span className="numeric">
+                <div className="flex flex-wrap gap-2 md:col-span-3 md:justify-end">
+                  <span className="chip">{t(font.type, lang)}</span>
+                  <span className="chip numeric">
                     {font.weights.length} {tr.fonts.weights}
                   </span>
-                </p>
+                </div>
               </div>
             </Link>
           </Reveal>

@@ -33,7 +33,8 @@ export function LanguageSwitcher({ lang, className }: { lang: Lang; className?: 
       aria-label={t.nav.switchLanguage}
       lang={target}
       className={cn(
-        'inline-flex items-center gap-1.5 text-small text-muted transition-colors duration-300 hover:text-ink',
+        'inline-flex items-center gap-1.5 rounded-full bg-sunken px-3.5 py-2 text-small font-medium text-ink',
+        'transition-colors duration-300 hover:bg-line-strong',
         pending && 'opacity-50',
         className,
       )}

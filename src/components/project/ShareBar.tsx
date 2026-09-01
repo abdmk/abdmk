@@ -59,13 +59,13 @@ export function ShareBar({ title, path, lang }: ShareBarProps) {
     <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
       <span className="label">{t.project.share}</span>
 
-      <div className="-ms-2 flex flex-wrap items-center gap-1">
+      <div className="flex flex-wrap items-center gap-2">
         {canShare ? (
           <button
             type="button"
             onClick={() => void navigator.share({ title, url }).catch(() => undefined)}
             aria-label={t.project.share}
-            className="grid h-9 w-9 place-items-center text-muted transition-colors duration-300 hover:text-ink"
+            className="grid h-10 w-10 place-items-center rounded-full bg-sunken text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
           >
             <Icon name="share" size={16} />
           </button>
@@ -78,7 +78,7 @@ export function ShareBar({ title, path, lang }: ShareBarProps) {
             target="_blank"
             rel="noreferrer noopener"
             aria-label={target.label}
-            className="grid h-9 w-9 place-items-center text-muted transition-colors duration-300 hover:text-ink"
+            className="grid h-10 w-10 place-items-center rounded-full bg-sunken text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
           >
             <Icon name={target.icon} size={16} />
           </a>
@@ -87,7 +87,7 @@ export function ShareBar({ title, path, lang }: ShareBarProps) {
         <button
           type="button"
           onClick={copy}
-          className="inline-flex h-9 items-center gap-2 ps-2 text-small text-muted transition-colors duration-300 hover:text-ink"
+          className="inline-flex h-10 items-center gap-2 rounded-full bg-sunken px-4 text-small text-ink transition-colors duration-300 hover:bg-ink hover:text-surface"
         >
           <Icon name={copied ? 'check' : 'copy'} size={16} />
           <span>{copied ? t.project.copied : t.project.copyLink}</span>

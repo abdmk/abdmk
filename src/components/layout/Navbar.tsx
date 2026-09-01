@@ -18,12 +18,6 @@ interface NavbarProps {
   settings: Settings;
 }
 
-/**
- * Six destinations, no dropdowns. Fonts, companies and workshops still have
- * pages — they are reached from the work they belong to and from the footer —
- * but a portfolio's top bar should answer "what, who, how much, who are you,
- * how do I reach you" and nothing else.
- */
 const ROUTES = [
   ['work', '/work'],
   ['services', '/services'],
@@ -32,6 +26,11 @@ const ROUTES = [
   ['about', '/about'],
 ] as const;
 
+/**
+ * Floating capsule navigation. It rides above the page on a frosted pill, hides
+ * on downward scroll so full-bleed imagery is never permanently cropped, and
+ * collapses into a rounded sheet below the desktop breakpoint.
+ */
 export function Navbar({ lang, settings }: NavbarProps) {
   const t = ui(lang);
   const pathname = usePathname();
@@ -43,16 +42,15 @@ export function Navbar({ lang, settings }: NavbarProps) {
     let last = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 8);
-      // Only hide well past the fold, and only while travelling down — a bar
-      // that flickers on every small scroll is worse than one that stays.
-      setHidden(y > 320 && y > last + 4);
+      setScrolled(y > 16);
+      setHidden(y > 240 && y > last);
       last = y;
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Close the mobile sheet on navigation, and lock the page while it is open.
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -67,69 +65,76 @@ export function Navbar({ lang, settings }: NavbarProps) {
     <>
       <a
         href="#main"
-        className="sr-only bg-ink px-4 py-2 text-paper focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[120] focus:rounded-full"
+        className="sr-only bg-ink px-4 py-2 text-surface focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[120] focus:rounded-full"
       >
         {t.nav.skipToContent}
       </a>
 
       <motion.header
-        animate={{ y: hidden && !open ? '-110%' : '0%' }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-colors duration-500',
-          scrolled && !open ? 'glass border-b border-line' : 'border-b border-transparent',
-        )}
+        animate={{ y: hidden && !open ? '-160%' : '0%' }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        className="fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4"
       >
-        <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
-          <Link
-            href={localePath(lang)}
-            className="text-h3 font-medium leading-none"
-            aria-label={tr(settings.name, lang)}
+        <div className="mx-auto w-full max-w-shell px-gutter">
+          <div
+            className={cn(
+              'flex items-center justify-between gap-3 rounded-full transition-all duration-500 ease-editorial',
+              'h-14 ps-5 pe-2 sm:h-16 sm:ps-6 sm:pe-2.5',
+              scrolled && !open
+                ? 'glass shadow-soft ring-1 ring-line'
+                : 'bg-transparent ring-1 ring-transparent',
+            )}
           >
-            {tr(settings.name, lang)}
-          </Link>
-
-          <nav aria-label={t.nav.menu} className="hidden items-center gap-8 lg:flex xl:gap-10">
-            {ROUTES.map(([key, path]) => (
-              <Link
-                key={key}
-                href={localePath(lang, path)}
-                aria-current={isActive(path) ? 'page' : undefined}
-                className={cn(
-                  'text-small transition-colors duration-300',
-                  isActive(path)
-                    ? 'link-rule font-medium text-ink'
-                    : 'link-underline text-muted hover:text-ink',
-                )}
-              >
-                {t.nav[key]}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2 sm:gap-4">
-            <ThemeToggle
-              labelToDark={t.nav.switchToDark}
-              labelToLight={t.nav.switchToLight}
-              className="hidden sm:grid"
-            />
-            <LanguageSwitcher lang={lang} />
             <Link
-              href={localePath(lang, '/contact')}
-              className="btn btn-primary btn-sm hidden lg:inline-flex"
+              href={localePath(lang)}
+              className="text-[1.0625rem] font-semibold leading-none tracking-tight sm:text-h3"
+              aria-label={tr(settings.name, lang)}
             >
-              {t.nav.contact}
+              {tr(settings.name, lang)}
             </Link>
-            <button
-              type="button"
-              onClick={() => setOpen((v) => !v)}
-              aria-expanded={open}
-              aria-controls="mobile-nav"
-              aria-label={open ? t.nav.close : t.nav.menu}
-              className="-me-2 grid h-11 w-11 place-items-center text-ink lg:hidden"
-            >
-              <Icon name={open ? 'close' : 'menu'} size={20} />
-            </button>
+
+            <nav aria-label={t.nav.menu} className="hidden items-center gap-1 lg:flex">
+              {ROUTES.map(([key, path]) => (
+                <Link
+                  key={key}
+                  href={localePath(lang, path)}
+                  aria-current={isActive(path) ? 'page' : undefined}
+                  className={cn(
+                    'rounded-full px-3.5 py-2 text-small transition-colors duration-300 xl:px-4',
+                    isActive(path)
+                      ? 'bg-sunken font-medium text-ink'
+                      : 'text-muted hover:bg-sunken hover:text-ink',
+                  )}
+                >
+                  {t.nav[key]}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="flex items-center gap-2">
+              <ThemeToggle
+                labelToDark={t.nav.switchToDark}
+                labelToLight={t.nav.switchToLight}
+                className="hidden sm:inline-flex"
+              />
+              <LanguageSwitcher lang={lang} />
+              <Link
+                href={localePath(lang, '/contact')}
+                className="btn btn-primary btn-sm hidden lg:inline-flex"
+              >
+                {t.nav.contact}
+              </Link>
+              <button
+                type="button"
+                onClick={() => setOpen((v) => !v)}
+                aria-expanded={open}
+                aria-controls="mobile-nav"
+                aria-label={open ? t.nav.close : t.nav.menu}
+                className="btn-icon h-11 w-11 lg:hidden"
+              >
+                <Icon name={open ? 'close' : 'menu'} size={18} />
+              </button>
+            </div>
           </div>
         </div>
       </motion.header>
@@ -142,47 +147,47 @@ export function Navbar({ lang, settings }: NavbarProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-paper pt-16 md:pt-20 lg:hidden"
+            className="fixed inset-0 z-40 overflow-y-auto bg-paper px-gutter pb-8 pt-24 sm:pt-28 lg:hidden"
           >
-            <nav aria-label={t.nav.menu} className="shell flex flex-1 flex-col justify-center py-10">
-              <ul className="list-none p-0">
+            <nav aria-label={t.nav.menu} className="mx-auto w-full max-w-shell">
+              <ul className="list-none space-y-2 p-0">
                 {[...ROUTES, ['contact', '/contact'] as const].map(([key, path], i) => (
                   <motion.li
                     key={key}
-                    initial={{ opacity: 0, y: 16 }}
+                    initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      delay: 0.04 + i * 0.05,
-                      duration: 0.55,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="rule"
+                    transition={{ delay: 0.04 + i * 0.04, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                   >
                     <Link
                       href={localePath(lang, path)}
-                      className="flex items-baseline justify-between gap-4 py-5 text-h1"
+                      className="card card-hover flex items-center justify-between px-5 py-4 text-h3 font-medium sm:px-6 sm:py-5"
                     >
                       {t.nav[key]}
-                      <span className="label">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="grid h-8 w-8 place-items-center rounded-full bg-sunken text-faint">
+                        <Icon name="arrowRight" size={15} flipRtl />
+                      </span>
                     </Link>
                   </motion.li>
                 ))}
               </ul>
-            </nav>
 
-            <div className="shell rule flex flex-wrap items-center justify-between gap-5 py-7">
-              <a href={`mailto:${settings.contact.email}`} className="link-rule text-small">
-                {settings.contact.email}
-              </a>
-              <div className="flex items-center gap-4">
-                <ThemeToggle
-                  labelToDark={t.nav.switchToDark}
-                  labelToLight={t.nav.switchToLight}
-                  className="sm:hidden"
-                />
+              <div className="mt-8 flex flex-col gap-5 rounded-card bg-surface p-6 shadow-soft">
+                <div className="flex items-center justify-between gap-4">
+                  <a
+                    href={`mailto:${settings.contact.email}`}
+                    className="link-underline text-small font-medium"
+                  >
+                    {settings.contact.email}
+                  </a>
+                  <ThemeToggle
+                    labelToDark={t.nav.switchToDark}
+                    labelToLight={t.nav.switchToLight}
+                    className="sm:hidden"
+                  />
+                </div>
                 <SocialLinks links={settings.social} />
               </div>
-            </div>
+            </nav>
           </motion.div>
         ) : null}
       </AnimatePresence>

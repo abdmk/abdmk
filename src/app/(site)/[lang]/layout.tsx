@@ -15,8 +15,8 @@ export function generateStaticParams() {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F9F8F6' },
-    { media: '(prefers-color-scheme: dark)', color: '#0C0C0C' },
+    { media: '(prefers-color-scheme: light)', color: '#F4F5F7' },
+    { media: '(prefers-color-scheme: dark)', color: '#0C0D10' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -96,7 +96,7 @@ export default async function SiteLayout({
       </head>
       <body className="min-h-dvh antialiased">
         <Navbar lang={typed} settings={s} />
-        <main id="main" className="pt-16 md:pt-20">
+        <main id="main" className="pt-[76px] sm:pt-[88px]">
           {children}
         </main>
         <Footer lang={typed} settings={s} />

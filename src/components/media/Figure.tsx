@@ -42,7 +42,7 @@ export function Figure({ media, lang, sizes, priority, className, showCaption = 
   return (
     <figure className={cn('m-0', className)}>
       <div
-        className="well relative"
+        className="relative overflow-hidden rounded-card bg-sunken"
         style={ratio ? { aspectRatio: String(ratio) } : undefined}
       >
         {inner}

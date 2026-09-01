@@ -5,11 +5,8 @@ import type { Lang, Product } from '@/lib/content/types';
 import { localePath, t } from '@/lib/i18n/config';
 import { ui } from '@/lib/i18n/dictionary';
 
-/**
- * Products as an extension of the portfolio: the same caption grammar as a
- * project (name, kind, price) so a reader moving down the page does not feel
- * they have walked into a different website with a shop in it.
- */
+/** Products wear the same card as a project — same rounding, same hover lift —
+ * so they read as an extension of the portfolio, not a separate shop bolted on. */
 export function ProductRow({
   products,
   lang,
@@ -24,11 +21,17 @@ export function ProductRow({
   if (!list.length) return null;
 
   return (
-    <ul className="grid list-none grid-cols-2 gap-x-5 gap-y-12 p-0 md:grid-cols-4 md:gap-x-6">
+    <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
       {list.map((product, i) => (
-        <Reveal as="li" key={product.id} index={i % 4}>
-          <Link href={localePath(lang, '/products')} className="group block">
-            <div className="media-zoom well relative" style={{ aspectRatio: '4 / 3' }}>
+        <Reveal key={product.id} index={i % 4} className="h-full">
+          <Link
+            href={localePath(lang, '/products')}
+            className="card card-hover group flex h-full flex-col overflow-hidden p-2.5"
+          >
+            <div
+              className="media-zoom relative overflow-hidden rounded-[calc(var(--radius-card)-0.5rem)] bg-sunken"
+              style={{ aspectRatio: '4 / 3' }}
+            >
               <SmartImage
                 src={product.cover.src}
                 alt={t(product.cover.alt, lang)}
@@ -36,17 +39,19 @@ export function ProductRow({
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
-            <h3 className="mt-4 text-h3">
-              <span className="link-underline">{t(product.name, lang)}</span>
-            </h3>
-            <p className="meta-line mt-1.5">
-              {tr.products.kinds[product.kind]}
-              <span aria-hidden> · </span>
-              <span className="numeric">{t(product.price, lang)}</span>
-            </p>
+            <div className="flex flex-1 flex-col px-1.5 pb-1 pt-3.5">
+              <h3 className="text-small font-medium leading-snug">
+                <span className="link-underline">{t(product.name, lang)}</span>
+              </h3>
+              <p className="meta-line mt-1.5">
+                {tr.products.kinds[product.kind]}
+                <span aria-hidden> · </span>
+                <span className="numeric">{t(product.price, lang)}</span>
+              </p>
+            </div>
           </Link>
         </Reveal>
       ))}
-    </ul>
+    </div>
   );
 }

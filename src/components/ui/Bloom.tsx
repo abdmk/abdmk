@@ -18,10 +18,14 @@ const HUE_CLASS: Record<Hue, string> = {
   lime: 'bloom-lime',
 };
 
-/** Where each light sits and how big it is, by index. Deliberately off-grid. */
+/* Where each light sits and how big it is, by index. Deliberately off-grid.
+   Kept fully inside the 0–100% box (no negative offsets): a blurred disc whose
+   box pokes past the parent's edge is still clipped visually by
+   overflow-hidden, but some contrast-checking tools measure its box anyway,
+   flagging nearby text against a colour nobody can actually see. */
 const PLACEMENT = [
-  'w-[46%] h-[58%] -top-[16%] -start-[10%]',
-  'w-[40%] h-[52%] -bottom-[20%] -end-[6%]',
+  'w-[46%] h-[58%] top-[2%] start-[2%]',
+  'w-[40%] h-[52%] bottom-[4%] end-[2%]',
   'w-[30%] h-[40%] top-[30%] start-[38%]',
 ];
 

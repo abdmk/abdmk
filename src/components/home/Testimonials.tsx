@@ -1,46 +1,62 @@
-import { Reveal } from '@/components/ui/Reveal';
+'use client';
+
+import { useEffect, useState } from 'react';
 import type { Lang, Testimonial } from '@/lib/content/types';
 import { t } from '@/lib/i18n/config';
+import { cn } from '@/lib/utils';
 
 /**
- * Client words, set as editorial pull quotes rather than review cards.
- *
- * Each quote gets a full row and display-size type, with the attribution
- * demoted to a caption on the opposite edge. Nobody reads five identical
- * boxes of praise — but a sentence set at 40px in the middle of a page is
- * read whether the visitor meant to or not.
+ * Client words as a single large quote at a time, not a wall of review cards.
+ * A quote set at heading size and read alone carries more weight than five
+ * identical boxes competing for attention, and it keeps the section as calm
+ * as the rest of the page. Auto-advances slowly; dots give manual control.
  */
-export function Testimonials({
-  items,
-  lang,
-}: {
-  items: Testimonial[];
-  lang: Lang;
-}) {
+export function Testimonials({ items, lang }: { items: Testimonial[]; lang: Lang }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (items.length < 2) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % items.length), 7000);
+    return () => clearInterval(id);
+  }, [items.length]);
+
   if (!items.length) return null;
+  const item = items[index];
 
   return (
-    <ul className="list-none p-0">
-      {items.map((item, i) => (
-        <Reveal as="li" key={item.id} index={Math.min(i, 2)} className="rule py-10 md:py-16">
-          <figure className="grid-editorial m-0">
-            <blockquote className="col-span-4 m-0 md:col-span-8 xl:col-span-9">
-              <p className="text-h1 font-normal">
-                <span aria-hidden className="text-faint">“</span>
-                {t(item.quote, lang)}
-                <span aria-hidden className="text-faint">”</span>
-              </p>
-            </blockquote>
+    <div className="card relative overflow-hidden px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+      <span aria-hidden className="block text-mega leading-none text-line-strong">
+        “
+      </span>
 
-            <figcaption className="col-span-4 mt-6 md:col-span-3 md:col-start-10 md:mt-2">
-              <p className="text-small font-medium">{t(item.author, lang)}</p>
-              <p className="meta-line mt-1.5">
-                {[t(item.role, lang), t(item.organisation, lang)].filter(Boolean).join('، ')}
-              </p>
-            </figcaption>
-          </figure>
-        </Reveal>
-      ))}
-    </ul>
+      <blockquote className="-mt-4 sm:-mt-8">
+        <p className="max-w-3xl text-h2 font-normal leading-snug">{t(item.quote, lang)}</p>
+        <footer className="mt-7 sm:mt-9">
+          <p className="text-small font-medium">{t(item.author, lang)}</p>
+          <p className="meta-line mt-0.5">
+            {[t(item.role, lang), t(item.organisation, lang)].filter(Boolean).join('، ')}
+          </p>
+        </footer>
+      </blockquote>
+
+      {items.length > 1 ? (
+        <div className="mt-9 flex items-center gap-2 sm:mt-12" role="tablist">
+          {items.map((testimonial, i) => (
+            <button
+              key={testimonial.id}
+              type="button"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={cn(
+                'h-1.5 rounded-full transition-all duration-500 ease-editorial',
+                i === index ? 'w-7 bg-ink' : 'w-1.5 bg-line-strong hover:bg-faint',
+              )}
+            />
+          ))}
+        </div>
+      ) : null}
+    </div>
   );
 }

@@ -18,8 +18,9 @@ interface ContactFormProps {
 }
 
 const FIELD =
-  'w-full border-0 border-b border-line bg-transparent px-0 py-3 text-body outline-none ' +
-  'transition-colors duration-300 placeholder:text-faint/70 focus:border-ink';
+  'w-full rounded-xl2 border border-line bg-sunken px-4 py-3.5 text-body outline-none ' +
+  'transition-colors duration-300 placeholder:text-faint/70 ' +
+  'hover:border-line-strong focus:border-ink focus:bg-surface';
 
 export function ContactForm({ settings, lang, serviceLabels }: ContactFormProps) {
   const tr = ui(lang);
@@ -67,17 +68,17 @@ export function ContactForm({ settings, lang, serviceLabels }: ContactFormProps)
 
   if (status === 'sent') {
     return (
-      <div className="rule py-16" role="status">
-        <p className="inline-flex items-center gap-4 text-h1">
-          <Icon name="check" size={28} className="text-faint" />
-          {tr.contact.success}
-        </p>
+      <div className="flex flex-col items-center gap-4 py-12 text-center" role="status">
+        <span className="grid h-14 w-14 place-items-center rounded-full bg-sunken text-ink">
+          <Icon name="check" size={24} />
+        </span>
+        <p className="text-h3">{tr.contact.success}</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid gap-8 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
       <div className="sm:col-span-1">
         <label htmlFor="name" className="label mb-1 block">
           {tr.contact.name}

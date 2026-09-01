@@ -13,9 +13,8 @@ interface ArrowLinkProps {
 }
 
 /**
- * The site's standard text link: a label carrying a rule that retreats on
- * hover, and an arrow that steps forward — the two halves of one gesture.
- * No circle, no fill: in this system a link is text, not a button.
+ * The site's standard text link: a label, a rule that draws in on hover, and a
+ * UIcons arrow in a small circular well that mirrors itself in RTL.
  */
 export function ArrowLink({
   href,
@@ -24,15 +23,26 @@ export function ArrowLink({
   className,
   size = 'default',
 }: ArrowLinkProps) {
+  const dim = size === 'lead' ? 'h-9 w-9' : 'h-7 w-7';
+
   const content = (
     <>
-      <span className="link-rule">{children}</span>
-      <Icon
-        name={external ? 'arrowUpRight' : 'arrowRight'}
-        size={size === 'lead' ? 20 : 15}
-        flipRtl={!external}
-        className="shrink-0 transition-transform duration-500 ease-editorial group-hover:translate-x-1.5 rtl:group-hover:-translate-x-1.5"
-      />
+      <span className="link-underline">{children}</span>
+      <span
+        className={cn(
+          'inline-flex items-center justify-center rounded-full bg-sunken text-ink',
+          'transition-[background-color,transform] duration-500 ease-editorial',
+          'group-hover:bg-ink group-hover:text-surface',
+          'group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5',
+          dim,
+        )}
+      >
+        <Icon
+          name={external ? 'arrowUpRight' : 'arrowRight'}
+          size={size === 'lead' ? 17 : 14}
+          flipRtl={!external}
+        />
+      </span>
     </>
   );
 
